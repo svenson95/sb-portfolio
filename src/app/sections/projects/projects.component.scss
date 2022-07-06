@@ -1,0 +1,52 @@
+:host {
+  .mat-expansion-panel:not([class*="mat-elevation-z"]) {
+    box-shadow: none;
+  }
+
+  .mat-expansion-panel-header {
+    white-space: nowrap;
+
+    ::ng-deep .mat-content {
+      flex-direction: column;
+    }
+  }
+
+  .mat-expansion-panel-header,
+  .mat-expansion-panel-body {
+    height: 64px !important;
+    padding: 0;
+
+    &.mat-expanded {
+      height: 80px !important;
+    }
+
+    .mat-expansion-panel-header-title {
+      font-weight: 600;
+    }
+
+    .mat-expansion-panel-header-description {
+      font-size: 12px;
+    }
+
+    ::ng-deep .mat-expansion-indicator {
+      margin-right: 2px;
+
+      &::after {
+        border-color: #1976d2;
+      }
+    }
+  }
+
+  .mat-expansion-panel
+    .mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled="true"]),
+  .mat-expansion-panel
+    .mat-expansion-panel-header.cdk-program-focused:not([aria-disabled="true"]),
+  .mat-expansion-panel:not(.mat-expanded)
+    .mat-expansion-panel-header:hover:not([aria-disabled="true"]) {
+    background: none;
+  }
+
+  ::ng-deep .mat-expansion-panel-body {
+    padding: 0 0 16px !important;
+  }
+}
