@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NgxViewerModule } from 'ngx-viewer';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -46,7 +47,8 @@ import { CardHeaderComponent } from './components/card-header/card-header.compon
     ),
     MatButtonModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    NgxViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
