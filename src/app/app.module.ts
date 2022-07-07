@@ -13,7 +13,6 @@ import { AboutMeComponent } from './sections/about-me/about-me.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { SkillsComponent } from './sections/skills/skills.component';
 import { CvComponent } from './sections/cv/cv.component';
-import { ContactComponent } from './sections/contact/contact.component';
 import { CardHeaderComponent } from './components/card-header/card-header.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { CardHeaderComponent } from './components/card-header/card-header.compon
     ProjectsComponent,
     SkillsComponent,
     CvComponent,
-    ContactComponent,
     CardHeaderComponent
   ],
   imports: [
