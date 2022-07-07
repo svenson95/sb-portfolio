@@ -2,11 +2,12 @@
   <div class="flex gap-3">
     <a
       *ngFor="let item of socials"
-      class="social-link py-1 px-3 text-white font-bold border-solid border-2 rounded-2xl duration-200 ease-out"
+      class="social-link font-bold duration-200 ease-out"
       [title]="'Profil auf ' + item.title"
       [href]="item.href"
       target="_blank"
       rel="noopener"
+      mat-flat-button
     >
       <small>{{ item.title }}</small>
     </a>
