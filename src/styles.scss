@@ -76,3 +76,55 @@ body {
   padding: 20px;
   background-color: white;
 }
+
+mat-expansion-panel.mat-expansion-panel {
+  &:not([class*='mat-elevation-z']) {
+    box-shadow: none;
+  }
+
+  &,
+  &:not(.mat-expanded) {
+    .mat-expansion-panel-header {
+      &.cdk-keyboard-focused:not([aria-disabled='true']),
+      &.cdk-program-focused:not([aria-disabled='true']),
+      &.mat-expansion-panel-header:hover:not([aria-disabled='true']) {
+        background: none;
+      }
+    }
+  }
+
+  mat-expansion-panel-header {
+    height: 64px;
+    padding: 0;
+    white-space: nowrap;
+
+    &.mat-expanded {
+      height: 80px;
+    }
+
+    span.mat-content {
+      flex-direction: column;
+
+      mat-panel-title {
+        font-weight: 600;
+        line-height: 1.1em;
+      }
+
+      mat-panel-description {
+        font-size: 12px;
+      }
+    }
+
+    span.mat-expansion-indicator {
+      margin-right: 2px;
+
+      &::after {
+        border-color: var(--sb-blue);
+      }
+    }
+  }
+
+  div.mat-expansion-panel-body {
+    padding: 0 0 16px;
+  }
+}
