@@ -4,7 +4,7 @@
 // Plus imports for other components in your app.
 
 $my-custom-typography: mat.define-typography-config(
-  $font-family: 'Montserrat'
+  $font-family: var(--font-primary)
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -50,6 +50,8 @@ $svenb-portfolio-theme: mat.define-light-theme(
 
 :root {
   --sb-blue: #1976d2;
+  --font-primary: 'Montserrat';
+  --font-secondary: 'Secular One';
 }
 
 html,
@@ -62,14 +64,9 @@ body {
   box-sizing: border-box;
   color: #2c2c2c;
   font-size: 14px;
-  font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
 }
 
 .card {
