@@ -15,16 +15,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'svenb-portfolio'`, () => {
+  it(`should have as title 'sb-portfolio'`, () => {
     // const fixture = TestBed.createComponent(AppComponent);
     // const app = fixture.componentInstance;
-    // expect(app.title).toEqual('svenb-portfolio');
+    // expect(app.title).toEqual('sb-tfolio');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('svenb-portfolio app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('sb-portfolio app is running!');
   });
 });
