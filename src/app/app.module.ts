@@ -10,24 +10,24 @@ import { NgxViewerModule } from 'ngx-viewer';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { AboutMeComponent } from './sections/about-me/about-me.component';
-import { WorkExamplesComponent } from './sections/work-examples/work-examples.component';
-import { HobbyProjectsComponent } from './sections/hobby-projects/hobby-projects.component';
-import { SkillsComponent } from './sections/skills/skills.component';
-import { CvComponent } from './sections/cv/cv.component';
 import { CardHeaderComponent } from './components/card-header/card-header.component';
+import { AboutMeComponent } from './sections/about-me/about-me.component';
+import { SkillsComponent } from './sections/skills/skills.component';
+import { WorkSamplesComponent } from './sections/work-samples/work-samples.component';
+import { HobbyProjectsComponent } from './sections/hobby-projects/hobby-projects.component';
+import { CvComponent } from './sections/cv/cv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    CardHeaderComponent,
     AboutMeComponent,
-    WorkExamplesComponent,
-    HobbyProjectsComponent,
     SkillsComponent,
-    CvComponent,
-    CardHeaderComponent
+    WorkSamplesComponent,
+    HobbyProjectsComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
