@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '../../constants';
+@use '../../mixins';
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+  $primary: map.get($theme, primary);
+  $is-dark-theme: map.get($theme, is-dark);
+
+  header {
+    background-color: if(
+      $is-dark-theme,
+      rgba(mat.get-color-from-palette($primary, darker), 0.5),
+      rgba(constants.$sb-blue-300, 0.5)
+    );
+  }
+}

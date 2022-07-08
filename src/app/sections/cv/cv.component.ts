@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'section#cv',
-  templateUrl: './cv.component.html',
-  styleUrls: ['./cv.component.scss']
+  templateUrl: './cv.component.html'
 })
 export class CvComponent {}

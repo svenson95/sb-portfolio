@@ -5,23 +5,28 @@ import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { NgxViewerModule } from 'ngx-viewer';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardHeaderComponent } from './components/card-header/card-header.component';
+import { ThemeToggleComponent } from './components/theme-toggle/theme-toggle.component';
 import { AboutMeComponent } from './sections/about-me/about-me.component';
 import { SkillsComponent } from './sections/skills/skills.component';
 import { WorkSamplesComponent } from './sections/work-samples/work-samples.component';
 import { HobbyProjectsComponent } from './sections/hobby-projects/hobby-projects.component';
 import { CvComponent } from './sections/cv/cv.component';
+import { STORAGE_PROVIDERS } from './services/storage.service';
+import { windowProvider, WindowToken } from './services/windows';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ThemeToggleComponent,
     CardHeaderComponent,
     AboutMeComponent,
     SkillsComponent,
@@ -48,9 +53,10 @@ import { CvComponent } from './sections/cv/cv.component';
     MatButtonModule,
     MatExpansionModule,
     MatMenuModule,
+    MatIconModule,
     NgxViewerModule
   ],
-  providers: [],
+  providers: [STORAGE_PROVIDERS, { provide: WindowToken, useFactory: windowProvider }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,8 +1,10 @@
-div {
+@use '../../constants';
+
+sb-card-header div {
   border-bottom-width: 1px;
 
   h2 {
-    font-family: var(--font-secondary);
+    font-family: constants.$secondary-font;
     text-transform: uppercase;
   }
 

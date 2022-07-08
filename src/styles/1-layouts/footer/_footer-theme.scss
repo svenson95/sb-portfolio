@@ -1,0 +1,16 @@
+@use 'sass:map';
+@use '../../constants';
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+  $primary: map.get($theme, primary);
+  $is-dark-theme: map.get($theme, is-dark);
+
+  footer {
+    background-color: if(
+      $is-dark-theme,
+      rgba(constants.$black, 0.25),
+      rgba(constants.$white, 0.25)
+    );
+  }
+}

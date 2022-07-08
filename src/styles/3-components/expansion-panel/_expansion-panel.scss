@@ -1,0 +1,67 @@
+@use '../../constants';
+
+mat-expansion-panel.mat-expansion-panel {
+  background: none;
+
+  &:not([class*='mat-elevation-z']) {
+    box-shadow: none;
+  }
+
+  &,
+  &:not(.mat-expanded) {
+    .mat-expansion-panel-header {
+      &.cdk-keyboard-focused:not([aria-disabled='true']),
+      &.cdk-program-focused:not([aria-disabled='true']),
+      &.mat-expansion-panel-header:hover:not([aria-disabled='true']) {
+        background: none;
+      }
+    }
+  }
+
+  mat-expansion-panel-header {
+    height: 64px;
+    padding: 0;
+    white-space: nowrap;
+
+    &.mat-expanded {
+      height: 80px;
+    }
+
+    span.mat-content {
+      flex-direction: column;
+
+      mat-panel-title {
+        font-weight: 600;
+        line-height: 1.1em;
+      }
+
+      mat-panel-description {
+        font-family: constants.$secondary-font;
+        font-size: 12px;
+      }
+    }
+
+    span.mat-expansion-indicator {
+      margin-right: 2px;
+
+      &::after {
+        border-color: constants.$sb-blue-700;
+      }
+    }
+  }
+
+  div.mat-expansion-panel-body {
+    font-family: var(--font-secondary);
+    padding: 0 0 16px;
+
+    div.links {
+      display: flex;
+      gap: 0.75em;
+      margin-bottom: 1em;
+
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

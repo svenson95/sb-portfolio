@@ -1,17 +1,18 @@
+@use '../../constants';
+
 table {
-  tr:nth-child(even) {
-    background-color: #dddddd;
+  th {
+    padding-bottom: 0.5em;
   }
 
-  td,
-  th {
-    border: 1px solid #dddddd;
+  td {
+    border: 1px solid;
     padding: 8px;
   }
 
   td:nth-of-type(1) {
     width: 120px;
-    font-family: var(--font-monospace);
+    font-family: constants.$monospace-font;
 
     @screen md {
       width: 215px;

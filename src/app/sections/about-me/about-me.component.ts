@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'section#about',
-  templateUrl: './about-me.component.html',
-  styleUrls: ['./about-me.component.scss']
+  templateUrl: './about-me.component.html'
 })
 export class AboutMeComponent {
   public data = [

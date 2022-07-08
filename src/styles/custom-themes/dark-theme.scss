@@ -1,0 +1,14 @@
+@use '../app-theme';
+@use '@angular/material' as mat;
+
+$sb-portfolio-primary: mat.define-palette(mat.$blue-palette, 700, 600, 900);
+$sb-portfolio-accent: mat.define-palette(mat.$orange-palette, A400);
+$sb-portfolio-warn: mat.define-palette(mat.$red-palette);
+$sb-portfolio-theme: mat.define-dark-theme(
+  $sb-portfolio-primary,
+  $sb-portfolio-accent,
+  $sb-portfolio-warn
+);
+
+@include mat.all-component-themes($sb-portfolio-theme);
+@include app-theme.theme($sb-portfolio-theme);

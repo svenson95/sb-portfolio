@@ -1,0 +1,36 @@
+@use '../../constants';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+}
+
+.clear {
+  clear: both;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+}

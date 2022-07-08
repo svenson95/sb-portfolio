@@ -1,7 +1,8 @@
-:host {
+@use '../../constants';
+
+sb-root {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(0deg, #74ceff, #bfe9ff);
 
   section {
     width: 100%;
@@ -12,7 +13,7 @@
   }
 
   main,
-  footer ::ng-deep .wrapper {
+  footer .wrapper {
     max-width: 1200px;
   }
 }

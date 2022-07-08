@@ -1,0 +1,10 @@
+@use '../constants';
+@use '../mixins';
+
+body {
+  font-family: constants.$primary-font;
+  font-size: 14px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
