@@ -1,11 +1,12 @@
 div {
   border-bottom-width: 1px;
 
-h2 {
-  font-family: var(--font-secondary);
-  text-transform: uppercase;
-}
+  h2 {
+    font-family: var(--font-secondary);
+    text-transform: uppercase;
+  }
 
-i.fa-solid {
-  transform: translateY(-1px);
+  i.fa-solid {
+    transform: translateY(1px);
+  }
 }
