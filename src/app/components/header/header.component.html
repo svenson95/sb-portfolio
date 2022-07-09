@@ -1,19 +1,7 @@
 <h1 class="text-xl font-bold">Portfolio</h1>
 <ul class="links mr-5 hidden md:flex gap-3">
-  <li>
-    <a href="#about" mat-flat-button>Über mich</a>
-  </li>
-  <li>
-    <a href="#skills" mat-flat-button>Skills</a>
-  </li>
-  <li>
-    <a href="#work-samples" mat-flat-button>Arbeits-Proben</a>
-  </li>
-  <li>
-    <a href="#hobby-projects" mat-flat-button>Hobby-Projekte</a>
-  </li>
-  <li>
-    <a href="#cv" mat-flat-button>Lebenslauf</a>
+  <li *ngFor="let item of menu">
+    <a [href]="item.href" rel="noopener" mat-flat-button>{{ item.title }}</a>
   </li>
 </ul>
 <sb-theme-toggle></sb-theme-toggle>

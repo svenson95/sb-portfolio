@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 
+import { menu } from 'src/app/constants/menu';
+
 @Component({
   selector: 'footer',
   templateUrl: './footer.component.html'
 })
 export class FooterComponent {
+  public menu = menu;
+
   public socials = [
     {
       title: 'linkedin',
