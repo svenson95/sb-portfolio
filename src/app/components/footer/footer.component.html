@@ -1,19 +1,29 @@
-<div class="wrapper flex flex-col md:flex-row w-full items-center md:justify-between m-5 xl:mx-auto py-5">
-  <div class="flex gap-3">
-    <a
-      *ngFor="let item of socials"
-      class="social-link font-bold duration-200 ease-out"
-      [title]="'Profil auf ' + item.title"
-      [href]="item.href"
-      target="_blank"
-      rel="noopener"
-      mat-flat-button
-    >
-      <small>{{ item.title }}</small>
-    </a>
+<div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 xl:mx-auto py-5">
+  <div class="flex gap-12">
+    <div class="flex flex-col gap-3">
+      <p class="font-bold opacity-50">Navigation</p>
+      <ul>
+        <li *ngFor="let item of menu">
+          <a [href]="item.href" rel="noopener">
+            <small>{{ item.title }}</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <p class="font-bold opacity-50">Social Media</p>
+      <ul>
+        <li *ngFor="let item of socials">
+          <a [title]="'Profil auf ' + item.title" [href]="item.href" target="_blank" rel="noopener">
+            <small>{{ item.title }}</small>
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <small class="flex text-white whitespace-nowrap items-baseline mt-5 md:mt-0">
+  <small class="flex text-white whitespace-nowrap items-baseline mt-8 sm:mt-0">
     Made with <i class="fa fa-heart text-red-600 mx-1"></i> in Berlin
   </small>
 </div>
