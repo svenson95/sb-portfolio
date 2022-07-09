@@ -1,7 +1,7 @@
 <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 xl:mx-auto py-5">
   <div class="flex gap-12">
     <div class="flex flex-col gap-3">
-      <p class="font-bold opacity-50">Navigation</p>
+      <h3 class="font-bold">Navigation</h3>
       <ul>
         <li *ngFor="let item of menu">
           <a [href]="item.href" rel="noopener">
@@ -12,7 +12,7 @@
     </div>
 
     <div class="flex flex-col gap-3">
-      <p class="font-bold opacity-50">Social Media</p>
+      <h3 class="font-bold">Social Media</h3>
       <ul>
         <li *ngFor="let item of socials">
           <a [title]="'Profil auf ' + item.title" [href]="item.href" target="_blank" rel="noopener">
@@ -23,7 +23,7 @@
     </div>
   </div>
 
-  <small class="flex text-white whitespace-nowrap items-baseline mt-8 sm:mt-0">
+  <small class="flex whitespace-nowrap items-baseline mt-8 sm:mt-0">
     Made with <i class="fa fa-heart text-red-600 mx-1"></i> in Berlin
   </small>
 </div>

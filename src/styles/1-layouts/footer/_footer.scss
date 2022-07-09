@@ -1,8 +1,9 @@
-@use '../../constants';
-@use '../../mixins';
-
 footer {
-  a:hover {
-    text-decoration: underline;
+  li {
+    height: 1.75em;
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
