@@ -1,6 +1,9 @@
+/* eslint-disable no-empty-function */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable @typescript-eslint/explicit-member-accessibility */
 import { InjectionToken, StaticProvider } from '@angular/core';
 
-import { WindowToken } from './windows';
+import { WindowToken } from './window';
 
 export const LocalStorage = new InjectionToken<Storage>('LocalStorage');
 export const SessionStorage = new InjectionToken<Storage>('SessionStorage');

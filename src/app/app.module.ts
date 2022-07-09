@@ -18,8 +18,8 @@ import { SkillsComponent } from './sections/skills/skills.component';
 import { WorkSamplesComponent } from './sections/work-samples/work-samples.component';
 import { HobbyProjectsComponent } from './sections/hobby-projects/hobby-projects.component';
 import { CvComponent } from './sections/cv/cv.component';
-import { STORAGE_PROVIDERS } from './services/storage.service';
-import { windowProvider, WindowToken } from './services/windows';
+import { STORAGE_PROVIDERS } from './shared/storage.service';
+import { windowProvider, WindowToken } from './shared/window';
 
 @NgModule({
   declarations: [
