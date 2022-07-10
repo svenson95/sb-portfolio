@@ -3,7 +3,6 @@
 @use '@angular/material' as mat;
 
 @mixin theme($theme) {
-  $background: map.get($theme, background);
   $is-dark-theme: map.get($theme, is-dark);
 
   sb-root {
@@ -12,5 +11,9 @@
       constants.$bg-gradient-dark,
       constants.$bg-gradient-light
     );
+
+    section {
+      background-color: if($is-dark-theme, constants.$black, constants.$white);
+    }
   }
 }
