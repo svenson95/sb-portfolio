@@ -11,7 +11,11 @@ export class ThemeToggleComponent {
     return `Zum ${this.theme.isDark ? Theme.LIGHT : Theme.DARK} mode wechseln`;
   }
 
+  public get themeIcon(): string {
+    return `${this.theme.isDark ? Theme.LIGHT : Theme.DARK}_mode`;
+  }
+
   public Theme = Theme;
 
-  constructor(public theme: ThemeService) {}
+  constructor(private theme: ThemeService) {}
 }

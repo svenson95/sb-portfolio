@@ -11,5 +11,5 @@ export class SkillsComponent {
     const color = this.theme.isDark ? Theme.LIGHT : Theme.DARK;
     return `assets/skillset/nodejs-${color}.png`;
   }
-  constructor(public theme: ThemeService) {}
+  constructor(private theme: ThemeService) {}
 }
