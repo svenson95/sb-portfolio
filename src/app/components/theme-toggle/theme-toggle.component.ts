@@ -17,5 +17,5 @@ export class ThemeToggleComponent {
 
   public Theme = Theme;
 
-  constructor(private theme: ThemeService) {}
+  constructor(public theme: ThemeService) {}
 }
