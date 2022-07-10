@@ -31,13 +31,14 @@ mat-expansion-panel.mat-expansion-panel {
       flex-direction: column;
 
       mat-panel-title {
-        font-weight: 600;
+        font-weight: 500;
         line-height: 1.1em;
       }
 
       mat-panel-description {
         font-family: constants.$secondary-font;
         font-size: 12px;
+        font-weight: 500;
       }
     }
 

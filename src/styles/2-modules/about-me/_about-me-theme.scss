@@ -6,6 +6,6 @@
   $is-dark-theme: map.get($theme, is-dark);
 
   div.key {
-    color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
+    color: if($is-dark-theme, constants.$lightgray, constants.$mediumgray);
   }
 }

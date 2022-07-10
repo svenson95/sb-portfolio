@@ -21,5 +21,9 @@
         constants.$lightgray
       );
     }
+
+    small {
+      color: if($is-dark-theme, constants.$lightgray, constants.$mediumgray);
+    }
   }
 }
