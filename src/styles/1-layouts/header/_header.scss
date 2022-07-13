@@ -1,1 +1,41 @@
 @use '../../constants';
+
+header {
+  .mat-button.mat-primary.mat-button-disabled,
+  .mat-button.mat-accent.mat-button-disabled,
+  .mat-button.mat-warn.mat-button-disabled,
+  .mat-button.mat-button-disabled.mat-button-disabled,
+  .mat-icon-button.mat-primary.mat-button-disabled,
+  .mat-icon-button.mat-accent.mat-button-disabled,
+  .mat-icon-button.mat-warn.mat-button-disabled,
+  .mat-icon-button.mat-button-disabled.mat-button-disabled,
+  .mat-stroked-button.mat-primary.mat-button-disabled,
+  .mat-stroked-button.mat-accent.mat-button-disabled,
+  .mat-stroked-button.mat-warn.mat-button-disabled,
+  .mat-stroked-button.mat-button-disabled.mat-button-disabled {
+    color: initial;
+  }
+
+  a {
+    &:hover,
+    &:focus,
+    &.in-viewport {
+      &:after {
+        width: 100%;
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      transition: all 0.25s ease-in-out;
+      -webkit-transition: all 0.25s ease-in-out;
+      -moz-transition: all 0.25s ease-in-out;
+      -o-transition: all 0.25s ease-in-out;
+    }
+  }
+}

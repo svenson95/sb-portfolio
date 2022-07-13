@@ -1,0 +1,7 @@
+@use '../../constants';
+
+.mat-button:hover:not(.mat-button-disabled) span.mat-button-focus-overlay,
+.mat-stroked-button:hover:not(.mat-button-disabled)
+  span.mat-button-focus-overlay {
+  opacity: 0.1;
+}

@@ -22,5 +22,13 @@
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
     }
+
+    a:after {
+      background-color: if(
+        $is-dark-theme,
+        rgba(constants.$sb-blue-300, 0.8),
+        rgba(mat.get-color-from-palette($primary, darker), 0.8)
+      );
+    }
   }
 }

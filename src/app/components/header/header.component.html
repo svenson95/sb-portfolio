@@ -1,7 +1,15 @@
 <h1 class="text-xl font-bold mr-5">Portfolio</h1>
 <ul class="links mr-5 hidden md:flex gap-3">
   <li *ngFor="let item of menu">
-    <a [href]="item.href" rel="noopener" mat-flat-button>{{ item.title }}</a>
+    <a
+      [href]="item.href"
+      rel="noopener"
+      mat-button
+      [class.in-viewport]="sectionInViewport(item.href)"
+      [disabled]="sectionInViewport(item.href)"
+    >
+      {{ item.title }}
+    </a>
   </li>
 </ul>
 <sb-theme-toggle></sb-theme-toggle>

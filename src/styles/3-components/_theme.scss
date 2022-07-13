@@ -1,7 +1,9 @@
+@use 'button/button-theme';
 @use 'card-header/card-header-theme';
 @use 'expansion-panel/expansion-panel-theme';
 
 @mixin theme($theme) {
+  @include button-theme.theme($theme);
   @include card-header-theme.theme($theme);
   @include expansion-panel-theme.theme($theme);
 }
