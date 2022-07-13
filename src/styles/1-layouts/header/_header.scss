@@ -1,4 +1,5 @@
 @use '../../constants';
+@use '../../mixins';
 
 header {
   .mat-button.mat-primary.mat-button-disabled,
@@ -32,10 +33,7 @@ header {
       position: absolute;
       left: 0;
       bottom: 0px;
-      transition: all 0.25s ease-in-out;
-      -webkit-transition: all 0.25s ease-in-out;
-      -moz-transition: all 0.25s ease-in-out;
-      -o-transition: all 0.25s ease-in-out;
+      @include mixins.transition(all 0.25s ease-in-out);
     }
   }
 }
