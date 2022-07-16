@@ -10,7 +10,8 @@ import { ScrollService } from './shared/scroll.service';
 export class AppComponent {
   constructor(private location: Location, private scroll: ScrollService) {
     if (this.location.path(true) === '') {
-      this.location.replaceState('#about');
+      // timeout needed to avoid unintended scroll to anchor
+      setTimeout(() => this.location.replaceState('#about'), 0);
     }
     this.scroll.initialize();
   }
