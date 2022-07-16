@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { ScrollService } from './shared/scroll.service';
@@ -7,7 +8,10 @@ import { ScrollService } from './shared/scroll.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  constructor(private scroll: ScrollService) {
+  constructor(private location: Location, private scroll: ScrollService) {
+    if (this.location.path(true) === '') {
+      this.location.replaceState('#about');
+    }
     this.scroll.initialize();
   }
 }
