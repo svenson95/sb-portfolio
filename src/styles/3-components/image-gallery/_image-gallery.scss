@@ -9,6 +9,7 @@ div.gallery {
   > img {
     width: 64px;
     height: 64px;
+    object-fit: cover;
     vertical-align: middle;
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
