@@ -1,21 +1,23 @@
-<sb-card-header title="Lebenslauf" icon="fa-clipboard-user"></sb-card-header>
+<div class="card">
+  <sb-card-header title="Lebenslauf" icon="fa-clipboard-user"></sb-card-header>
 
-<table class="w-full mb-5">
-  <tr>
-    <th>Berufliche Laubahn</th>
-  </tr>
-  <tr *ngFor="let item of work">
-    <td [innerHTML]="item.dateRange"></td>
-    <td [innerHTML]="item.value"></td>
-  </tr>
-</table>
+  <table class="w-full mb-5">
+    <tr>
+      <th>Berufliche Laubahn</th>
+    </tr>
+    <tr *ngFor="let item of work">
+      <td [innerHTML]="item.dateRange"></td>
+      <td [innerHTML]="item.value"></td>
+    </tr>
+  </table>
 
-<table class="w-full">
-  <tr>
-    <th>Schulische Laufbahn</th>
-  </tr>
-  <tr *ngFor="let item of school">
-    <td [innerHTML]="item.dateRange"></td>
-    <td [innerHTML]="item.value"></td>
-  </tr>
-</table>
+  <table class="w-full">
+    <tr>
+      <th>Schulische Laufbahn</th>
+    </tr>
+    <tr *ngFor="let item of school">
+      <td [innerHTML]="item.dateRange"></td>
+      <td [innerHTML]="item.value"></td>
+    </tr>
+  </table>
+</div>

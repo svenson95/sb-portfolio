@@ -18,10 +18,6 @@ $sb-blue-700: #134477;
 $sb-blue-800: #0b3a6b;
 $sb-blue-900: #052a53;
 
-// GRADIENTS
-$bg-gradient-light: linear-gradient(0deg, $sb-blue-300, $sb-blue-100);
-$bg-gradient-dark: linear-gradient(145deg, $sb-blue-900, $sb-blue-700);
-
 // COLOR PALETTE
 $cyan: #39d0ff;
 $powderblue: #bae0ff;
@@ -44,8 +40,14 @@ $lightboxgray: #ebebeb;
 $mist: #eceff1;
 $mediumgray: #6e6e6e;
 $darkgray: #444444;
-$deepgray: #333333;
+$deepgray: #161616;
 $black: #0f0f0f;
 $orange: #ff9800;
 $darkorange: #940;
 $anti-pattern: $brightred;
+
+// GRADIENTS
+$bg-gradient-light: linear-gradient(0deg, $sb-blue-300, $sb-blue-100);
+$bg-gradient-dark: linear-gradient(180deg, $sb-blue-900, $sb-blue-700);
+$card-gradient-light: linear-gradient(0deg, $white, $lightboxgray);
+$card-gradient-dark: linear-gradient(180deg, $black, $deepgray);

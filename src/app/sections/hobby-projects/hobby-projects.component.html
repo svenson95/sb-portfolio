@@ -1,26 +1,28 @@
-<sb-card-header title="Hobby-Projekte" icon="fa-clipboard-list"></sb-card-header>
+<div class="card">
+  <sb-card-header title="Hobby-Projekte" icon="fa-clipboard-list"></sb-card-header>
 
-<mat-accordion>
-  <ng-container *ngFor="let project of projects; last as isLast">
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
-        <mat-panel-description> {{ project.description }} </mat-panel-description>
-      </mat-expansion-panel-header>
-      <div class="links">
-        <ng-container *ngFor="let link of project.links">
-          <span *ngIf="link.href === null">GitHub</span>
-          <a *ngIf="link.href !== null" [href]="link.href" target="_blank"> {{ link.label }} </a>
-        </ng-container>
-      </div>
-      <p>
-        {{ project.content }}
-      </p>
-      <div *ngIf="project.images" class="gallery" ngxViewer [viewerOptions]="options">
-        <img *ngFor="let image of project.images" [src]="image.src" [alt]="image.alt" />
-      </div>
-    </mat-expansion-panel>
+  <mat-accordion>
+    <ng-container *ngFor="let project of projects; last as isLast">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
+          <mat-panel-description> {{ project.description }} </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="links">
+          <ng-container *ngFor="let link of project.links">
+            <span *ngIf="link.href === null">GitHub</span>
+            <a *ngIf="link.href !== null" [href]="link.href" target="_blank"> {{ link.label }} </a>
+          </ng-container>
+        </div>
+        <p>
+          {{ project.content }}
+        </p>
+        <div *ngIf="project.images" class="gallery" ngxViewer [viewerOptions]="options">
+          <img *ngFor="let image of project.images" [src]="image.src" [alt]="image.alt" />
+        </div>
+      </mat-expansion-panel>
 
-    <hr *ngIf="!isLast" />
-  </ng-container>
-</mat-accordion>
+      <hr *ngIf="!isLast" />
+    </ng-container>
+  </mat-accordion>
+</div>

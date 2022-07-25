@@ -47,7 +47,7 @@ import { windowProvider, WindowToken } from './shared/window';
       {
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled',
-        scrollOffset: [0, 128]
+        scrollOffset: [0, 64]
       }
     ),
     MatButtonModule,

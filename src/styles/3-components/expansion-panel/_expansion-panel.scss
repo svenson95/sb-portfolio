@@ -59,9 +59,15 @@ mat-expansion-panel.mat-expansion-panel {
       display: flex;
       gap: 0.75em;
       margin-bottom: 1em;
+      align-items: center;
 
-      a:hover {
-        text-decoration: underline;
+      a {
+        background-color: rgba(100, 100, 100, 0.25);
+        padding: 4px 8px;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

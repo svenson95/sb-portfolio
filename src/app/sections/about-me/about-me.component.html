@@ -1,26 +1,28 @@
-<div class="flex-1">
-  <sb-card-header title="Über mich" icon="fa-circle-user"></sb-card-header>
+<div class="card flex-col md:flex-row gap-5 md:gap-10">
+  <div class="flex-1">
+    <sb-card-header title="Über mich" icon="fa-circle-user"></sb-card-header>
 
-  <img class="float-left w-20 sm:w-auto mr-5 mb-5" src="assets/picture.jpg" alt="picture" />
+    <img class="float-left w-20 sm:w-auto mr-5 mb-5" src="assets/picture.jpg" alt="picture" />
 
-  <p class="mb-3">
-    2010 das erste mal aus Interesse mit Webentwicklung beschäftigt. 2016 die erste kleine WordPress Page über Strato
-    gehostet für kleinen Fliesenleger Betrieb, etwas Text, Kontaktdaten und einige Bilder bisheriger Arbeiten.
-  </p>
+    <p class="mb-3">
+      2010 das erste mal aus Interesse mit Webentwicklung beschäftigt. 2016 die erste kleine WordPress Page über Strato
+      gehostet für kleinen Fliesenleger Betrieb, etwas Text, Kontaktdaten und einige Bilder bisheriger Arbeiten.
+    </p>
 
-  <p>
-    Ende 2018 angefangen Programmieren zu lernen mit einem Kurs auf Udemy, iOS Entwicklung mit Swift. März 2019 meine
-    erstes Beschäftigung in einer Agentur für Web- & App-Entwicklung.
-  </p>
-</div>
+    <p>
+      Ende 2018 angefangen Programmieren zu lernen mit einem Kurs auf Udemy, iOS Entwicklung mit Swift. März 2019 meine
+      erstes Beschäftigung in einer Agentur für Web- & App-Entwicklung.
+    </p>
+  </div>
 
-<div class="flex-1">
-  <sb-card-header title="Daten" icon="fa-address-card"></sb-card-header>
+  <div class="flex-1">
+    <sb-card-header title="Daten" icon="fa-address-card"></sb-card-header>
 
-  <div class="flex flex-col gap-3" @staggerAnimation>
-    <div class="flex flex-col lg:flex-row border-b" *ngFor="let item of data">
-      <div class="key flex-1">{{ item.key }}:</div>
-      <div class="value flex-1" [innerHTML]="item.value"></div>
+    <div class="flex flex-col gap-3" @staggerAnimation>
+      <div class="flex flex-col lg:flex-row border-b" *ngFor="let item of data">
+        <div class="key flex-1">{{ item.key }}:</div>
+        <div class="value flex-1" [innerHTML]="item.value"></div>
+      </div>
     </div>
   </div>
 </div>
