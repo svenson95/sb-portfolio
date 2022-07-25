@@ -51,7 +51,7 @@ export class WorkSamplesComponent {
       title: 'Lernetics',
       description: 'Oktober 2020 - Dezember 2020',
       content:
-        'Neuentwicklung der nativen Cross-Plattform-Application (Tab-basiert) für eine Berufsschule. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“. Quizze für verschiedene Themen und anschließende Auswertung. Fragen die nicht korrekt beantwortet wurden konnten im Nachhinein nochmal gezielt abgefragt werden.',
+        'Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“. Quizze für verschiedene Themen und anschließende Auswertung. Fragen die nicht korrekt beantwortet wurden konnten im Nachhinein nochmal gezielt abgefragt werden.',
       images: [{ src: 'assets/work-examples/lernetics/lernetics-1.png', alt: 'Image 1' }]
     },
     {
