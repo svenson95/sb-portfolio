@@ -17,9 +17,7 @@ export class ScrollService {
         // reenter the Angular zone
         this.ngZone.run(() => {
           // prevent set visible section when app starts
-          if (event.timeStamp > 1500) {
-            this.setVisibleSection();
-          }
+          this.setVisibleSection();
         });
       });
     });

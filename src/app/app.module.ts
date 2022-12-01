@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -20,6 +19,7 @@ import { HobbyProjectsComponent } from './sections/hobby-projects/hobby-projects
 import { CvComponent } from './sections/cv/cv.component';
 import { STORAGE_PROVIDERS } from './shared/storage.service';
 import { windowProvider, WindowToken } from './shared/window';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -37,19 +37,7 @@ import { windowProvider, WindowToken } from './shared/window';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(
-      [
-        {
-          path: '',
-          component: AppComponent
-        }
-      ],
-      {
-        anchorScrolling: 'enabled',
-        scrollPositionRestoration: 'enabled',
-        scrollOffset: [0, 64]
-      }
-    ),
+    AppRoutingModule,
     MatButtonModule,
     MatExpansionModule,
     MatMenuModule,
