@@ -5,20 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './cv.component.html'
 })
 export class CvComponent {
-  public school = [
-    {
-      dateRange: '07.2010 - 10.2012',
-      value: 'Evangelische Schule Charlottenburg'
-    },
-    {
-      dateRange: '07.2008 - 06.2010',
-      value: 'Gottfried Kinkel Realschule'
-    },
-    {
-      dateRange: '07.2002 - 06.2008',
-      value: 'Christian Morgenstern Grundschule'
-    }
-  ];
 
   public work = [
     {
@@ -31,7 +17,7 @@ export class CvComponent {
     },
     {
       dateRange: '01.03.2019 - 01.09.2019',
-      value: 'EQJ zum Fachinformatiker für Anwendungsentwicklung <br /> <small>Piobyte GmbH</small>'
+      value: '<abbr title="Einstiegsqualifizierungsjahr">EQJ</abbr> als Webentwickler <br /> <small>Piobyte GmbH</small>'
     },
     {
       dateRange: '18.06.2018 - 08.10.2018',
@@ -68,7 +54,7 @@ export class CvComponent {
     },
     {
       dateRange: '02.01.2013 - 22.04.2013',
-      value: 'EQJ zum Sport- und Fitnesskaufmann <br /> <small>EasyFitness Prenzlauer Berg</small>'
+      value: '<abbr title="Einstiegsqualifizierungsjahr">EQJ</abbr> zum Sport- und Fitnesskaufmann <br /> <small>EasyFitness Prenzlauer Berg</small>'
     },
     {
       dateRange: '09.01.2012 - 27.01.2012',
