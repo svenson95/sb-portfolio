@@ -2,9 +2,6 @@
   <sb-card-header title="Lebenslauf" icon="fa-clipboard-user"></sb-card-header>
 
   <table class="w-full mb-5">
-    <tr>
-      <th>Berufliche Laubahn</th>
-    </tr>
     <tr *ngFor="let item of work">
       <td [innerHTML]="item.dateRange"></td>
       <td [innerHTML]="item.value"></td>
