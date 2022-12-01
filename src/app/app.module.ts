@@ -20,19 +20,25 @@ import { CvComponent } from './sections/cv/cv.component';
 import { STORAGE_PROVIDERS } from './shared/storage.service';
 import { windowProvider, WindowToken } from './shared/window';
 import { AppRoutingModule } from './app-routing.module';
+import { LinkComponent } from "./components/link/link.component";
+import { InNewTabDirective } from "./components/link/in-new-tab.directive";
+
+const DIRECTIVES = [InNewTabDirective]
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    LinkComponent,
     ThemeToggleComponent,
     CardHeaderComponent,
     AboutMeComponent,
     SkillsComponent,
     WorkSamplesComponent,
     HobbyProjectsComponent,
-    CvComponent
+    CvComponent,
+    ...DIRECTIVES
   ],
   imports: [
     BrowserModule,

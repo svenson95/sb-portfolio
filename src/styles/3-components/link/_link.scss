@@ -1,0 +1,7 @@
+@use '../../constants';
+
+a {
+  margin-inline: -2px;
+  padding-inline: 2px;
+  transition: box-shadow 200ms ease-in-out;
+}
