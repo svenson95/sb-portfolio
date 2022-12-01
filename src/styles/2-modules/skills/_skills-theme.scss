@@ -1,0 +1,11 @@
+@use 'sass:map';
+@use '../../constants';
+@use '@angular/material' as mat;
+
+@mixin theme($theme) {
+  $is-dark-theme: map.get($theme, is-dark);
+
+  small {
+    color: if($is-dark-theme, constants.$lightgray, constants.$mediumgray);
+  }
+}

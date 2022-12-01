@@ -1,7 +1,9 @@
 @use 'about-me/about-me-theme';
 @use 'cv/cv-theme';
+@use 'skills/skills-theme';
 
 @mixin theme($theme) {
   @include about-me-theme.theme($theme);
   @include cv-theme.theme($theme);
+  @include skills-theme.theme($theme);
 }
