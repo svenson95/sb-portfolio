@@ -1,6 +1,8 @@
 import { trigger, transition, query, style, stagger, animate, keyframes } from '@angular/animations';
 import { Component } from '@angular/core';
 
+import { socials } from 'src/app/constants/socials';
+
 @Component({
   selector: 'section#about',
   templateUrl: './about-me.component.html',
@@ -26,6 +28,8 @@ import { Component } from '@angular/core';
   ]
 })
 export class AboutMeComponent {
+  public socials = socials;
+
   public data = [
     { key: 'Name', value: 'Sven Brodny' },
     { key: 'Geburtsdatum', value: '02.11.1995' },
