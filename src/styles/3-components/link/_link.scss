@@ -4,4 +4,5 @@ a {
   margin-inline: -2px;
   padding-inline: 2px;
   transition: box-shadow 200ms ease-in-out;
+  white-space: nowrap; // needed to show animation correctly
 }
