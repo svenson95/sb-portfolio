@@ -10,7 +10,7 @@
     background-color: if(
       $is-dark-theme,
       rgba(constants.$black, 0.25),
-      rgba(constants.$white, 0.4)
+      rgba(constants.$grey-2, 0.3)
     );
 
     h3 {

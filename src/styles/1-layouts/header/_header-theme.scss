@@ -17,8 +17,8 @@
     @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
       background-color: if(
         $is-dark-theme,
-        rgba(mat.get-color-from-palette($primary, darker), 0.5),
-        rgba(constants.$sb-blue-300, 0.5)
+        rgba(constants.$grey-2, 0.2),
+        rgba(constants.$white, 0.5)
       );
       @include mixins.backdrop-filter(3px);
     }

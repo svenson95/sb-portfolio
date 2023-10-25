@@ -11,13 +11,5 @@
       constants.$bg-gradient-dark,
       constants.$bg-gradient-light
     );
-
-    section .card {
-      background: if(
-        $is-dark-theme,
-        constants.$card-gradient-dark,
-        constants.$card-gradient-light
-      );
-    }
   }
 }
