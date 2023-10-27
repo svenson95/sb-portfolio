@@ -27,7 +27,7 @@ export class WorkSamplesComponent {
       description: 'April 2021 - November 2021',
       content:
         'Neuentwicklung einer Online-Plattform zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports. Entsprechende Anwender (bspw. Bauernhöfe) können hier die bereits bestehenden Funktionen der Datenerfassung, -verarbeitung und -auswertung einsehen.',
-      links: [{ href: 'assets/work-examples/cop/cop-1.png', label: 'GitHub' }]
+      images: [{ src: 'assets/work-examples/cop/cop-1.png', alt: 'Image 1' }]
     },
     {
       title: 'Pio Office Suite',
