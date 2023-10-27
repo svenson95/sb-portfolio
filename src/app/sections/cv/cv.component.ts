@@ -8,57 +8,61 @@ export class CvComponent {
 
   public work = [
     {
+      dateRange: '01.08.2022 - 31.10.2023',
+      value: 'Webentwickler Vollzeit <br /> <small>Yolawo GmbH</small>'
+    },
+    {
       dateRange: '21.09.2021 - 21.02.2022',
-      value: 'Nebenbeschäftigung als Webentwickler <br /> <small>Kominal UG</small>'
+      value: 'Webentwickler Teilzeit <br /> <small>Kominal UG</small>'
     },
     {
       dateRange: '01.09.2019 - 23.03.2022',
-      value: 'Ausbildung zum Fachinformatiker für Anwendungsentwicklung <br /> <small>Piobyte GmbH</small>'
+      value: 'Fachinformatiker für Anwendungsentwicklung Ausbildung <br /> <small>Piobyte GmbH</small>'
     },
     {
       dateRange: '01.03.2019 - 01.09.2019',
-      value: '<abbr title="Einstiegsqualifizierungsjahr">EQJ</abbr> als Webentwickler <br /> <small>Piobyte GmbH</small>'
+      value: 'EQJ | Webentwickler Einstiegsqualifizierungsjahr <br /> <small>Piobyte GmbH</small>'
     },
     {
       dateRange: '18.06.2018 - 08.10.2018',
-      value: 'Produktionshelfer Handschriftautomation <br /> <small>Wunderpen GmbH</small>'
+      value: 'Handschriftautomation Produktionshelfer Vollzeit <br /> <small>Wunderpen GmbH</small>'
     },
     {
       dateRange: '16.10.2017 - 31.12.2017',
       value:
-        'Ausbildung zum Fliesen-, Platten- und Mosaikleger <br /> <small>Ulf Martischewski Fliesen, Naturstein, Spanndecken</small>'
+        'Fliesen-, Platten- und Mosaikleger Ausbildung <br /> <small>Ulf Martischewski Fliesen, Naturstein, Spanndecken</small>'
     },
     {
       dateRange: '01.09.2016 - 20.07.2017',
-      value: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger <br /> <small>WH Werkhaus Berlin</small>'
+      value: 'Fliesen-, Platten- und Mosaikleger Ausbildung <br /> <small>WH Werkhaus Berlin</small>'
     },
     {
       dateRange: '01.10.2015 - 06.07.2016',
-      value: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger <br /> <small>BfW Lehrbauhof Berlin</small>'
+      value: 'Fliesen-, Platten- und Mosaikleger Ausbildung  <br /> <small>BfW Lehrbauhof Berlin</small>'
     },
     {
       dateRange: '12.12.2014 - 18.01.2015',
-      value: 'Ausbildung zum Informatikkaufmann <br /> <small>ACDM (MAIL BOX - Zentrale)</small>'
+      value: 'Informatikkaufmann Ausbildung <br /> <small>ACDM (MAIL BOX - Zentrale)</small>'
     },
     {
       dateRange: '01.08.2013 - 12.12.2014',
-      value: 'Ausbildung zur Fachkraft für Lagerlogistik <br /> <small>MAIL BOX - Direct-Marketing Service GmbH</small>'
+      value: 'Fachkraft für Lagerlogistik Ausbildung <br /> <small>MAIL BOX - Direct-Marketing Service GmbH</small>'
     },
     {
       dateRange: '10.05.2013 - 01.08.2013',
-      value: 'Lagerhelfer in Teilzeit <br /> <small>MAIL BOX - Direct-Marketing Service GmbH</small>'
+      value: 'Lagerhelfer Teilzeit <br /> <small>MAIL BOX - Direct-Marketing Service GmbH</small>'
     },
     {
       dateRange: '29.04.2013 - 10.05.2013',
-      value: 'Praktikum als Fachkraft für Lagerlogistik <br /> <small>Party Rent Franchise GmbH</small>'
+      value: 'Fachkraft für Lagerlogistik Vollzeit Praktikum <br /> <small>Party Rent Franchise GmbH</small>'
     },
     {
       dateRange: '02.01.2013 - 22.04.2013',
-      value: '<abbr title="Einstiegsqualifizierungsjahr">EQJ</abbr> zum Sport- und Fitnesskaufmann <br /> <small>EasyFitness Prenzlauer Berg</small>'
+      value: 'EQJ | Sport- und Fitnesskaufmann Einstiegsqualifizierungsjahr <br /> <small>EasyFitness Prenzlauer Berg</small>'
     },
     {
       dateRange: '09.01.2012 - 27.01.2012',
-      value: 'Schulpraktikum beim Reparaturservice <br /> <small>Phonedoctor Berlin</small>'
+      value: 'Smartphone-Reparaturservice Vollzeit Schulpraktikum <br /> <small>Phonedoctor Berlin</small>'
     }
   ];
 }
