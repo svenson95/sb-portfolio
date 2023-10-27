@@ -16,6 +16,7 @@
       <ul>
         <li *ngFor="let item of socials">
           <a [title]="'Profil auf ' + item.title" [href]="item.href" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin" [ngClass]="item.iconSelector"></i>
             <small>{{ item.title }}</small>
           </a>
         </li>

@@ -1,11 +1,14 @@
-<div class="flex gap-5">
+<div id="socials" class="flex gap-5">
   <a
     *ngFor="let link of socials"
-    mat-raised-button
+    mat-button
     target="_blank"
     rel="noopener noreferrer"
     [href]="link.href">
-    {{ link.title }}
+    <span class="wrapper">
+      <i class="fa-brands fa-linkedin" [ngClass]="link.iconSelector"></i>
+      <span>{{ link.title }}</span>
+    </span>
   </a>
 </div>
 <div class="card flex-col md:flex-row gap-5 md:gap-10">
