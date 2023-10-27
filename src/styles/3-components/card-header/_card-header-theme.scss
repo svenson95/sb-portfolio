@@ -6,7 +6,7 @@
   $background: map.get($theme, background);
   $is-dark-theme: map.get($theme, is-dark);
 
-  i.fa-solid {
+  i.fa-solid, i.fa-brands {
     color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
   }
 }

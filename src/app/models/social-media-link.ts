@@ -12,8 +12,9 @@ export class SocialMediaLink {
 
   get iconSelector() {
     switch (this.title) {
-      case "linkedin": return "fa-linkedin";
-      case "github": return "fa-github";
+      case "linkedin": return "fa-brands fa-linkedin";
+      case "github": return "fa-brands fa-github";
+      case "mail": return "fa-solid fa-paper-plane";
       default: throw new Error("unknown socials icon selector title")
     }
   }

@@ -10,7 +10,7 @@
       background-color: if(
         $is-dark-theme,
         rgba(constants.$mediumgray, 0.3),
-        rgba(constants.$lightgray, 0.3)
+        rgba(constants.$lightboxgray, 0.2)
       );
     }
 

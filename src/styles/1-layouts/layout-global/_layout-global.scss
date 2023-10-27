@@ -1,3 +1,5 @@
+@use '../../mixins';
+
 html {
   scroll-behavior: smooth;
 }
@@ -10,4 +12,26 @@ body {
 body {
   margin: 0;
   box-sizing: border-box;
+}
+
+.mat-button {
+  position: relative;
+
+  &:hover,
+  &:focus,
+  &.in-viewport {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    @include mixins.transition(all 0.25s ease-in-out);
+  }
 }

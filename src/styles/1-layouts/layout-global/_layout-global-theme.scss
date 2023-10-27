@@ -23,6 +23,14 @@
     background-color: if($is-dark-theme, constants.$black, constants.$white);
   }
 
+  .mat-button:after {
+    background-color: if(
+        $is-dark-theme,
+        constants.$white,
+        constants.$black
+    );
+  }
+
   @if $is-dark-theme {
     :root {
       color-scheme: dark;

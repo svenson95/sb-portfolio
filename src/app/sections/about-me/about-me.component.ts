@@ -34,10 +34,6 @@ export class AboutMeComponent {
     { key: 'Name', value: 'Sven Brodny' },
     { key: 'Geburtsdatum', value: '02.11.1995' },
     {
-      key: 'E-Mail',
-      value: '<a href="mailto:svenbrodny@googlemail.com">svenbrodny@googlemail.com</a>'
-    },
-    {
       key: 'Sprachen',
       value: 'Deutsch (C2) / Englisch (B2) <br> TypeScript / HTML / CSS'
     },

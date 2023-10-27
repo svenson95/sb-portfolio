@@ -8,5 +8,9 @@ export const socials: SocialMediaLink[] = [
   new SocialMediaLink({
     title: 'github',
     href: 'https://github.com/svenson95'
+  }),
+  new SocialMediaLink({
+    title: 'mail',
+    href: 'mailto:svenbrodny@googlemail.com'
   })
 ];
