@@ -48,6 +48,15 @@ export class HobbyProjectsComponent {
         { href: 'https://github.com/svenson95/yahtzee-app', label: 'GitHub' },
         { href: 'https://codesandbox.io/s/github/svenson95/yahtzee-app', label: 'CodeSandbox' }
       ]
+    },
+    {
+      title: 'Angular documentation extension',
+      description: 'July 2022',
+      content: 'Eigene Dokumentation für Angular.',
+      links: [
+        { href: 'https://github.com/svenson95/ng-neer-app', label: 'GitHub' },
+        { href: 'http://ng-neer.io/', label: 'Live' }
+      ]
     }
   ];
 }
