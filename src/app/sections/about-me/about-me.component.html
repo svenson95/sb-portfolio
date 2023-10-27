@@ -72,6 +72,13 @@
           die Ausbildung zum Fachinformatiker für Anwendungsentwicklung
         </p>
       </section>
+
+      <section>
+        <h4 class="subtitle">August 2022</h4>
+        <p>
+          Erste Vollzeit Beschäftigung als Frontend-Entwickler
+        </p>
+      </section>
     </div>
   </div>
 
@@ -79,7 +86,7 @@
     <sb-card-header title="Daten" icon="fa-address-card"></sb-card-header>
 
     <div class="flex flex-col gap-3" @staggerAnimation>
-      <div class="flex flex-col lg:flex-row border-b" *ngFor="let item of data">
+      <div class="flex flex-col lg:flex-row border-b pb-2" *ngFor="let item of data">
         <div class="key flex-1">{{ item.key }}:</div>
         <div class="value flex-1" [innerHTML]="item.value"></div>
       </div>

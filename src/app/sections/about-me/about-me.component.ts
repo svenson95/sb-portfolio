@@ -39,9 +39,10 @@ export class AboutMeComponent {
     },
     {
       key: 'Sprachen',
-      value: 'Deutsch (C2) / Englisch (B2)'
+      value: 'Deutsch (C2) / Englisch (B2) <br> TypeScript / HTML / CSS'
     },
     { key: 'Geburtsort', value: 'Hamburg' },
-    { key: 'Wohnort', value: 'Berlin' }
+    { key: 'Aufgewachsen in', value: 'Berlin' },
+    { key: 'Wohnort', value: 'Magdeburg' },
   ];
 }
