@@ -8,12 +8,6 @@
           <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
           <mat-panel-description> {{ project.description }} </mat-panel-description>
         </mat-expansion-panel-header>
-        <div class="links" *ngIf="project.links">
-          <ng-container *ngFor="let link of project.links">
-            <span *ngIf="link.href === null">GitHub</span>
-            <a *ngIf="link.href !== null" [href]="link.href" target="_blank"> {{ link.label }} </a>
-          </ng-container>
-        </div>
         <p>
           {{ project.content }}
         </p>
