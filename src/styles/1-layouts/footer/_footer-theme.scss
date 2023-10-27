@@ -12,9 +12,5 @@
       rgba(constants.$black, 0.25),
       rgba(constants.$grey-2, 0.3)
     );
-
-    h3 {
-      color: if($is-dark-theme, constants.$sb-blue-300, constants.$sb-blue-500);
-    }
   }
 }
