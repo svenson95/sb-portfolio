@@ -23,11 +23,11 @@
       @include mixins.backdrop-filter(3px);
     }
 
-    a:after {
-      background-color: if(
-        $is-dark-theme,
-        constants.$white,
-        constants.$black
+    h1 {
+      color: if(
+          $is-dark-theme,
+          constants.$mediumgray,
+          constants.$lightgray
       );
     }
   }
