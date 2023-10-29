@@ -8,9 +8,7 @@
           <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
           <mat-panel-description> {{ project.description }} </mat-panel-description>
         </mat-expansion-panel-header>
-        <p>
-          {{ project.content }}
-        </p>
+        <p [innerHTML]="project.content"></p>
         <div *ngIf="project.images" class="gallery" ngxViewer [viewerOptions]="options">
           <img *ngFor="let image of project.images" [src]="image.src" [alt]="image.alt" />
         </div>
