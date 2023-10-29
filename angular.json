@@ -38,8 +38,7 @@
                 "inject": false,
                 "input": "src/styles/custom-themes/light-theme.scss",
                 "bundleName": "light-theme"
-              },
-              "node_modules/viewerjs/dist/viewer.css"
+              }
             ],
             "scripts": []
           },

@@ -15,8 +15,10 @@
           </ng-container>
         </div>
         <p [innerHTML]="project.content"></p>
-        <div *ngIf="project.images" class="gallery" ngxViewer [viewerOptions]="options">
-          <img *ngFor="let image of project.images" [src]="image.src" [alt]="image.alt" />
+        <div *ngIf="project.images" class="gallery">
+          <a *ngFor="let image of project.images" [href]="image.src" target="_blank" rel="noopener noreferrer">
+            <img [src]="image.src" [alt]="image.alt" />
+          </a>
         </div>
       </mat-expansion-panel>
 

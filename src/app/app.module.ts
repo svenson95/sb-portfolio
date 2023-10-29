@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
-import { NgxViewerModule } from 'ngx-viewer';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -48,7 +47,6 @@ const DIRECTIVES = [InNewTabDirective]
     MatExpansionModule,
     MatMenuModule,
     MatIconModule,
-    NgxViewerModule
   ],
   providers: [STORAGE_PROVIDERS, { provide: WindowToken, useFactory: windowProvider }],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@
           <mat-panel-description> {{ project.description }} </mat-panel-description>
         </mat-expansion-panel-header>
         <p [innerHTML]="project.content"></p>
-        <div *ngIf="project.images" class="gallery" ngxViewer [viewerOptions]="options">
+        <div *ngIf="project.images" class="gallery">
           <img *ngFor="let image of project.images" [src]="image.src" [alt]="image.alt" />
         </div>
       </mat-expansion-panel>
