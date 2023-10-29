@@ -20,7 +20,6 @@ mat-expansion-panel.mat-expansion-panel {
 
   mat-expansion-panel-header {
     height: 64px;
-    padding: 0;
     white-space: nowrap;
 
     &.mat-expanded {
@@ -46,14 +45,13 @@ mat-expansion-panel.mat-expansion-panel {
       margin-right: 2px;
 
       &::after {
-        border-color: constants.$sb-blue-700;
+
       }
     }
   }
 
   div.mat-expansion-panel-body {
     font-family: var(--font-secondary);
-    padding: 0 0 16px;
 
     div.links {
       display: flex;

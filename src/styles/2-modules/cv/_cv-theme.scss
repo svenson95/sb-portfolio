@@ -9,7 +9,7 @@
     tr:nth-child(even) {
       background-color: if(
         $is-dark-theme,
-        rgba(constants.$mediumgray, 0.3),
+        rgba(constants.$mediumgray, 0.1),
         rgba(constants.$lightboxgray, 0.2)
       );
     }
