@@ -33,10 +33,7 @@ export class AboutMeComponent {
   public data = [
     { key: 'Name', value: 'Sven Brodny' },
     { key: 'Geburtsdatum', value: '02.11.1995' },
-    {
-      key: 'Sprachen',
-      value: 'Deutsch (C2) / Englisch (B2) <br> TypeScript / HTML / CSS'
-    },
+    { key: 'Sprachen', value: 'Deutsch (C2) / Englisch (B2)' },
     { key: 'Geburtsort', value: 'Hamburg' },
     { key: 'Aufgewachsen in', value: 'Berlin' },
     { key: 'Wohnort', value: 'Magdeburg' },

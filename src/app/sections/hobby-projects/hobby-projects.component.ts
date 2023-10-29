@@ -14,7 +14,7 @@ export class HobbyProjectsComponent {
       title: 'Fachentwickler',
       description: 'April 2020 - Heute',
       content:
-        'Home-Schooling Plattform für die Berufsschule, Unterrichtszusammenfassungen, Quizze, Karteikarten & "Matching"-Puzzle-Minigame. Dashboard zum chronologischen abarbeiten aller Inhalte, Anzeige der letzten Ankündigung aus dem Schul-Newsarchiv, anstehender Klausuren, aktuellen Stundenplan und Lektionen der aktuellen Schulwoche.',
+        'Home-Schooling Plattform für die Berufsschule, Unterrichtszusammenfassungen, Quizze, Karteikarten & "Matching"-Puzzle-Minigame. Dashboard mit Fortschrittsanzeige, Anzeige der letzten Ankündigung aus dem Schul-Newsarchiv, anstehende Klausuren, Stundenplan und Lektionen der aktuellen Schulwoche.',
       links: [
         { href: null, label: 'GitHub' },
         { href: 'https://github.com/svenson95/fachentwickler-app', label: 'Frontend' },
@@ -34,7 +34,7 @@ export class HobbyProjectsComponent {
       title: 'ng-xmp<wbr />-animations',
       description: 'September 2021 - Dezember 2021',
       content:
-        "Tutorial App für geplanten schriftlichen Artikel mit Beispiel-Implementierungen von Angular's integrierten Animations-System. Animation bei State-Änderung, beim Erreichen eines Scrollpoints und <i>Stagger</i>-Animation.",
+        "Tutorial App mit Beispiel-Implementierungen von Angular's integriertem Animations-System.",
       links: [
         { href: 'https://github.com/svenson95/ng-xmp-animations', label: 'GitHub' },
         { href: 'https://svenson95.github.io/ng-xmp-animations', label: 'Live-Preview' }

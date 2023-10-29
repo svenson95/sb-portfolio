@@ -14,7 +14,7 @@ export class WorkSamplesComponent {
       title: 'Survey-App',
       description: 'März 2019 - Dezember 2019',
       content:
-        'Single-Page-Application für Kundenumfragen bezüglich der Nutzung des TK-GesundheitsCoachs (Ziele: Gesundheit, Nichtraucher oder Fitness). Je nachdem welches Ziel der Nutzer verfolgt & wie lange er schon beim Coaching dabei ist werden unterschiedliche Fragen angezeigt.',
+        'SPA gebaut mit Angular und Angular Material, dynamische Umfragen-App',
       images: [
         { src: 'assets/work-examples/vilua-survey/vilua-survey-1.png', alt: 'Image 1' },
         { src: 'assets/work-examples/vilua-survey/vilua-survey-2.png', alt: 'Image 2' },
@@ -25,14 +25,14 @@ export class WorkSamplesComponent {
       title: 'Lernetics',
       description: 'Oktober 2020 - Dezember 2020',
       content:
-        'Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“. Quizze für verschiedene Themen und anschließende Auswertung. Fragen die nicht korrekt beantwortet wurden konnten im Nachhinein nochmal gezielt abgefragt werden.',
+        'Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“',
       images: [{ src: 'assets/work-examples/lernetics/lernetics-1.png', alt: 'Image 1' }]
     },
     {
       title: 'VapeWatchers',
       description: 'Januar 2020 - Juni 2021',
       content:
-        'Control-Panel für Nutzer von E-Zigaretten mit Informationen zu Inhaltsstoffen und Rauchverhalten - Nikotin Konsum pro Tag/Woche, verwendete Cartridges & Nutzungshistorie. Ebenso konnten verbundene Devices (E-Zigaretten) eingesehen werden. Zur Benutzer-Authentifizierung wurde AWS-Amplify genutzt.',
+        'Ionic & React Control-Panel-App für Nutzer von E-Zigaretten mit Informationen zu Inhaltsstoffen und Rauchverhalten - Nikotin Konsum pro Tag/Woche, verwendete Cartridges & Nutzungshistorie. Benutzer-Authentifizierung über AWS-Amplify.',
       images: [
         { src: 'assets/work-examples/smart-vaping/smart-vaping-1.png', alt: 'Image 1' },
         { src: 'assets/work-examples/smart-vaping/smart-vaping-2.png', alt: 'Image 2' },
@@ -50,14 +50,14 @@ export class WorkSamplesComponent {
       title: 'Cost-of-Production',
       description: 'April 2021 - November 2021',
       content:
-        'Neuentwicklung einer Online-Plattform zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports. Entsprechende Anwender (bspw. Bauernhöfe) können hier die bereits bestehenden Funktionen der Datenerfassung, -verarbeitung und -auswertung einsehen.',
+        'Online-Plattform gebaut mit <a target="blank" rel="noopener noreferrer" href="https://themeforest.net/item/vien-angular-admin-template/25817698">Vien-Angular-Admin-Template</a>. zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports.',
       images: [{ src: 'assets/work-examples/cop/cop-1.png', alt: 'Image 1' }]
     },
     {
       title: 'KryptoCrypto',
       description: 'Oktober 2021 - Dezember 2021',
       content:
-        'Weiterentwicklung einer Webanwendung zur Darstellung von Informationen wie Transaktionen, Wertänderungen und zum Einrichten von Benachrichtigungen für Crypto Wallets sowie zur Analyse des CO² Austoßes eines Crypto Wallets.',
+        'Weiterentwicklung zur Darstellung von Informationen wie Transaktionen, Wallet- und Platform-Selector zum filtern der Inhalte.',
       images: [
         { src: 'assets/work-examples/kryptocrypto/kryptocrypto-1.png', alt: 'Image 1' },
         { src: 'assets/work-examples/kryptocrypto/kryptocrypto-2.png', alt: 'Image 2' },
