@@ -62,7 +62,7 @@ export class HobbyProjectsComponent {
         { href: 'https://github.com/tomalaforge/angular-challenges', label: 'GitHub' },
         { href: 'https://angular-challenges.vercel.app/', label: 'Live' },
         { href: 'https://github.com/tomalaforge/angular-challenges/pulls?q=is%3Apr+author%3Asvenson95+', label: 'Meine Pull Requests' },
-        { href: 'https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/', label: 'Challenge Simple Animations (In Arbeit)' },
+        { href: 'https://angular-challenges-prxxkdmv9-tomalaforge.vercel.app/challenges/angular/46-simple-animations/', label: 'Challenge Simple Animations (In Arbeit)' },
       ],
       images: [
         { src: 'assets/hobby-projects/challenge-simple-animations.png', alt: 'Image 1' }
