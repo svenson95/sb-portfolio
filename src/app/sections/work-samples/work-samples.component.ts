@@ -10,7 +10,7 @@ export class WorkSamplesComponent {
       title: 'Survey-App',
       description: 'März 2019 - Dezember 2019',
       content:
-        'SPA gebaut mit Angular und Angular Material, dynamische Umfragen-App',
+        'Single-Page-Application entwickelt mit Angular und Angular Material, Anwendung zum durchführen von Umfragen.',
       images: [
         { src: 'assets/work-examples/vilua-survey/vilua-survey-1.png', alt: 'Image 1' },
         { src: 'assets/work-examples/vilua-survey/vilua-survey-2.png', alt: 'Image 2' },
@@ -28,7 +28,7 @@ export class WorkSamplesComponent {
       title: 'VapeWatchers',
       description: 'Januar 2020 - Juni 2021',
       content:
-        'Ionic & React Control-Panel-App für Nutzer von E-Zigaretten mit Informationen zu Inhaltsstoffen und Rauchverhalten - Nikotin Konsum pro Tag/Woche, verwendete Cartridges & Nutzungshistorie. Benutzer-Authentifizierung über AWS-Amplify.',
+        'Neuentwicklung einer Ionic & React Control-Panel-App, für Nutzer von E-Zigaretten mit Informationen zu Inhaltsstoffen und Rauchverhalten - Nikotin Konsum pro Tag/Woche, verwendete Cartridges & Nutzungshistorie. Benutzer-Authentifizierung über AWS-Amplify.',
       images: [
         { src: 'assets/work-examples/smart-vaping/smart-vaping-1.png', alt: 'Image 1' },
         { src: 'assets/work-examples/smart-vaping/smart-vaping-2.png', alt: 'Image 2' },
@@ -39,7 +39,7 @@ export class WorkSamplesComponent {
       title: 'Pio Office Suite',
       description: 'August 2020 - September 2021',
       content:
-        'Betriebsinterne VoIP App als PWA für Kontaktdaten aller Kunden, Mitarbeiter & Partner. Über die App war es möglich Anrufe über Durchwahlnummern zu initialisieren mithilfe einer zusätzlichen VoIP-App „easybell“. In dieser App konnten zudem Kunden- und Partner-Firmen eingesehen werden (Kontaktdaten des Unternehmens & entsprechende Mitarbeiter-Liste).',
+        'Neuentwicklung einer Progressive-Web-App mit Ionic & Angular, ein Kontaktbuch mit der Möglichkeit, Anrufe über VoIP zu führen. Über die App war es möglich Anrufe über Durchwahlnummern zu initialisieren mithilfe einer zusätzlichen VoIP-App „easybell“. In dieser App konnten zudem Kunden- und Partner-Firmen eingesehen werden (Kontaktdaten des Unternehmens & entsprechende Mitarbeiter-Liste).',
       images: [{ src: 'assets/work-examples/pos/pos-1.png', alt: 'Image 1' }]
     },
     {
@@ -53,7 +53,7 @@ export class WorkSamplesComponent {
       title: 'KryptoCrypto',
       description: 'Oktober 2021 - Dezember 2021',
       content:
-        'Weiterentwicklung zur Darstellung von Informationen wie Transaktionen, Wallet- und Platform-Selector zum filtern der Inhalte.',
+        'Weiterentwicklung einer Single-Page-Application mit Angular.',
       images: [
         { src: 'assets/work-examples/kryptocrypto/kryptocrypto-1.png', alt: 'Image 1' },
         { src: 'assets/work-examples/kryptocrypto/kryptocrypto-2.png', alt: 'Image 2' },
