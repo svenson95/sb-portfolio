@@ -48,7 +48,7 @@ export class HobbyProjectsComponent {
     {
       title: 'Angular documentation extension',
       description: 'July 2022',
-      content: 'Eigene Dokumentation für Angular.',
+      content: 'Eigene Dokumentation für Angular. (In Arbeit)',
       links: [
         { href: 'https://github.com/svenson95/ng-neer-app', label: 'GitHub' },
         { href: 'http://ng-neer.io/', label: 'Live' }
