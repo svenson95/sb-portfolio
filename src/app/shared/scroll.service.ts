@@ -1,22 +1,24 @@
 import { DOCUMENT, Location } from '@angular/common';
-import { Inject, Injectable, NgZone } from '@angular/core';
+import { Inject, Injectable, NgZone, inject } from '@angular/core';
 import { fromEvent, debounceTime } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
-  private scrollEvent$ = fromEvent(window, 'scroll').pipe(debounceTime(20));
+  private readonly scrollEvent$ = fromEvent(window, 'scroll').pipe(debounceTime(20));
 
-  constructor(private ngZone: NgZone, @Inject(DOCUMENT) private document: Document, private location: Location) {}
+  private readonly ngZone = inject(NgZone);
+  private readonly location = inject(Location);
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
 
   public initialize(): void {
-    // Inside runOutsideAngular callback, events which are usually triggering CD will not do it anymore - scroll event in this case
+    // Inside runOutsideAngular, events which are usually triggering CD will not do it anymore
     this.ngZone.runOutsideAngular(() => {
-      this.scrollEvent$.subscribe((event: Event) => {
-        // reenter the Angular zone
+      this.scrollEvent$.subscribe((_: Event) => {
+        // reenter the Angular zone after event subscribed
         this.ngZone.run(() => {
-          // prevent set visible section when app starts
           this.setVisibleSection();
         });
       });
@@ -25,7 +27,7 @@ export class ScrollService {
 
   private setVisibleSection(): void {
     const sections = this.document.querySelectorAll('section');
-
+    
     Array.from(sections).some((section) => {
       if (this.isInViewport(section)) {
         this.location.replaceState('#' + section.id);
