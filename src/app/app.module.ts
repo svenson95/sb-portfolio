@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -21,8 +21,11 @@ import { windowProvider, WindowToken } from './shared/window';
 import { AppRoutingModule } from './app-routing.module';
 import { LinkComponent } from "./components/link/link.component";
 import { InNewTabDirective } from "./components/link/in-new-tab.directive";
+import { BypassUrlPipe } from './pipes/bypass-url.pipe';
 
-const DIRECTIVES = [InNewTabDirective]
+const DIRECTIVES = [InNewTabDirective];
+const PIPES = [BypassUrlPipe];
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,7 @@ const DIRECTIVES = [InNewTabDirective]
     WorkSamplesComponent,
     HobbyProjectsComponent,
     CvComponent,
-    ...DIRECTIVES
+    ...DIRECTIVES,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ const DIRECTIVES = [InNewTabDirective]
     MatExpansionModule,
     MatMenuModule,
     MatIconModule,
+    ...PIPES
   ],
   providers: [STORAGE_PROVIDERS, { provide: WindowToken, useFactory: windowProvider }],
   bootstrap: [AppComponent]

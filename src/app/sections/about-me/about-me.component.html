@@ -1,75 +1,29 @@
-<div id="socials" class="flex gap-5">
-  <a
-    *ngFor="let link of socials"
-    mat-button
-    target="_blank"
-    rel="noopener noreferrer"
-    [href]="link.href">
-    <span class="wrapper">
-      <i class="text-2xl" [ngClass]="link.iconSelector"></i>
-      <span>{{ link.title }}</span>
-    </span>
-  </a>
-</div>
-<div class="card flex-col md:flex-row gap-5 md:gap-10">
+<section id="socials" class="flex gap-5">
+  @for (link of socials; track link.title) {
+    <a
+      mat-button
+      target="_blank"
+      rel="noopener noreferrer"
+      [href]="link.href"
+    >
+      <span class="flex flex-col items-center py-2">
+        <i class="text-2xl" [ngClass]="link.iconSelector"></i>
+        <span>{{ link.title }}</span>
+      </span>
+    </a>
+  }
+</section>
+<section class="card flex-col md:flex-row gap-5 md:gap-10">
   <div class="flex-1">
     <sb-card-header title="Über mich" icon="fa-circle-user"></sb-card-header>
 
     <div class="flex flex-col gap-3 px-5">
-      <section>
-        <h4 class="subtitle">2008</h4>
-        <p>
-          In der Oberschule hatten wir einen Computer-Kurs, wo wir mit <sb-link url="https://scratch.mit.edu/" inNewTab>Scratch</sb-link>
-          gearbeitet haben, so bin ich das erste mal mit dem Thema Programmierung in Berührung gekommen.
-        </p>
-      </section>
-
-      <section>
-        <h4 class="subtitle">2009</h4>
-        <p>
-          Mit <sb-link url="https://developer.valvesoftware.com/wiki/SDK_Docs" inNewTab>Source SDK</sb-link> "Maps" für ein Computer Spiel entwickelt.
-        </p>
-      </section>
-
-      <section>
-        <h4 class="subtitle">2010</h4>
-        <p>
-          Das erste mal mit Webentwicklung und insbesondere mit WordPress beschäftigt, eine kleine Website gebaut und
-          einige Funktionen ausprobiert, Plugins installiert, am Styling Kleinigkeiten geändert.
-        </p>
-      </section>
-
-      <section>
-        <h4 class="subtitle">2016</h4>
-        <p>
-          Die erste kleine WordPress Page über Strato gehostet, für einen kleinen Handwerks Betrieb,
-          mit etwas Text, Kontaktdaten, Referenzen in Form von Fotos und Beschreibungen.
-        </p>
-      </section>
-
-      <section>
-        <h4 class="subtitle">2018</h4>
-        <p>
-        <span>
-          Den Entschluss getroffen, Programmieren zu lernen, angefangen mit einem Kurs auf Udemy über das Thema 
-          iOS Entwicklung mit <sb-link url="https://www.apple.com/de/swift/" inNewTab>Swift</sb-link>.
-        </span>
-        </p>
-      </section>
-
-      <section>
-        <h4 class="subtitle">2019</h4>
-        <p>
-          Vollzeit-Praktikum in einer Agentur für Web- & App-Entwicklung begonnen - vorbereitend zur Ausbildung zum Fachinformatiker für Anwendungsentwicklung.
-        </p>
-      </section>
-
-      <section>
-        <h4 class="subtitle">2022</h4>
-        <p>
-          Mein Start als Junior Frontend-Entwickler.
-        </p>
-      </section>
+      @for (section of aboutSections; track section.key) {
+        <div>
+          <h4 class="subtitle">{{ section.key }}</h4>
+          <div [innerHTML]="section.value | bypassUrl: 'html'"></div>
+        </div>
+      }
     </div>
   </div>
 
@@ -77,10 +31,12 @@
     <sb-card-header title="Daten" icon="fa-address-card"></sb-card-header>
 
     <div class="flex flex-col gap-3" @staggerAnimation>
-      <div class="flex flex-col lg:flex-row border-b pb-2 px-5" *ngFor="let item of data">
-        <div class="key flex-1">{{ item.key }}:</div>
-        <div class="value flex-1" [innerHTML]="item.value"></div>
-      </div>
+      @for(section of dataSections; track section.key) {
+        <div class="flex flex-col lg:flex-row border-b pb-2 px-5">
+          <div class="key flex-1">{{ section.key }}:</div>
+          <div class="value flex-1" [innerHTML]="section.value"></div>
+        </div>
+      }
     </div>
   </div>
-</div>
+</section>
