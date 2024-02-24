@@ -39,7 +39,7 @@ export class WorkSamplesComponent {
       title: 'Pio Office Suite',
       description: 'August 2020 - September 2021',
       content:
-        'Neuentwicklung einer Progressive-Web-App mit Ionic & Angular, ein Kontaktbuch mit der Möglichkeit, Anrufe über VoIP zu führen. Über die App war es möglich Anrufe über Durchwahlnummern zu initialisieren mithilfe einer zusätzlichen VoIP-App „easybell“. In dieser App konnten zudem Kunden- und Partner-Firmen eingesehen werden (Kontaktdaten des Unternehmens & entsprechende Mitarbeiter-Liste).',
+        'Neuentwicklung einer Progressive-Web-App mit Ionic & Angular, ein Kontaktbuch mit der Möglichkeit, Anrufe über Durchwahlnummern zu initialisieren mithilfe einer zusätzlichen VoIP-App „easybell“.',
       images: [{ src: 'assets/work-examples/pos/pos-1.png', alt: 'Image 1' }]
     },
     {
@@ -48,18 +48,6 @@ export class WorkSamplesComponent {
       content:
         'Online-Plattform gebaut mit <a target="blank" rel="noopener noreferrer" href="https://themeforest.net/item/vien-angular-admin-template/25817698">Vien-Angular-Admin-Template</a>. zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports.',
       images: [{ src: 'assets/work-examples/cop/cop-1.png', alt: 'Image 1' }]
-    },
-    {
-      title: 'KryptoCrypto',
-      description: 'Oktober 2021 - Dezember 2021',
-      content:
-        'Weiterentwicklung einer Single-Page-Application mit Angular.',
-      images: [
-        { src: 'assets/work-examples/kryptocrypto/kryptocrypto-1.png', alt: 'Image 1' },
-        { src: 'assets/work-examples/kryptocrypto/kryptocrypto-2.png', alt: 'Image 2' },
-        { src: 'assets/work-examples/kryptocrypto/kryptocrypto-3.png', alt: 'Image 3' },
-        { src: 'assets/work-examples/kryptocrypto/kryptocrypto-4.png', alt: 'Image 4' }
-      ]
-    },
+    }
   ];
 }

@@ -2,21 +2,27 @@
   <sb-card-header title="Arbeits-Proben" icon="fa-code"></sb-card-header>
 
   <mat-accordion>
-    <ng-container *ngFor="let project of projects; last as isLast">
+    @for(project of projects; track project.title; let isLast = $last) {
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
           <mat-panel-description> {{ project.description }} </mat-panel-description>
         </mat-expansion-panel-header>
         <p [innerHTML]="project.content"></p>
-        <div *ngIf="project.images" class="gallery">
-          <a *ngFor="let image of project.images" [href]="image.src" target="_blank" rel="noopener noreferrer">
-            <img [src]="image.src" [alt]="image.alt" />
-          </a>
-        </div>
+        @if (project.images) {
+          <div class="gallery">
+            @for (image of project.images; track image.src) {
+              <a [href]="image.src" target="_blank" rel="noopener noreferrer">
+                <img [src]="image.src" [alt]="image.alt" />
+              </a>
+            }
+          </div>
+        }
       </mat-expansion-panel>
 
-      <hr *ngIf="!isLast" />
-    </ng-container>
+      @if (!isLast) {
+        <hr />
+      }
+    }
   </mat-accordion>
 </div>
