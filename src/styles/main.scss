@@ -3,10 +3,9 @@
 @use './1-layouts' as layouts;
 @use './2-modules' as modules;
 @use './3-components' as components;
-
 @use '@angular/material' as mat;
 
-$my-custom-typography: mat.define-legacy-typography-config(
+$my-custom-typography: mat.define-typography-config(
   $font-family: var(--font-primary)
 );
 
@@ -20,8 +19,8 @@ $my-custom-typography: mat.define-legacy-typography-config(
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
 //    `@include mat.legacy-typography-hierarchy($my-custom-typography);`
-@include mat.all-legacy-component-typographies($my-custom-typography);
-@include mat.legacy-core();
+@include mat.all-component-typographies($my-custom-typography);
+@include mat.core();
 
 @tailwind base;
 @tailwind components;

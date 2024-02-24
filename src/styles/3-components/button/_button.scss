@@ -1,12 +1,5 @@
 @use '../../constants';
 
-.mat-button:hover:not(.mat-button-disabled) span.mat-button-focus-overlay,
-.mat-stroked-button:hover:not(.mat-button-disabled)
-  span.mat-button-focus-overlay {
-  opacity: 0.1;
-}
-
-body .mat-raised-button:not([class*='mat-elevation-z']) {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  transition: none;
+.mat-mdc-button.mdc-button .mat-mdc-button-persistent-ripple::before {
+  background-color: transparent;
 }

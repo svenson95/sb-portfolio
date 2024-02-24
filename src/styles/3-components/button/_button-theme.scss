@@ -5,7 +5,7 @@
 @mixin theme($theme) {
   $is-dark-theme: map.get($theme, is-dark);
 
-  span.mat-button-focus-overlay {
+  span.mat-mdc-button-focus-overlay {
     background: transparent;
   }
 }

@@ -1,0 +1,771 @@
+{
+  "version": "6.0",
+  "nxVersion": "17.2.8",
+  "deps": {
+    "@angular/animations": "^17.2.2",
+    "@angular/cdk": "^17.2.1",
+    "@angular/common": "^17.2.2",
+    "@angular/compiler": "^17.2.2",
+    "@angular/core": "^17.2.2",
+    "@angular/forms": "^17.2.2",
+    "@angular/material": "^17.2.1",
+    "@angular/platform-browser": "^17.2.2",
+    "@angular/platform-browser-dynamic": "^17.2.2",
+    "@angular/router": "^17.2.2",
+    "rxjs": "^7.8.1",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.4",
+    "@angular-devkit/build-angular": "^17.2.1",
+    "@angular-eslint/builder": "^17.2.1",
+    "@angular-eslint/eslint-plugin": "^17.2.1",
+    "@angular-eslint/eslint-plugin-template": "^17.2.1",
+    "@angular-eslint/schematics": "^17.2.1",
+    "@angular-eslint/template-parser": "^17.2.1",
+    "@angular/cli": "^17.2.1",
+    "@angular/compiler-cli": "^17.2.2",
+    "@types/jasmine": "~3.10.0",
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "autoprefixer": "^10.4.4",
+    "eslint": "^8.17.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^3.2.4",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "jasmine-core": "~4.0.0",
+    "karma": "~6.3.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.1.0",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "~1.7.0",
+    "postcss": "^8.4.12",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^5.3.3"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "6686520031028425313"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "11240409709136649732"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "13044518069027839699"
+      },
+      {
+        "file": ".prettierrc.json",
+        "hash": "4247408672021872258"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "5331566439708925252"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "4815948323043747099"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "5336636969995539451"
+      },
+      {
+        "file": "README.md",
+        "hash": "15358956897610402542"
+      },
+      {
+        "file": "angular.json",
+        "hash": "16234417111827956992"
+      },
+      {
+        "file": "docs/3rdpartylicenses.txt",
+        "hash": "641436306914760304"
+      },
+      {
+        "file": "docs/assets/hobby-projects/challenge-simple-animations.png",
+        "hash": "3634941791197599626"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-1.png",
+        "hash": "1127298039532468202"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-2.png",
+        "hash": "11492181210509227811"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-3.png",
+        "hash": "14804792697490455265"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-4.png",
+        "hash": "17911790872046535069"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-5.png",
+        "hash": "16921287389686949521"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-6.png",
+        "hash": "6933875933098157498"
+      },
+      {
+        "file": "docs/assets/hobby-projects/fachentwickler-7.png",
+        "hash": "17260869440898232444"
+      },
+      {
+        "file": "docs/assets/skillset/angular.png",
+        "hash": "13547896191040942006"
+      },
+      {
+        "file": "docs/assets/skillset/css.png",
+        "hash": "4606755889302667041"
+      },
+      {
+        "file": "docs/assets/skillset/html.png",
+        "hash": "12738294081766246367"
+      },
+      {
+        "file": "docs/assets/skillset/ionic.png",
+        "hash": "13462224213387674983"
+      },
+      {
+        "file": "docs/assets/skillset/java.png",
+        "hash": "11082248011511975198"
+      },
+      {
+        "file": "docs/assets/skillset/javascript.png",
+        "hash": "15172528038457314949"
+      },
+      {
+        "file": "docs/assets/skillset/mongodb.png",
+        "hash": "8522502084467382909"
+      },
+      {
+        "file": "docs/assets/skillset/mysql.png",
+        "hash": "16702801017733361920"
+      },
+      {
+        "file": "docs/assets/skillset/nodejs-dark.png",
+        "hash": "15626356653451498289"
+      },
+      {
+        "file": "docs/assets/skillset/nodejs-light.png",
+        "hash": "227207050485260785"
+      },
+      {
+        "file": "docs/assets/skillset/react.png",
+        "hash": "16178150852691125582"
+      },
+      {
+        "file": "docs/assets/skillset/swift.png",
+        "hash": "6851587422377511431"
+      },
+      {
+        "file": "docs/assets/skillset/typescript.png",
+        "hash": "11792913171788095955"
+      },
+      {
+        "file": "docs/assets/work-examples/cop/cop-1.png",
+        "hash": "667184284059415196"
+      },
+      {
+        "file": "docs/assets/work-examples/kryptocrypto/kryptocrypto-1.png",
+        "hash": "9875967127410176731"
+      },
+      {
+        "file": "docs/assets/work-examples/kryptocrypto/kryptocrypto-2.png",
+        "hash": "6280392354530510297"
+      },
+      {
+        "file": "docs/assets/work-examples/kryptocrypto/kryptocrypto-3.png",
+        "hash": "3484737331126125005"
+      },
+      {
+        "file": "docs/assets/work-examples/kryptocrypto/kryptocrypto-4.png",
+        "hash": "8555103823006082937"
+      },
+      {
+        "file": "docs/assets/work-examples/lernetics/lernetics-1.png",
+        "hash": "8720533510877060712"
+      },
+      {
+        "file": "docs/assets/work-examples/pos/pos-1.png",
+        "hash": "11422125069180890971"
+      },
+      {
+        "file": "docs/assets/work-examples/smart-vaping/smart-vaping-1.png",
+        "hash": "2962275022636965999"
+      },
+      {
+        "file": "docs/assets/work-examples/smart-vaping/smart-vaping-2.png",
+        "hash": "8013594375847501432"
+      },
+      {
+        "file": "docs/assets/work-examples/smart-vaping/smart-vaping-3.png",
+        "hash": "16200852336329764496"
+      },
+      {
+        "file": "docs/assets/work-examples/vilua-survey/vilua-survey-1.png",
+        "hash": "5608452292223093291"
+      },
+      {
+        "file": "docs/assets/work-examples/vilua-survey/vilua-survey-2.png",
+        "hash": "10282891715518043610"
+      },
+      {
+        "file": "docs/assets/work-examples/vilua-survey/vilua-survey-3.png",
+        "hash": "15079417232737132474"
+      },
+      {
+        "file": "docs/dark-theme.css",
+        "hash": "6978514606021563613"
+      },
+      {
+        "file": "docs/favicon.ico",
+        "hash": "3464744996580215640"
+      },
+      {
+        "file": "docs/index.html",
+        "hash": "14312699838620996077"
+      },
+      {
+        "file": "docs/light-theme.css",
+        "hash": "1782518623385288511"
+      },
+      {
+        "file": "docs/main.b93e4282dc8a6550.js",
+        "hash": "16635253266332072656"
+      },
+      {
+        "file": "docs/polyfills.8b16668571c77bce.js",
+        "hash": "10613978234090061027"
+      },
+      {
+        "file": "docs/runtime.578e670291a8fd3e.js",
+        "hash": "2377365342995788565"
+      },
+      {
+        "file": "docs/styles.083e6196dc8c87f4.css",
+        "hash": "2529261409783261491"
+      },
+      {
+        "file": "karma.conf.js",
+        "hash": "4657861205345391379"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "503976282346098739"
+      },
+      {
+        "file": "package.json",
+        "hash": "6844546439313756223"
+      },
+      {
+        "file": "src/app/app-routing.module.ts",
+        "hash": "11359549738115315895"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "2557489800182131129"
+      },
+      {
+        "file": "src/app/app.component.spec.ts",
+        "hash": "7991079567699782455"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "6059670341241239706"
+      },
+      {
+        "file": "src/app/app.module.ts",
+        "hash": "7431397554112961170"
+      },
+      {
+        "file": "src/app/components/card-header/card-header.component.html",
+        "hash": "12592071265235564878"
+      },
+      {
+        "file": "src/app/components/card-header/card-header.component.spec.ts",
+        "hash": "4879548555281092637"
+      },
+      {
+        "file": "src/app/components/card-header/card-header.component.ts",
+        "hash": "64630377861770063"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.html",
+        "hash": "14176977270191352869"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.spec.ts",
+        "hash": "12053911739832376394"
+      },
+      {
+        "file": "src/app/components/footer/footer.component.ts",
+        "hash": "16641356347578154530"
+      },
+      {
+        "file": "src/app/components/header/header.component.html",
+        "hash": "7504653774574952152"
+      },
+      {
+        "file": "src/app/components/header/header.component.spec.ts",
+        "hash": "10479655879811431224"
+      },
+      {
+        "file": "src/app/components/header/header.component.ts",
+        "hash": "15672794476392906998"
+      },
+      {
+        "file": "src/app/components/link/in-new-tab.directive.ts",
+        "hash": "11188946752272016178"
+      },
+      {
+        "file": "src/app/components/link/link.component.html",
+        "hash": "12530042843682235196"
+      },
+      {
+        "file": "src/app/components/link/link.component.ts",
+        "hash": "13962467825072424760"
+      },
+      {
+        "file": "src/app/components/theme-toggle/theme-toggle.component.html",
+        "hash": "18156114937758309920"
+      },
+      {
+        "file": "src/app/components/theme-toggle/theme-toggle.component.ts",
+        "hash": "15317364003156853952"
+      },
+      {
+        "file": "src/app/constants/menu.ts",
+        "hash": "5800486463265327882"
+      },
+      {
+        "file": "src/app/constants/socials.ts",
+        "hash": "16271966286502300534"
+      },
+      {
+        "file": "src/app/models/html-target.ts",
+        "hash": "8177957040741224493"
+      },
+      {
+        "file": "src/app/models/social-media-link.ts",
+        "hash": "13636506566524119250"
+      },
+      {
+        "file": "src/app/sections/about-me/about-me.animation.ts",
+        "hash": "943268710278122350"
+      },
+      {
+        "file": "src/app/sections/about-me/about-me.component.html",
+        "hash": "4504126299105606057"
+      },
+      {
+        "file": "src/app/sections/about-me/about-me.component.spec.ts",
+        "hash": "2688664371693149921"
+      },
+      {
+        "file": "src/app/sections/about-me/about-me.component.ts",
+        "hash": "7476418098965440492"
+      },
+      {
+        "file": "src/app/sections/cv/cv.component.html",
+        "hash": "9120044513221495943"
+      },
+      {
+        "file": "src/app/sections/cv/cv.component.spec.ts",
+        "hash": "10639345269305584455"
+      },
+      {
+        "file": "src/app/sections/cv/cv.component.ts",
+        "hash": "5197081899707565970"
+      },
+      {
+        "file": "src/app/sections/hobby-projects/hobby-projects.component.html",
+        "hash": "12429081626744381506"
+      },
+      {
+        "file": "src/app/sections/hobby-projects/hobby-projects.component.spec.ts",
+        "hash": "454896342206161628"
+      },
+      {
+        "file": "src/app/sections/hobby-projects/hobby-projects.component.ts",
+        "hash": "1420375182957417699"
+      },
+      {
+        "file": "src/app/sections/skills/skills.component.html",
+        "hash": "2428947540222974232"
+      },
+      {
+        "file": "src/app/sections/skills/skills.component.spec.ts",
+        "hash": "9902424829039306679"
+      },
+      {
+        "file": "src/app/sections/skills/skills.component.ts",
+        "hash": "275891090633387999"
+      },
+      {
+        "file": "src/app/sections/work-samples/work-samples.component.html",
+        "hash": "1226695391710123967"
+      },
+      {
+        "file": "src/app/sections/work-samples/work-samples.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/sections/work-samples/work-samples.component.spec.ts",
+        "hash": "16646711937849264195"
+      },
+      {
+        "file": "src/app/sections/work-samples/work-samples.component.ts",
+        "hash": "17919538479284649365"
+      },
+      {
+        "file": "src/app/shared/scroll.service.ts",
+        "hash": "14487655276352986334"
+      },
+      {
+        "file": "src/app/shared/storage.service.ts",
+        "hash": "13309364051402542116"
+      },
+      {
+        "file": "src/app/shared/theme.service.ts",
+        "hash": "2514438365563131107"
+      },
+      {
+        "file": "src/app/shared/window.ts",
+        "hash": "10085867174170290908"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/assets/hobby-projects/challenge-simple-animations.png",
+        "hash": "3634941791197599626"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-1.png",
+        "hash": "1127298039532468202"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-2.png",
+        "hash": "11492181210509227811"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-3.png",
+        "hash": "14804792697490455265"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-4.png",
+        "hash": "17911790872046535069"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-5.png",
+        "hash": "16921287389686949521"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-6.png",
+        "hash": "6933875933098157498"
+      },
+      {
+        "file": "src/assets/hobby-projects/fachentwickler-7.png",
+        "hash": "17260869440898232444"
+      },
+      {
+        "file": "src/assets/skillset/angular.png",
+        "hash": "13547896191040942006"
+      },
+      {
+        "file": "src/assets/skillset/css.png",
+        "hash": "4606755889302667041"
+      },
+      {
+        "file": "src/assets/skillset/html.png",
+        "hash": "12738294081766246367"
+      },
+      {
+        "file": "src/assets/skillset/ionic.png",
+        "hash": "13462224213387674983"
+      },
+      {
+        "file": "src/assets/skillset/java.png",
+        "hash": "11082248011511975198"
+      },
+      {
+        "file": "src/assets/skillset/javascript.png",
+        "hash": "15172528038457314949"
+      },
+      {
+        "file": "src/assets/skillset/mongodb.png",
+        "hash": "8522502084467382909"
+      },
+      {
+        "file": "src/assets/skillset/mysql.png",
+        "hash": "16702801017733361920"
+      },
+      {
+        "file": "src/assets/skillset/nodejs-dark.png",
+        "hash": "15626356653451498289"
+      },
+      {
+        "file": "src/assets/skillset/nodejs-light.png",
+        "hash": "227207050485260785"
+      },
+      {
+        "file": "src/assets/skillset/react.png",
+        "hash": "16178150852691125582"
+      },
+      {
+        "file": "src/assets/skillset/swift.png",
+        "hash": "6851587422377511431"
+      },
+      {
+        "file": "src/assets/skillset/typescript.png",
+        "hash": "11792913171788095955"
+      },
+      {
+        "file": "src/assets/work-examples/cop/cop-1.png",
+        "hash": "667184284059415196"
+      },
+      {
+        "file": "src/assets/work-examples/lernetics/lernetics-1.png",
+        "hash": "8720533510877060712"
+      },
+      {
+        "file": "src/assets/work-examples/pos/pos-1.png",
+        "hash": "11422125069180890971"
+      },
+      {
+        "file": "src/assets/work-examples/smart-vaping/smart-vaping-1.png",
+        "hash": "2962275022636965999"
+      },
+      {
+        "file": "src/assets/work-examples/smart-vaping/smart-vaping-2.png",
+        "hash": "8013594375847501432"
+      },
+      {
+        "file": "src/assets/work-examples/smart-vaping/smart-vaping-3.png",
+        "hash": "16200852336329764496"
+      },
+      {
+        "file": "src/assets/work-examples/vilua-survey/vilua-survey-1.png",
+        "hash": "5608452292223093291"
+      },
+      {
+        "file": "src/assets/work-examples/vilua-survey/vilua-survey-2.png",
+        "hash": "10282891715518043610"
+      },
+      {
+        "file": "src/assets/work-examples/vilua-survey/vilua-survey-3.png",
+        "hash": "15079417232737132474"
+      },
+      {
+        "file": "src/environments/environment.prod.ts",
+        "hash": "5406836414239361753"
+      },
+      {
+        "file": "src/environments/environment.ts",
+        "hash": "17458466784506237106"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3464744996580215640"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "16906389399240666837"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "14896519517424602606"
+      },
+      {
+        "file": "src/polyfills.ts",
+        "hash": "13952578668946952738"
+      },
+      {
+        "file": "src/styles/0-base/_index.scss",
+        "hash": "13337450674539543677"
+      },
+      {
+        "file": "src/styles/0-base/_typography-theme.scss",
+        "hash": "14251506353104452300"
+      },
+      {
+        "file": "src/styles/0-base/_typography.scss",
+        "hash": "6378002827044036650"
+      },
+      {
+        "file": "src/styles/1-layouts/_index.scss",
+        "hash": "4884451932032202492"
+      },
+      {
+        "file": "src/styles/1-layouts/_theme.scss",
+        "hash": "14544831539986658634"
+      },
+      {
+        "file": "src/styles/1-layouts/content-layout/_content-layout-theme.scss",
+        "hash": "17721281968947047613"
+      },
+      {
+        "file": "src/styles/1-layouts/content-layout/_content-layout.scss",
+        "hash": "8680654979591278160"
+      },
+      {
+        "file": "src/styles/1-layouts/footer/_footer-theme.scss",
+        "hash": "6301080452315254114"
+      },
+      {
+        "file": "src/styles/1-layouts/footer/_footer.scss",
+        "hash": "14679914684032936699"
+      },
+      {
+        "file": "src/styles/1-layouts/header/_header-theme.scss",
+        "hash": "4102701139688713647"
+      },
+      {
+        "file": "src/styles/1-layouts/header/_header.scss",
+        "hash": "6952100990985329780"
+      },
+      {
+        "file": "src/styles/1-layouts/layout-global/_layout-global-theme.scss",
+        "hash": "7469512472167761824"
+      },
+      {
+        "file": "src/styles/1-layouts/layout-global/_layout-global.scss",
+        "hash": "7310383612525190617"
+      },
+      {
+        "file": "src/styles/2-modules/_index.scss",
+        "hash": "17098214948674186441"
+      },
+      {
+        "file": "src/styles/2-modules/_theme.scss",
+        "hash": "10624757090682933067"
+      },
+      {
+        "file": "src/styles/2-modules/about-me/_about-me-theme.scss",
+        "hash": "13723134777819368233"
+      },
+      {
+        "file": "src/styles/2-modules/about-me/_about-me.scss",
+        "hash": "7854066910968159553"
+      },
+      {
+        "file": "src/styles/2-modules/cv/_cv-theme.scss",
+        "hash": "5769813940090253791"
+      },
+      {
+        "file": "src/styles/2-modules/cv/_cv.scss",
+        "hash": "11010673448927822305"
+      },
+      {
+        "file": "src/styles/2-modules/skills/_skills-theme.scss",
+        "hash": "12706690886117874513"
+      },
+      {
+        "file": "src/styles/2-modules/skills/_skills.scss",
+        "hash": "3994482106490217413"
+      },
+      {
+        "file": "src/styles/3-components/_index.scss",
+        "hash": "10704381001696413683"
+      },
+      {
+        "file": "src/styles/3-components/_theme.scss",
+        "hash": "4475169042146540151"
+      },
+      {
+        "file": "src/styles/3-components/button/_button-theme.scss",
+        "hash": "10645228257323353176"
+      },
+      {
+        "file": "src/styles/3-components/button/_button.scss",
+        "hash": "374339973742258793"
+      },
+      {
+        "file": "src/styles/3-components/card-header/_card-header-theme.scss",
+        "hash": "2540520080676332515"
+      },
+      {
+        "file": "src/styles/3-components/card-header/_card-header.scss",
+        "hash": "5478156709257782967"
+      },
+      {
+        "file": "src/styles/3-components/expansion-panel/_expansion-panel-theme.scss",
+        "hash": "3642549486331185007"
+      },
+      {
+        "file": "src/styles/3-components/expansion-panel/_expansion-panel.scss",
+        "hash": "8810818337039673982"
+      },
+      {
+        "file": "src/styles/3-components/image-gallery/_image-gallery.scss",
+        "hash": "10827608506257891269"
+      },
+      {
+        "file": "src/styles/3-components/link/_link-theme.scss",
+        "hash": "10594990933379823124"
+      },
+      {
+        "file": "src/styles/3-components/link/_link.scss",
+        "hash": "1453095897915396453"
+      },
+      {
+        "file": "src/styles/_app-theme.scss",
+        "hash": "12409344436660022306"
+      },
+      {
+        "file": "src/styles/_constants.scss",
+        "hash": "14684128242913301827"
+      },
+      {
+        "file": "src/styles/_mixins.scss",
+        "hash": "203201199895813676"
+      },
+      {
+        "file": "src/styles/custom-themes/dark-theme.scss",
+        "hash": "15570200660999965454"
+      },
+      {
+        "file": "src/styles/custom-themes/light-theme.scss",
+        "hash": "7080498866000764826"
+      },
+      {
+        "file": "src/styles/main.scss",
+        "hash": "14316591743254568999"
+      },
+      {
+        "file": "src/test.ts",
+        "hash": "9089317366485350742"
+      },
+      {
+        "file": "tailwind.config.js",
+        "hash": "15837075864296032885"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "9041030522571917449"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "2850247428870254560"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "17198424518534092990"
+      }
+    ]
+  }
+}

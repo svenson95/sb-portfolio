@@ -4,11 +4,12 @@
 $sb-portfolio-primary: mat.define-palette(mat.$blue-palette, 700, 600, 800);
 $sb-portfolio-accent: mat.define-palette(mat.$orange-palette, A400);
 $sb-portfolio-warn: mat.define-palette(mat.$red-palette);
-$sb-portfolio-theme: mat.define-light-theme(
-  $sb-portfolio-primary,
-  $sb-portfolio-accent,
-  $sb-portfolio-warn
-);
+$sb-portfolio-theme: mat.define-light-theme((
+  color: (
+    primary: $sb-portfolio-primary,
+    accent: $sb-portfolio-accent,
+    warn: $sb-portfolio-warn  
+  ),
+));
 
-@include mat.all-legacy-component-themes($sb-portfolio-theme);
 @include app-theme.theme($sb-portfolio-theme);

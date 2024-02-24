@@ -18,7 +18,7 @@
     <sb-card-header title="Über mich" icon="fa-circle-user"></sb-card-header>
 
     <div class="flex flex-col gap-3 px-5">
-      @for (section of aboutSections; track section.key) {
+      @for (section of about; track section.key) {
         <div>
           <h4 class="subtitle">{{ section.key }}</h4>
           <div [innerHTML]="section.value | bypassUrl: 'html'"></div>
@@ -31,7 +31,7 @@
     <sb-card-header title="Daten" icon="fa-address-card"></sb-card-header>
 
     <div class="flex flex-col gap-3" @staggerAnimation>
-      @for(section of dataSections; track section.key) {
+      @for(section of data; track section.key) {
         <div class="flex flex-col lg:flex-row border-b pb-2 px-5">
           <div class="key flex-1">{{ section.key }}:</div>
           <div class="value flex-1" [innerHTML]="section.value"></div>

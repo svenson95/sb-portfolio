@@ -3,13 +3,10 @@
 
 @mixin theme($theme) {
   $is-dark-theme: map.get($theme, is-dark);
+  $default-font-color: if($is-dark-theme, constants.$lightboxgray, constants.$darkgray);
 
   body {
-    color: if($is-dark-theme, constants.$lightboxgray, constants.$darkgray);
-  }
-
-  h2 {
-    color: if($is-dark-theme, constants.$white, constants.$black);
+    color: $default-font-color;
   }
 
   p,
@@ -18,6 +15,16 @@
   li,
   input,
   a {
-    color: if($is-dark-theme, constants.$lightboxgray, constants.$darkgray);
+    color: $default-font-color;
+  }
+
+  h2 {
+    color: if($is-dark-theme, constants.$white, constants.$black);
+  }
+
+  .mdc-button.mat-mdc-button[disabled], 
+  .mdc-button.mat-mdc-button.mat-mdc-button-disabled, 
+  .mdc-button.mat-mdc-button:not(:disabled) {
+    color: $default-font-color;
   }
 }

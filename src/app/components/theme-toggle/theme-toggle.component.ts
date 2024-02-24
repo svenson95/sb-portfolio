@@ -1,21 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
-import { Theme, ThemeService } from 'src/app/shared/theme.service';
+import { ThemeService } from '../../shared/theme.service';
 
 @Component({
   selector: 'sb-theme-toggle',
   templateUrl: './theme-toggle.component.html'
 })
 export class ThemeToggleComponent {
-  public get toggleLabel(): string {
-    return `Zum ${this.theme.isDark ? Theme.LIGHT : Theme.DARK} mode wechseln`;
-  }
-
-  public get themeIcon(): string {
-    return `${this.theme.isDark ? Theme.LIGHT : Theme.DARK}_mode`;
-  }
-
-  public Theme = Theme;
-
-  constructor(public theme: ThemeService) {}
+  public readonly theme = inject(ThemeService);
+  public readonly themeToggleLabel = computed(() => `Zum ${this.theme.themeString()} mode wechseln`);
+  public readonly iconString = computed(() => (this.theme.themeString()) + "_mode");
 }

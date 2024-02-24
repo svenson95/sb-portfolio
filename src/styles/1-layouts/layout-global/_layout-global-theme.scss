@@ -16,15 +16,8 @@
     );
   }
 
-  .mat-flat-button,
-  .mat-raised-button,
-  .mat-fab,
-  .mat-mini-fab {
-    background-color: if($is-dark-theme, constants.$black, constants.$white);
-  }
-
-  .mat-button {
-    &.mat-button-disabled:after {
+  .mat-mdc-button {
+    &.mat-mdc-button-disabled:after {
       background-color: if(
           $is-dark-theme,
           constants.$white,
@@ -32,7 +25,7 @@
       );
     }
 
-    &:not(.mat-button-disabled):hover:after {
+    &:not(.mat-mdc-button-disabled):hover:after {
       background-color: if(
           $is-dark-theme,
           constants.$mediumgray,

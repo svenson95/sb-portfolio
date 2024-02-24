@@ -6,7 +6,17 @@
   $background: map.get($theme, background);
   $is-dark-theme: map.get($theme, is-dark);
 
-  div.links span {
-    color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
+  mat-expansion-panel {
+    .mat-expansion-panel-header-title {
+      color: if($is-dark-theme, constants.$lightboxgray, constants.$darkgray);
+    }
+
+    .mat-expansion-panel-header-description {
+      color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
+    }
+
+    div.links span {
+      color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
+    }
   }
 }

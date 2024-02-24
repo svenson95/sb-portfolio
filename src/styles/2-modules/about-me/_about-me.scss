@@ -1,15 +1,6 @@
 section#about {
-  #socials a.mat-button {
-    span {
-      line-height: initial;
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      padding-block: 8px;
-    }
+  #socials a.mat-mdc-button {
+    height: auto;
   }
 
   .card {
