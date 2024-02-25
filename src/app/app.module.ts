@@ -23,10 +23,20 @@ import { LinkComponent } from "./components/link/link.component";
 import { InNewTabDirective } from "./components/link/in-new-tab.directive";
 import { BypassUrlPipe } from './pipes/bypass-url.pipe';
 import { HeaderLinkComponent } from './components/header/link/link.component';
+import { ProjectsAccordionComponent } from './components/projects-accordion/projects-accordion.component';
 
 const DIRECTIVES = [InNewTabDirective];
 const PIPES = [BypassUrlPipe];
 
+const MAT_MODULES = [
+  MatButtonModule,
+  MatMenuModule,
+  MatIconModule,
+];
+
+const STANDALONE_COMPONENTS = [
+  ProjectsAccordionComponent,
+];
 
 @NgModule({
   declarations: [
@@ -48,11 +58,9 @@ const PIPES = [BypassUrlPipe];
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatButtonModule,
-    MatExpansionModule,
-    MatMenuModule,
-    MatIconModule,
-    ...PIPES
+    ...MAT_MODULES,
+    ...PIPES,
+    ...STANDALONE_COMPONENTS
   ],
   providers: [STORAGE_PROVIDERS, BypassUrlPipe, { provide: WindowToken, useFactory: windowProvider }],
   bootstrap: [AppComponent]

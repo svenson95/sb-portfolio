@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-const PROJECTS_DATA = [
+import { PanelData } from '../../models/panel-data.model';
+
+const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
     title: 'Fachentwickler',
     description: 'April 2020 - Heute',
@@ -12,13 +14,13 @@ const PROJECTS_DATA = [
       { href: 'https://github.com/svenson95/fachentwickler-api', label: 'Backend' }
     ],
     images: [
-      { src: 'assets/hobby-projects/fachentwickler-1.png', alt: 'Image 1' },
-      { src: 'assets/hobby-projects/fachentwickler-2.png', alt: 'Image 2' },
-      { src: 'assets/hobby-projects/fachentwickler-3.png', alt: 'Image 3' },
-      { src: 'assets/hobby-projects/fachentwickler-4.png', alt: 'Image 4' },
-      { src: 'assets/hobby-projects/fachentwickler-5.png', alt: 'Image 5' },
-      { src: 'assets/hobby-projects/fachentwickler-6.png', alt: 'Image 6' },
-      { src: 'assets/hobby-projects/fachentwickler-7.png', alt: 'Image 7' }
+      { src: 'assets/hobby-projects/fachentwickler-1.png', label: 'Image 1' },
+      { src: 'assets/hobby-projects/fachentwickler-2.png', label: 'Image 2' },
+      { src: 'assets/hobby-projects/fachentwickler-3.png', label: 'Image 3' },
+      { src: 'assets/hobby-projects/fachentwickler-4.png', label: 'Image 4' },
+      { src: 'assets/hobby-projects/fachentwickler-5.png', label: 'Image 5' },
+      { src: 'assets/hobby-projects/fachentwickler-6.png', label: 'Image 6' },
+      { src: 'assets/hobby-projects/fachentwickler-7.png', label: 'Image 7' }
     ]
   },
   {
@@ -60,15 +62,15 @@ const PROJECTS_DATA = [
       { href: 'https://angular-challenges-prxxkdmv9-tomalaforge.vercel.app/challenges/angular/46-simple-animations/', label: 'Challenge Simple Animations (In Arbeit)' },
     ],
     images: [
-      { src: 'assets/hobby-projects/challenge-simple-animations.png', alt: 'Image 1' }
+      { src: 'assets/hobby-projects/challenge-simple-animations.png', label: 'Image 1' }
     ]
   }
 ];
 
 @Component({
   selector: 'section#hobby-projects',
-  templateUrl: './hobby-projects.component.html'
+  templateUrl: './hobby-projects.component.html',
 })
 export class HobbyProjectsComponent {
-  public readonly projects = PROJECTS_DATA;
+  public readonly hobbyProjects = HOBBY_PROJECTS_DATA;
 }

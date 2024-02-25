@@ -1,0 +1,36 @@
+<mat-accordion>
+  @for(project of projects(); track project.title; let isLast = $last) {
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
+        <mat-panel-description> {{ project.description }} </mat-panel-description>
+      </mat-expansion-panel-header>
+      @if (project.links) {
+        <div class="links">
+          @for (link of project.links; track link.href) {
+            @if (link.href === null) {
+              <span>GitHub</span>
+            }
+            @if (link.href !== null) {
+              <a [href]="link.href" target="_blank">{{ link.label }}</a>
+            }
+          }
+        </div>
+      }
+      <p [innerHTML]="project.content"></p>
+      @if (project.images) {
+        <div class="gallery">
+          @for (image of project.images; track image.src) {
+            <a [href]="image.src" target="_blank" rel="noopener noreferrer">
+              <img [src]="image.src" [alt]="image.label" />
+            </a>
+          }
+        </div>
+      }
+    </mat-expansion-panel>
+
+    @if (!isLast) {
+      <hr />
+    }
+  }
+</mat-accordion>
