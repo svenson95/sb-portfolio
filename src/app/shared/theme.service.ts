@@ -29,23 +29,30 @@ export class ThemeService {
 
   public initializeThemeFromPreferences(): void {
     const storedPreference = this.storage.getItem(THEME_STORAGE_KEY);
-    if (storedPreference) {
-      this.isDark.set(storedPreference === Theme.DARK);
-    } else {
-      this.isDark.set(matchMedia?.('(prefers-color-scheme: dark)').matches ?? false);
-    }
+    const isDark = this.initIsDark(storedPreference);
+    this.isDark.set(isDark);
 
+    const linkElement = this.createThemeLink();
+    this.document.head.appendChild(linkElement);
+  }
+
+  private initIsDark(theme: string | null): boolean {
+    const isDark = theme === Theme.DARK;
+    const systemColor = matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+    return theme ? isDark : systemColor;
+  }
+
+  private createThemeLink(): HTMLLinkElement {
     const initialTheme = this.document.querySelector('#sb-portfolio-initial-theme');
     if (initialTheme) {
       initialTheme.parentElement?.removeChild(initialTheme);
     }
 
-    const themeLink = this.createLinkElement({
-      id: 'sb-portfolio-custom-theme',
-      rel: 'stylesheet',
-      href: `${this.themeString()}-theme.css`
-    });
-    this.document.head.appendChild(themeLink);
+    const themeLink = this.document.createElement('link');
+    themeLink.id = 'sb-portfolio-custom-theme';
+    themeLink.rel = 'stylesheet';
+    themeLink.href = `${this.themeString()}-theme.css`;
+    return themeLink;
   }
 
   private updateRenderedTheme(): void {
@@ -55,13 +62,5 @@ export class ThemeService {
     }
 
     this.storage.setItem(THEME_STORAGE_KEY, this.themeString());
-  }
-
-  private createLinkElement(props: { id: string, rel: string, href: string }): HTMLLinkElement {
-    const link = this.document.createElement('link');
-    link.id = props.id;
-    link.rel = props.rel;
-    link.href = props.href;
-    return link;
   }
 }

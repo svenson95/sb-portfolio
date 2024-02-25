@@ -2,27 +2,37 @@
   <sb-card-header title="Hobby-Projekte" icon="fa-code"></sb-card-header>
 
   <mat-accordion>
-    <ng-container *ngFor="let project of projects; last as isLast">
+    @for (project of projects; track project.title; let isLast = $last) {
       <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
           <mat-panel-description> {{ project.description }} </mat-panel-description>
         </mat-expansion-panel-header>
         <div class="links">
-          <ng-container *ngFor="let link of project.links">
-            <span *ngIf="link.href === null">GitHub</span>
-            <a *ngIf="link.href !== null" [href]="link.href" target="_blank"> {{ link.label }} </a>
-          </ng-container>
+          @for (link of project.links; track link.href) {
+            @if (link.href === null) {
+              <span>GitHub</span>
+            }
+            @if (link.href !== null) {
+              <a [href]="link.href" target="_blank">{{ link.label }}</a>
+            }
+          }
         </div>
         <p [innerHTML]="project.content"></p>
-        <div *ngIf="project.images" class="gallery">
-          <a *ngFor="let image of project.images" [href]="image.src" target="_blank" rel="noopener noreferrer">
-            <img [src]="image.src" [alt]="image.alt" />
-          </a>
-        </div>
+        @if (project.images) {
+          <div class="gallery">
+            @for (image of project.images; track image.src) {
+              <a [href]="image.src" target="_blank" rel="noopener noreferrer">
+                <img [src]="image.src" [alt]="image.alt" />
+              </a>
+            }
+          </div>
+        }
       </mat-expansion-panel>
 
-      <hr *ngIf="!isLast" />
-    </ng-container>
+      @if (!isLast) {
+        <hr />
+      }
+    }
   </mat-accordion>
 </div>

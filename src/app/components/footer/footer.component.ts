@@ -8,7 +8,6 @@ import { socials } from 'src/app/constants/socials';
   templateUrl: './footer.component.html'
 })
 export class FooterComponent {
-  public menu = menu;
-
-  public socials = socials;
+  public readonly menu = menu;
+  public readonly socials = socials;
 }

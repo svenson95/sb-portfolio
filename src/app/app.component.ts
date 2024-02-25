@@ -1,4 +1,3 @@
-import { Location } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { ScrollService } from './shared/scroll.service';
@@ -8,7 +7,7 @@ import { ScrollService } from './shared/scroll.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  constructor(private location: Location, private scroll: ScrollService) {
+  constructor(private readonly scroll: ScrollService) {
     this.scroll.initialize();
   }
 }

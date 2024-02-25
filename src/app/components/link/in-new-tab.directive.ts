@@ -1,4 +1,5 @@
 import { Directive } from "@angular/core";
+
 import { LinkComponent } from "./link.component";
 
 @Directive({

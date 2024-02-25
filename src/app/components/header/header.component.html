@@ -4,16 +4,10 @@
   <span>Sven B.</span>
 </h1>
 <ul class="links mr-5 hidden lg:flex gap-3">
-  <li *ngFor="let item of menu">
-    <a
-      [href]="item.href"
-      rel="noopener"
-      mat-button
-      [class.in-viewport]="sectionInViewport(item.href)"
-      [disabled]="sectionInViewport(item.href)"
-    >
-      {{ item.title }}
-    </a>
-  </li>
+  @for (item of menu; track item.href) {
+    <li>
+      <sb-header-link [menuItem]="item"></sb-header-link>
+    </li>
+  }
 </ul>
 <sb-theme-toggle></sb-theme-toggle>

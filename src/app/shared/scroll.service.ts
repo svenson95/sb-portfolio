@@ -1,5 +1,5 @@
 import { DOCUMENT, Location } from '@angular/common';
-import { Inject, Injectable, NgZone, inject } from '@angular/core';
+import { Inject, Injectable, NgZone, inject, signal } from '@angular/core';
 import { fromEvent, debounceTime } from 'rxjs';
 
 @Injectable({
@@ -7,9 +7,10 @@ import { fromEvent, debounceTime } from 'rxjs';
 })
 export class ScrollService {
   private readonly scrollEvent$ = fromEvent(window, 'scroll').pipe(debounceTime(20));
-
   private readonly ngZone = inject(NgZone);
   private readonly location = inject(Location);
+
+  public readonly visibleSection = signal<string | undefined>(undefined);
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
@@ -26,15 +27,12 @@ export class ScrollService {
   }
 
   private setVisibleSection(): void {
-    const sections = this.document.querySelectorAll('section');
-    
-    Array.from(sections).some((section) => {
-      if (this.isInViewport(section)) {
-        this.location.replaceState('#' + section.id);
-        return true;
-      }
-      return false;
-    });
+    const sections = Array.from(this.document.querySelectorAll('section'));
+    const visibleSection = sections.find(this.isInViewport);
+    if (visibleSection) {
+      this.visibleSection.set(visibleSection.id);
+      this.location.replaceState('#' + visibleSection.id);
+    }
   }
 
   private isInViewport(el: HTMLElement): boolean {

@@ -22,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LinkComponent } from "./components/link/link.component";
 import { InNewTabDirective } from "./components/link/in-new-tab.directive";
 import { BypassUrlPipe } from './pipes/bypass-url.pipe';
+import { HeaderLinkComponent } from './components/header/link/link.component';
 
 const DIRECTIVES = [InNewTabDirective];
 const PIPES = [BypassUrlPipe];
@@ -31,6 +32,7 @@ const PIPES = [BypassUrlPipe];
   declarations: [
     AppComponent,
     HeaderComponent,
+    HeaderLinkComponent,
     FooterComponent,
     LinkComponent,
     ThemeToggleComponent,
@@ -52,7 +54,7 @@ const PIPES = [BypassUrlPipe];
     MatIconModule,
     ...PIPES
   ],
-  providers: [STORAGE_PROVIDERS, { provide: WindowToken, useFactory: windowProvider }],
+  providers: [STORAGE_PROVIDERS, BypassUrlPipe, { provide: WindowToken, useFactory: windowProvider }],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

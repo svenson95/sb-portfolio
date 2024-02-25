@@ -3,10 +3,12 @@
 
   <div class="px-5">
     <table class="w-full mb-5">
-      <tr *ngFor="let item of work">
-        <td [innerHTML]="item.dateRange"></td>
-        <td [innerHTML]="item.value"></td>
-      </tr>
+      @for (item of work; track item.value) {
+        <tr>
+          <td [innerHTML]="item.dateRange"></td>
+          <td [innerHTML]="item.value"></td>
+        </tr>
+      }
     </table>
   </div>
 </div>
