@@ -6,22 +6,11 @@ import { ProjectsAccordionComponent } from '../../components/projects-accordion/
 
 const WORK_SAMPLES_DATA: PanelData[] = [
   {
-    title: 'Survey-App',
-    description: 'März 2019 - Dezember 2019',
+    title: 'Cost-of-Production',
+    description: 'April 2021 - November 2021',
     content:
-      'Single-Page-Application entwickelt mit Angular und Angular Material, Anwendung zum durchführen von Umfragen.',
-    images: [
-      { src: 'assets/work-examples/vilua-survey/vilua-survey-1.png', label: 'Image 1' },
-      { src: 'assets/work-examples/vilua-survey/vilua-survey-2.png', label: 'Image 2' },
-      { src: 'assets/work-examples/vilua-survey/vilua-survey-3.png', label: 'Image 3' }
-    ]
-  },
-  {
-    title: 'Lernetics',
-    description: 'Oktober 2020 - Dezember 2020',
-    content:
-      'Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“',
-    images: [{ src: 'assets/work-examples/lernetics/lernetics-1.png', label: 'Image 1' }]
+      'Online-Plattform gebaut mit <a target="blank" rel="noopener noreferrer" href="https://themeforest.net/item/vien-angular-admin-template/25817698">Vien-Angular-Admin-Template</a>. zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports.',
+    images: [{ src: 'assets/work-examples/cop/cop-1.png', label: 'Image 1' }]
   },
   {
     title: 'VapeWatchers',
@@ -35,6 +24,13 @@ const WORK_SAMPLES_DATA: PanelData[] = [
     ]
   },
   {
+    title: 'Lernetics',
+    description: 'Oktober 2020 - Dezember 2020',
+    content:
+      'Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“',
+    images: [{ src: 'assets/work-examples/lernetics/lernetics-1.png', label: 'Image 1' }]
+  },
+  {
     title: 'Pio Office Suite',
     description: 'August 2020 - September 2021',
     content:
@@ -42,12 +38,16 @@ const WORK_SAMPLES_DATA: PanelData[] = [
     images: [{ src: 'assets/work-examples/pos/pos-1.png', label: 'Image 1' }]
   },
   {
-    title: 'Cost-of-Production',
-    description: 'April 2021 - November 2021',
+    title: 'Survey-App',
+    description: 'März 2019 - Dezember 2019',
     content:
-      'Online-Plattform gebaut mit <a target="blank" rel="noopener noreferrer" href="https://themeforest.net/item/vien-angular-admin-template/25817698">Vien-Angular-Admin-Template</a>. zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports.',
-    images: [{ src: 'assets/work-examples/cop/cop-1.png', label: 'Image 1' }]
-  }
+      'Single-Page-Application entwickelt mit Angular und Angular Material, Anwendung zum durchführen von Umfragen.',
+    images: [
+      { src: 'assets/work-examples/vilua-survey/vilua-survey-1.png', label: 'Image 1' },
+      { src: 'assets/work-examples/vilua-survey/vilua-survey-2.png', label: 'Image 2' },
+      { src: 'assets/work-examples/vilua-survey/vilua-survey-3.png', label: 'Image 3' }
+    ]
+  },
 ];
 
 @Component({

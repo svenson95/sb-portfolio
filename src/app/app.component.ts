@@ -18,8 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
       <main class="flex flex-col mx-0 md:mx-5 my-7 gap-7 xl:mx-auto">
         <section id="about" class="flex-col gap-5 justify-center"></section>
         <section id="skills"></section>
-        <section id="work-samples"></section>
         <section id="hobby-projects"></section>
+        <section id="work-samples"></section>
         <section id="cv"></section>
       </main>
     <footer class="flex w-full"></footer>
