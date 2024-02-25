@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { PanelData } from '../../models/panel-data.model';
+import { CardHeaderComponent } from '../../components/card-header/card-header.component';
+import { ProjectsAccordionComponent } from '../../components/projects-accordion/projects-accordion.component';
 
 const WORK_SAMPLES_DATA: PanelData[] = [
   {
@@ -50,7 +52,16 @@ const WORK_SAMPLES_DATA: PanelData[] = [
 
 @Component({
   selector: 'section#work-samples',
-  templateUrl: './work-samples.component.html'
+  template: `
+    <div class="card">
+      <sb-card-header title="Bisherige Projekte" icon="fa-code"></sb-card-header>
+
+      <sb-projects-accordion [projects]="workSamples" />
+    </div>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [CardHeaderComponent, ProjectsAccordionComponent],
 })
 export class WorkSamplesComponent {
   public readonly workSamples = WORK_SAMPLES_DATA;

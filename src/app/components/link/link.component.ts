@@ -1,8 +1,11 @@
-import { Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 
 @Component({
   selector: 'sb-link',
   templateUrl: './link.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: []
 })
 export class LinkComponent {
   public readonly url = input.required<string>();

@@ -8,8 +8,8 @@ describe('HeaderLinkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeaderLinkComponent]
-    }).compileComponents();
+    imports: [HeaderLinkComponent]
+}).compileComponents();
   });
 
   beforeEach(() => {

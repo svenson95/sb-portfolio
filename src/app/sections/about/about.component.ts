@@ -1,9 +1,14 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
 
+import { CardHeaderComponent } from '../../components/card-header/card-header.component';
+import { BypassUrlPipe } from '../../pipes/bypass-url.pipe';
+import { LinkComponent } from '../../components/link/link.component';
 import { socials } from '../../constants/socials';
 
-import { staggerAnimation } from './about-me.animation';
 
+import { staggerAnimation } from './about.animation';
 const ABOUT_DATA = [
   { key: '2008', value: 'In der Oberschule hatten wir einen Computer-Kurs, wo wir mit <sb-link url="https://scratch.mit.edu/" inNewTab>Scratch</sb-link> gearbeitet haben, so bin ich das erste mal mit dem Thema Programmierung in Berührung gekommen.' },
   { key: '2009', value: 'Mit <sb-link url="https://developer.valvesoftware.com/wiki/SDK_Docs" inNewTab>Source SDK</sb-link> "Maps" für ein Computer Spiel entwickelt.' },
@@ -25,10 +30,19 @@ const PROFILE_DATA = [
 
 @Component({
   selector: 'section#about',
-  templateUrl: './about-me.component.html',
+  templateUrl: './about.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    CommonModule,
+    CardHeaderComponent,
+    BypassUrlPipe,
+    MatButtonModule,
+    LinkComponent
+  ],
   animations: [staggerAnimation]
 })
-export class AboutMeComponent {
+export class AboutComponent {
   public readonly socials = socials;
   public readonly about = ABOUT_DATA;
   public readonly profile = PROFILE_DATA;

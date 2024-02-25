@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { PanelData } from '../../models/panel-data.model';
+import { CardHeaderComponent } from '../../components/card-header/card-header.component';
+import { ProjectsAccordionComponent } from '../../components/projects-accordion/projects-accordion.component';
 
 const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
@@ -69,7 +71,16 @@ const HOBBY_PROJECTS_DATA: PanelData[] = [
 
 @Component({
   selector: 'section#hobby-projects',
-  templateUrl: './hobby-projects.component.html',
+  template: `
+    <div class="card">
+      <sb-card-header title="Hobby-Projekte" icon="fa-code"></sb-card-header>
+
+      <sb-projects-accordion [projects]="hobbyProjects" />
+    </div>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [CardHeaderComponent, ProjectsAccordionComponent],
 })
 export class HobbyProjectsComponent {
   public readonly hobbyProjects = HOBBY_PROJECTS_DATA;

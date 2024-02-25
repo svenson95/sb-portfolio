@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { CardHeaderComponent } from 'src/app/components/card-header/card-header.component';
 
 const WORK_DATA = [
   {
@@ -15,7 +16,7 @@ const WORK_DATA = [
   },
   {
     dateRange: '01.03.2019 - 01.09.2019',
-    value: 'EQJ | Webentwickler Einstiegsqualifizierungsjahr <br /> <small>Piobyte GmbH</small>'
+    value: 'EQJ | Webentwickler Einstiegs<wbr/>qualifizierungs<wbr/>jahr <br /> <small>Piobyte GmbH</small>'
   },
   {
     dateRange: '18.06.2018 - 08.10.2018',
@@ -52,7 +53,7 @@ const WORK_DATA = [
   },
   {
     dateRange: '02.01.2013 - 22.04.2013',
-    value: 'EQJ | Sport- und Fitnesskaufmann Einstiegsqualifizierungsjahr <br /> <small>EasyFitness Prenzlauer Berg</small>'
+    value: 'EQJ | Sport- und Fitnesskaufmann Einstiegs<wbr/>qualifizierungs<wbr/>jahr <br /> <small>EasyFitness Prenzlauer Berg</small>'
   },
   {
     dateRange: '09.01.2012 - 27.01.2012',
@@ -62,7 +63,25 @@ const WORK_DATA = [
 
 @Component({
   selector: 'section#cv',
-  templateUrl: './cv.component.html'
+  template: `
+    <div class="card">
+      <sb-card-header title="Lebenslauf" icon="fa-table"></sb-card-header>
+
+      <div class="px-5">
+        <table class="w-full mb-5">
+          @for (item of work; track item.value) {
+            <tr>
+              <td [innerHTML]="item.dateRange"></td>
+              <td [innerHTML]="item.value"></td>
+            </tr>
+          }
+        </table>
+      </div>
+    </div>
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [CardHeaderComponent],
 })
 export class CvComponent {
   public readonly work = WORK_DATA;

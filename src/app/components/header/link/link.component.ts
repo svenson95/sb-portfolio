@@ -1,10 +1,14 @@
-import { Component, effect, inject, input, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, inject, input, signal } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 import { ScrollService } from '../../../shared/scroll.service';
 
 @Component({
   selector: 'sb-header-link',
-  templateUrl: './link.component.html'
+  templateUrl: './link.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [MatButtonModule]
 })
 export class HeaderLinkComponent {
   private readonly scroll = inject(ScrollService);
