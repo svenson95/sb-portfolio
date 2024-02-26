@@ -88,7 +88,7 @@
       },
       {
         "file": "docs/3rdpartylicenses.txt",
-        "hash": "4539813094488943641"
+        "hash": "10554379215444031177"
       },
       {
         "file": "docs/assets/hobby-projects/challenge-simple-animations.png",
@@ -220,15 +220,15 @@
       },
       {
         "file": "docs/index.html",
-        "hash": "10105632849233644604"
+        "hash": "4142246453576486726"
       },
       {
         "file": "docs/light-theme.css",
         "hash": "14879701987312308939"
       },
       {
-        "file": "docs/main.45762df15d4fd7ad.js",
-        "hash": "8059012572596811405"
+        "file": "docs/main.e2f39c6c534a3de9.js",
+        "hash": "12591401378037242958"
       },
       {
         "file": "docs/polyfills.1d2b6e63a8e0c728.js",
@@ -255,36 +255,24 @@
         "hash": "6844546439313756223"
       },
       {
-        "file": "src/app/app-routing.module.ts",
-        "hash": "11359549738115315895"
-      },
-      {
-        "file": "src/app/app.component.html",
-        "hash": "2557489800182131129"
-      },
-      {
         "file": "src/app/app.component.spec.ts",
-        "hash": "7991079567699782455"
+        "hash": "3090113424809491593"
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "5864733843151337731"
+        "hash": "5167896180104622242"
       },
       {
-        "file": "src/app/app.module.ts",
-        "hash": "15353741617580918188"
-      },
-      {
-        "file": "src/app/components/card-header/card-header.component.html",
-        "hash": "16263580696483850906"
+        "file": "src/app/app.config.ts",
+        "hash": "7250028491451949551"
       },
       {
         "file": "src/app/components/card-header/card-header.component.spec.ts",
-        "hash": "4879548555281092637"
+        "hash": "17073119140656450459"
       },
       {
         "file": "src/app/components/card-header/card-header.component.ts",
-        "hash": "10194058888566573050"
+        "hash": "3596833172048276028"
       },
       {
         "file": "src/app/components/footer/footer.component.html",
@@ -292,23 +280,19 @@
       },
       {
         "file": "src/app/components/footer/footer.component.spec.ts",
-        "hash": "12053911739832376394"
+        "hash": "11871664467523262420"
       },
       {
         "file": "src/app/components/footer/footer.component.ts",
         "hash": "15990399904029736730"
       },
       {
-        "file": "src/app/components/header/header.component.html",
-        "hash": "13283903003253320053"
-      },
-      {
         "file": "src/app/components/header/header.component.spec.ts",
-        "hash": "10479655879811431224"
+        "hash": "2536929785870486149"
       },
       {
         "file": "src/app/components/header/header.component.ts",
-        "hash": "9720354942011806163"
+        "hash": "603102306935125843"
       },
       {
         "file": "src/app/components/header/link/link.component.html",
@@ -316,15 +300,15 @@
       },
       {
         "file": "src/app/components/header/link/link.component.spec.ts",
-        "hash": "2994759268406562128"
+        "hash": "4698508324761960039"
       },
       {
         "file": "src/app/components/header/link/link.component.ts",
-        "hash": "10210812983877039328"
+        "hash": "13513795651901380560"
       },
       {
         "file": "src/app/components/link/in-new-tab.directive.ts",
-        "hash": "9373094954159616845"
+        "hash": "8995292406788089537"
       },
       {
         "file": "src/app/components/link/link.component.html",
@@ -375,44 +359,40 @@
         "hash": "4374834055667122014"
       },
       {
-        "file": "src/app/sections/about-me/about-me.animation.ts",
+        "file": "src/app/sections/about/about.animation.ts",
         "hash": "943268710278122350"
       },
       {
-        "file": "src/app/sections/about-me/about-me.component.html",
+        "file": "src/app/sections/about/about.component.html",
         "hash": "1202304655738661353"
       },
       {
-        "file": "src/app/sections/about-me/about-me.component.spec.ts",
-        "hash": "2688664371693149921"
+        "file": "src/app/sections/about/about.component.spec.ts",
+        "hash": "16438975812171501548"
       },
       {
-        "file": "src/app/sections/about-me/about-me.component.ts",
-        "hash": "7799616120876937366"
-      },
-      {
-        "file": "src/app/sections/cv/cv.component.html",
-        "hash": "373847062753297180"
+        "file": "src/app/sections/about/about.component.ts",
+        "hash": "18256969726036730060"
       },
       {
         "file": "src/app/sections/cv/cv.component.spec.ts",
-        "hash": "10639345269305584455"
+        "hash": "1532528903309679309"
       },
       {
         "file": "src/app/sections/cv/cv.component.ts",
-        "hash": "6394656127471036164"
-      },
-      {
-        "file": "src/app/sections/hobby-projects/hobby-projects.component.html",
-        "hash": "1076598030335414041"
+        "hash": "5839424239822514794"
       },
       {
         "file": "src/app/sections/hobby-projects/hobby-projects.component.spec.ts",
-        "hash": "454896342206161628"
+        "hash": "9036929206599928709"
       },
       {
         "file": "src/app/sections/hobby-projects/hobby-projects.component.ts",
-        "hash": "16169446888430196367"
+        "hash": "4759633316439954361"
+      },
+      {
+        "file": "src/app/sections/index.ts",
+        "hash": "13262153650391985511"
       },
       {
         "file": "src/app/sections/skills/skills.component.html",
@@ -420,27 +400,19 @@
       },
       {
         "file": "src/app/sections/skills/skills.component.spec.ts",
-        "hash": "9902424829039306679"
+        "hash": "981321314620892002"
       },
       {
         "file": "src/app/sections/skills/skills.component.ts",
-        "hash": "17755218546363381749"
-      },
-      {
-        "file": "src/app/sections/work-samples/work-samples.component.html",
-        "hash": "6776063496960958328"
-      },
-      {
-        "file": "src/app/sections/work-samples/work-samples.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "12556962236556106795"
       },
       {
         "file": "src/app/sections/work-samples/work-samples.component.spec.ts",
-        "hash": "16646711937849264195"
+        "hash": "12969044794832705480"
       },
       {
         "file": "src/app/sections/work-samples/work-samples.component.ts",
-        "hash": "14888089414166984320"
+        "hash": "15151086031856014903"
       },
       {
         "file": "src/app/shared/scroll.service.ts",
@@ -600,7 +572,7 @@
       },
       {
         "file": "src/main.ts",
-        "hash": "14896519517424602606"
+        "hash": "16888527944159462120"
       },
       {
         "file": "src/polyfills.ts",
