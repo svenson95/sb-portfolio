@@ -1,6 +1,6 @@
-import { SocialMediaLink } from "../models/social-media-link.model";
+import { SocialMediaLink } from '../models/social-media-link.model';
 
-export const socials: SocialMediaLink[] = [
+export const SOCIALS_DATA: SocialMediaLink[] = [
   new SocialMediaLink({
     title: 'linkedin',
     href: 'https://www.linkedin.com/in/sven-brodny-0ba603237'

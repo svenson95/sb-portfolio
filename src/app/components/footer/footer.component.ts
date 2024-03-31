@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { menu } from 'src/app/constants/menu';
-import { socials } from 'src/app/constants/socials';
+
+import { SOCIALS_DATA } from '../../constants';
 
 @Component({
   selector: 'footer',
@@ -13,5 +14,5 @@ import { socials } from 'src/app/constants/socials';
 })
 export class FooterComponent {
   public readonly menu = menu;
-  public readonly socials = socials;
+  public readonly socials = SOCIALS_DATA;
 }
