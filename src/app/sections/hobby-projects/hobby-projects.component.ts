@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { PanelData } from '../../models/panel-data.model';
 import { CardHeaderComponent } from '../../components/card-header/card-header.component';
 import { ProjectsAccordionComponent } from '../../components/projects-accordion/projects-accordion.component';
+import { PanelData } from '../../models/panel-data.model';
 
 const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
@@ -12,12 +12,16 @@ const HOBBY_PROJECTS_DATA: PanelData[] = [
     links: [
       { href: 'https://github.com/tomalaforge/angular-challenges', label: 'GitHub' },
       { href: 'https://angular-challenges.vercel.app/', label: 'Live' },
-      { href: 'https://github.com/tomalaforge/angular-challenges/pulls?q=is%3Apr+author%3Asvenson95+', label: 'Meine Pull Requests' },
-      { href: 'https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/', label: 'Challenge Simple Animations' },
+      {
+        href: 'https://github.com/tomalaforge/angular-challenges/pulls?q=is%3Apr+author%3Asvenson95+',
+        label: 'Meine Pull Requests'
+      },
+      {
+        href: 'https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/',
+        label: 'Challenge Simple Animations'
+      }
     ],
-    images: [
-      { src: 'assets/hobby-projects/challenge-simple-animations.png', label: 'Image 1' }
-    ]
+    images: [{ src: 'assets/hobby-projects/challenge-simple-animations.png', label: 'Image 1' }]
   },
   {
     title: 'Angular documentation extension',
@@ -31,8 +35,7 @@ const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
     title: 'ng-xmp<wbr />-animations',
     description: 'September 2021 - Dezember 2021',
-    content:
-      "Tutorial App mit Beispiel-Implementierungen von Angular's integrierter Animations-Library.",
+    content: "Tutorial App mit Beispiel-Implementierungen von Angular's integrierter Animations-Library.",
     links: [
       { href: 'https://github.com/svenson95/ng-xmp-animations', label: 'GitHub' },
       { href: 'https://svenson95.github.io/ng-xmp-animations', label: 'Live-Preview' }
@@ -57,7 +60,7 @@ const HOBBY_PROJECTS_DATA: PanelData[] = [
       { src: 'assets/hobby-projects/fachentwickler-6.png', label: 'Image 6' },
       { src: 'assets/hobby-projects/fachentwickler-7.png', label: 'Image 7' }
     ]
-  },
+  }
 ];
 
 @Component({
@@ -71,7 +74,7 @@ const HOBBY_PROJECTS_DATA: PanelData[] = [
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CardHeaderComponent, ProjectsAccordionComponent],
+  imports: [CardHeaderComponent, ProjectsAccordionComponent]
 })
 export class HobbyProjectsComponent {
   public readonly hobbyProjects = HOBBY_PROJECTS_DATA;

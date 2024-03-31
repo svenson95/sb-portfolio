@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+
 import { CardHeaderComponent } from 'src/app/components/card-header/card-header.component';
 
 const WORK_DATA = [
@@ -53,13 +54,14 @@ const WORK_DATA = [
   },
   {
     dateRange: '02.01.2013 - 22.04.2013',
-    value: 'EQJ | Sport- und Fitnesskaufmann Einstiegs<wbr/>qualifizierungs<wbr/>jahr <br /> <small>EasyFitness Prenzlauer Berg</small>'
+    value:
+      'EQJ | Sport- und Fitnesskaufmann Einstiegs<wbr/>qualifizierungs<wbr/>jahr <br /> <small>EasyFitness Prenzlauer Berg</small>'
   },
   {
     dateRange: '09.01.2012 - 27.01.2012',
     value: 'Smartphone-Reparaturservice Vollzeit Schulpraktikum <br /> <small>Phonedoctor Berlin</small>'
   }
-]
+];
 
 @Component({
   selector: 'section#cv',
@@ -70,10 +72,10 @@ const WORK_DATA = [
       <div class="px-5">
         <table class="w-full mb-5">
           @for (item of work; track item.value) {
-            <tr>
-              <td [innerHTML]="item.dateRange"></td>
-              <td [innerHTML]="item.value"></td>
-            </tr>
+          <tr>
+            <td [innerHTML]="item.dateRange"></td>
+            <td [innerHTML]="item.value"></td>
+          </tr>
           }
         </table>
       </div>
@@ -81,7 +83,7 @@ const WORK_DATA = [
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CardHeaderComponent],
+  imports: [CardHeaderComponent]
 })
 export class CvComponent {
   public readonly work = WORK_DATA;

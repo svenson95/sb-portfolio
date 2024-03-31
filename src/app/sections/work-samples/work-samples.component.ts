@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { PanelData } from '../../models/panel-data.model';
 import { CardHeaderComponent } from '../../components/card-header/card-header.component';
 import { ProjectsAccordionComponent } from '../../components/projects-accordion/projects-accordion.component';
+import { PanelData } from '../../models/panel-data.model';
 
 const WORK_SAMPLES_DATA: PanelData[] = [
   {
@@ -47,7 +47,7 @@ const WORK_SAMPLES_DATA: PanelData[] = [
       { src: 'assets/work-examples/vilua-survey/vilua-survey-2.png', label: 'Image 2' },
       { src: 'assets/work-examples/vilua-survey/vilua-survey-3.png', label: 'Image 3' }
     ]
-  },
+  }
 ];
 
 @Component({
@@ -61,7 +61,7 @@ const WORK_SAMPLES_DATA: PanelData[] = [
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CardHeaderComponent, ProjectsAccordionComponent],
+  imports: [CardHeaderComponent, ProjectsAccordionComponent]
 })
 export class WorkSamplesComponent {
   public readonly workSamples = WORK_SAMPLES_DATA;
