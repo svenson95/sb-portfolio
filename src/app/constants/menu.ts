@@ -1,22 +1,24 @@
-export const menu = [
+import { MenuItem } from '../models';
+
+export const menu: MenuItem[] = [
   {
     title: 'Über mich',
-    href: '#about'
+    id: 'about'
   },
   {
     title: 'Skills',
-    href: '#skills'
+    id: 'skills'
   },
   {
     title: 'Arbeits-Proben',
-    href: '#work-samples'
+    id: 'work-samples'
   },
   {
     title: 'Hobby-Projekte',
-    href: '#hobby-projects'
+    id: 'hobby-projects'
   },
   {
     title: 'Lebenslauf',
-    href: '#cv'
+    id: 'cv'
   }
 ];

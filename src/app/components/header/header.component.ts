@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { menu } from '../../constants/menu';
+import { menu } from '../../constants';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 import { HeaderLinkComponent } from './link/link.component';
@@ -14,10 +14,10 @@ import { HeaderLinkComponent } from './link/link.component';
       <span>Sven B.</span>
     </h1>
     <ul class="links mr-5 hidden lg:flex gap-3">
-      @for (item of menu; track item.href) {
-        <li>
-          <sb-header-link [menuItem]="item"></sb-header-link>
-        </li>
+      @for (item of menu; track item.id) {
+      <li>
+        <sb-header-link [menuItem]="item"></sb-header-link>
+      </li>
       }
     </ul>
     <sb-theme-toggle></sb-theme-toggle>

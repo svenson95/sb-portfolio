@@ -1,9 +1,3 @@
-<a
-  [href]="menuItem().href"
-  rel="noopener"
-  mat-button
-  [class.in-viewport]="isInViewport()"
-  [disabled]="isInViewport()"
->
+<a [href]="'#' + menuItem().id" mat-button [class.in-viewport]="isInViewport()" [disabled]="isInViewport()">
   {{ menuItem().title }}
 </a>
