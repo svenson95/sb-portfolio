@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { menu } from 'src/app/constants/menu';
-
-import { SOCIALS_DATA } from '../../constants';
+import { SOCIALS_DATA, menu } from '../../constants';
 
 @Component({
   selector: 'footer',

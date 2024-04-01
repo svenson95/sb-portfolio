@@ -1,5 +1,5 @@
 export * from './about.data';
 export * from './hobby-projects.data';
-export * from './menu';
-export * from './socials';
+export * from './menu.data';
+export * from './socials.data';
 export * from './work.data';
