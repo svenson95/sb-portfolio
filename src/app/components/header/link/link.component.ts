@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, effect, inject, input, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
-import { MenuItem } from '../../../models';
+import { NavigationItem } from '../../../models';
 import { ScrollService } from '../../../shared';
 
 @Component({
@@ -14,13 +14,13 @@ import { ScrollService } from '../../../shared';
 export class HeaderLinkComponent {
   private readonly scroll = inject(ScrollService);
 
-  public readonly menuItem = input.required<MenuItem>();
+  public readonly navItem = input.required<NavigationItem>();
   public readonly isInViewport = signal<boolean>(false);
 
   public visibleSectionEffect = effect(
     () => {
       const visibleSectionId = this.scroll.visibleSection();
-      const linkId = this.menuItem().id;
+      const linkId = this.navItem().id;
       this.isInViewport.set(visibleSectionId === linkId);
     },
     { allowSignalWrites: true }

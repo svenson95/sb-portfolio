@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { menu } from '../../constants';
+import { NAVIGATION_DATA } from '../../constants';
 import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 import { HeaderLinkComponent } from './link/link.component';
@@ -14,9 +14,9 @@ import { HeaderLinkComponent } from './link/link.component';
       <span>Sven B.</span>
     </h1>
     <ul class="links mr-5 hidden lg:flex gap-3">
-      @for (item of menu; track item.id) {
+      @for (item of navigation; track item.id) {
       <li>
-        <sb-header-link [menuItem]="item"></sb-header-link>
+        <sb-header-link [navItem]="item"></sb-header-link>
       </li>
       }
     </ul>
@@ -27,5 +27,5 @@ import { HeaderLinkComponent } from './link/link.component';
   imports: [HeaderLinkComponent, ThemeToggleComponent]
 })
 export class HeaderComponent {
-  public readonly menu = menu;
+  public readonly navigation = NAVIGATION_DATA;
 }

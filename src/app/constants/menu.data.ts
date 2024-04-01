@@ -1,6 +1,6 @@
-import { MenuItem } from '../models';
+import { NavigationItem } from '../models';
 
-export const menu: MenuItem[] = [
+export const NAVIGATION_DATA: NavigationItem[] = [
   {
     title: 'Über mich',
     id: 'about'

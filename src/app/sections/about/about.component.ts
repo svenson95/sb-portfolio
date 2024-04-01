@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
-import { CardHeaderComponent, LinkComponent } from '../../components';
+import { CardHeaderComponent, InNewTabDirective, LinkComponent } from '../../components';
 import { ABOUT_DATA, PROFILE_DATA, SOCIALS_DATA } from '../../constants';
 import { BypassUrlPipe } from '../../pipes';
 
@@ -13,7 +13,7 @@ import { staggerAnimation } from './about.animation';
   templateUrl: './about.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule, LinkComponent],
+  imports: [CommonModule, CardHeaderComponent, BypassUrlPipe, InNewTabDirective, MatButtonModule, LinkComponent],
   animations: [staggerAnimation]
 })
 export class AboutComponent {

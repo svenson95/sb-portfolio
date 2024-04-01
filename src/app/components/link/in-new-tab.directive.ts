@@ -1,6 +1,6 @@
-import { Directive } from "@angular/core";
+import { Directive } from '@angular/core';
 
-import { LinkComponent } from "./link.component";
+import { LinkComponent } from './link.component';
 
 @Directive({
   selector: 'sb-link[inNewTab]',
@@ -8,6 +8,6 @@ import { LinkComponent } from "./link.component";
 })
 export class InNewTabDirective {
   constructor(private linkComponent: LinkComponent) {
-    this.linkComponent.newTab = true
+    this.linkComponent.newTab = true;
   }
 }
