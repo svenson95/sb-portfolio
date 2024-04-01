@@ -10,12 +10,12 @@ export const menu: MenuItem[] = [
     id: 'skills'
   },
   {
-    title: 'Arbeits-Proben',
-    id: 'work-samples'
-  },
-  {
     title: 'Hobby-Projekte',
     id: 'hobby-projects'
+  },
+  {
+    title: 'Arbeits-Proben',
+    id: 'work-samples'
   },
   {
     title: 'Lebenslauf',
