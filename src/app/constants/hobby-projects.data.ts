@@ -20,15 +20,6 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
     images: [{ src: 'assets/hobby-projects/challenge-simple-animations.png', label: 'Image 1' }]
   },
   {
-    title: 'Angular documentation extension',
-    description: 'July 2022',
-    content: 'Eigene Dokumentation für Angular. (In Arbeit)',
-    links: [
-      { href: 'https://github.com/svenson95/ng-neer-app', label: 'GitHub' },
-      { href: 'http://ng-neer.io/', label: 'Live' }
-    ]
-  },
-  {
     title: 'ng-xmp<wbr />-animations',
     description: 'September 2021 - Dezember 2021',
     content: "Tutorial App mit Beispiel-Implementierungen von Angular's integrierter Animations-Library.",
