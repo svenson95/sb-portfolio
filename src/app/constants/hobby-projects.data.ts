@@ -4,17 +4,14 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
     title: 'Angular Challenges',
     description: 'Februar 2024',
-    content: 'Mitwirkung an einem OpenSource Projekt, hier habe ich unter anderem eine eigene Challenge erstellt.',
+    content:
+      'Mitwirkung an einem OpenSource Projekt, Challenges gelöst, kleinere Styling Anpassungen und eigenen Content (Challenges) erstellt, <a target="blank" rel="noopener noreferrer" href="https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/">Simple Animations</a> & <a target="blank" rel="noopener noreferrer" href="https://angular-challenges.vercel.app/challenges/typescript/47-enums-vs-union-types/">Enums vs Union Types</a>.',
     links: [
       { href: 'https://github.com/tomalaforge/angular-challenges', label: 'GitHub' },
       { href: 'https://angular-challenges.vercel.app/', label: 'Live' },
       {
         href: 'https://github.com/tomalaforge/angular-challenges/pulls?q=is%3Apr+author%3Asvenson95+',
         label: 'Meine Pull Requests'
-      },
-      {
-        href: 'https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/',
-        label: 'Challenge Simple Animations'
       }
     ],
     images: [{ src: 'assets/hobby-projects/challenge-simple-animations.png', label: 'Image 1' }]
