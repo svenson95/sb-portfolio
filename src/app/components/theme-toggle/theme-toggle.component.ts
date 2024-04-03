@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { ThemeService } from '../../shared/theme.service';
+import { Theme, ThemeService } from '../../shared/theme.service';
 
 import { SunUpAndDownAnimation } from './theme.toggle.animation';
 
@@ -15,8 +15,8 @@ import { SunUpAndDownAnimation } from './theme.toggle.animation';
   animations: [SunUpAndDownAnimation]
 })
 export class ThemeToggleComponent {
-  public readonly theme = inject(ThemeService);
-  public readonly themeToggleLabel = computed(() => `${this.theme.themeString()} mode aktivieren`);
-  public readonly iconString = computed(() => this.theme.themeString() + '_mode');
-  public readonly isDark = this.theme.isDark;
+  readonly theme = inject(ThemeService);
+  readonly themeToggleLabel = computed(() => `${this.isDark() ? Theme.LIGHT : Theme.DARK} mode aktivieren`);
+  readonly iconString = computed(() => this.theme.themeString() + '_mode');
+  readonly isDark = this.theme.isDark;
 }
