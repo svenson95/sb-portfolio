@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { ThemeService } from '../../shared/theme.service';
 
@@ -10,7 +11,7 @@ import { SunUpAndDownAnimation } from './theme.toggle.animation';
   templateUrl: './theme-toggle.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [MatIconModule],
+  imports: [MatIconModule, MatTooltipModule],
   animations: [SunUpAndDownAnimation]
 })
 export class ThemeToggleComponent {

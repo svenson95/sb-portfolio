@@ -1,3 +1,9 @@
-<button mat-icon-button type="button" (click)="theme.toggle()" [title]="themeToggleLabel()" [@sunUpAndDown]="isDark()">
+<button
+  mat-icon-button
+  type="button"
+  (click)="theme.toggle()"
+  [matTooltip]="themeToggleLabel()"
+  [@sunUpAndDown]="isDark()"
+>
   <mat-icon>{{ iconString() }}</mat-icon>
 </button>
