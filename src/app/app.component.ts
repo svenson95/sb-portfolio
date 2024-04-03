@@ -10,12 +10,14 @@ import { ScrollService } from './shared/scroll.service';
   template: `
     <header class="flex items-center justify-between h-16 sticky top-0 z-10 px-4 sm:p-5"></header>
     <main class="flex flex-col mx-0 md:mx-5 my-7 gap-7 xl:mx-auto">
-      @defer {
       <section id="about" class="flex-col gap-5 justify-center"></section>
+      @defer (on viewport) {
       <section id="skills"></section>
       <section id="hobby-projects"></section>
       <section id="work-samples"></section>
       <section id="cv"></section>
+      } @placeholder {
+      <p>loading ...</p>
       }
     </main>
     <footer class="flex w-full"></footer>
