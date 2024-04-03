@@ -9,11 +9,13 @@ import { WORK_DATA } from '../../constants';
     <div class="card">
       <sb-card-header title="Lebenslauf" icon="fa-table"></sb-card-header>
 
-      <div class="px-5">
+      <div class="px-3 md:px-5">
         <table class="w-full mb-5">
           @for (item of work; track item.value) {
           <tr>
-            <td [innerHTML]="item.dateRange"></td>
+            <td>
+              <small>{{ item.dateRange }}</small>
+            </td>
             <td [innerHTML]="item.value"></td>
           </tr>
           }
