@@ -3,12 +3,13 @@
 /* eslint-disable @typescript-eslint/explicit-member-accessibility */
 import { InjectionToken, StaticProvider } from '@angular/core';
 
-import { WindowToken } from './window';
+import { WindowToken, windowProvider } from './window';
 
 export const LocalStorage = new InjectionToken<Storage>('LocalStorage');
 export const SessionStorage = new InjectionToken<Storage>('SessionStorage');
 
 export const STORAGE_PROVIDERS: StaticProvider[] = [
+  { provide: WindowToken, useFactory: windowProvider },
   {
     provide: LocalStorage,
     useFactory: (win: Window) => getStorage(win, 'localStorage'),
