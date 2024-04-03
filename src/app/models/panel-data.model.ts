@@ -1,6 +1,8 @@
+import { ImageUrl } from './image.model';
+
 export interface PanelDataLink {
   href?: string | null;
-  src?: string;
+  src?: ImageUrl | null;
   label: string;
 }
 
@@ -8,6 +10,6 @@ export interface PanelData {
   title: string;
   description: string;
   content: string;
-  links?: PanelDataLink[];
-  images?: PanelDataLink[];
+  links?: PanelDataLink[] | null;
+  images?: PanelDataLink[] | null;
 }
