@@ -8,7 +8,11 @@ import { SunUpAndDownAnimation } from './theme.toggle.animation';
 
 @Component({
   selector: 'sb-theme-toggle',
-  templateUrl: './theme-toggle.component.html',
+  template: `
+    <button mat-icon-button type="button" (click)="theme.toggle()" [matTooltip]="themeToggleLabel()">
+      <mat-icon [@sunUpAndDown]="isDark()">{{ iconString() }}</mat-icon>
+    </button>
+  `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [MatIconModule, MatTooltipModule],
