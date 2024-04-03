@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { FooterComponent } from './components/footer/footer.component';
-import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent, HeaderComponent } from './components';
+import { BypassUrlPipe } from './pipes';
 import { AboutComponent, CvComponent, HobbyProjectsComponent, SkillsComponent, WorkSamplesComponent } from './sections';
-import { ScrollService } from './shared/scroll.service';
+import { ScrollService } from './shared';
 
 @Component({
   selector: 'sb-root',
@@ -32,7 +32,8 @@ import { ScrollService } from './shared/scroll.service';
     HobbyProjectsComponent,
     CvComponent,
     FooterComponent
-  ]
+  ],
+  providers: [BypassUrlPipe]
 })
 export class AppComponent {
   constructor(private readonly scroll: ScrollService) {

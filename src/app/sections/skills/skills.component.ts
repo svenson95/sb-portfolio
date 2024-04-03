@@ -11,7 +11,7 @@ import { ThemeService } from '../../shared';
   templateUrl: './skills.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule, CardHeaderComponent, BypassUrlPipe]
+  imports: [CommonModule, CardHeaderComponent]
 })
 export class SkillsComponent {
   private readonly theme = inject(ThemeService);
