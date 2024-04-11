@@ -11,11 +11,11 @@ table {
   }
 
   td:nth-of-type(1) {
-    width: 130px;
+    width: 120px;
     font-family: constants.$monospace-font;
 
     @screen md {
-      width: 230px;
+      width: 150px;
     }
   }
 

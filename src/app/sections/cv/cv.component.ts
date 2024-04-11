@@ -14,7 +14,11 @@ import { WORK_DATA } from '../../constants';
           @for (item of work; track item.value) {
           <tr>
             <td>
-              <small>{{ item.dateRange }}</small>
+              @if (item.to !== null) {
+              <small>{{ item.to }}</small>
+              <br />
+              }
+              <small>{{ item.from }}</small>
             </td>
             <td [innerHTML]="item.value"></td>
           </tr>
