@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
+import { ScrollAnchorDirective } from '../../directives';
 
 @Component({
   selector: 'footer',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollAnchorDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 xl:mx-auto py-5">
@@ -16,7 +17,7 @@ import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
           <ul>
             @for (item of navigation; track item.id) {
             <li>
-              <a [href]="'#' + item.id">
+              <a class="cursor-pointer" [sbScrollAnchor]="item.id">
                 <small>{{ item.title }}</small>
               </a>
             </li>

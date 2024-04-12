@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, effect, inject, input, signal } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 
+import { ScrollAnchorDirective } from '../../../directives';
 import { NavigationItem } from '../../../models';
 import { ScrollService } from '../../../shared';
 
@@ -8,9 +9,9 @@ import { ScrollService } from '../../../shared';
   selector: 'sb-header-link',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, ScrollAnchorDirective],
   template: `
-    <a [href]="'#' + navItem().id" mat-button [class.in-viewport]="isInViewport()" [disabled]="isInViewport()">
+    <a mat-button [sbScrollAnchor]="navItem().id" [class.in-viewport]="isInViewport()" [disabled]="isInViewport()">
       {{ navItem().title }}
     </a>
   `
