@@ -31,14 +31,10 @@ import { ScrollService } from './shared';
     <header></header>
     <main>
       <section id="about" sbScrollSection="about"></section>
-      @defer (on viewport) {
       <section id="skills" sbScrollSection="skills"></section>
       <section id="hobby-projects" sbScrollSection="hobby-projects"></section>
       <section id="work-samples" sbScrollSection="work-samples"></section>
       <section id="cv" sbScrollSection="cv"></section>
-      } @placeholder {
-      <p>loading ...</p>
-      }
     </main>
     <footer></footer>
   `
