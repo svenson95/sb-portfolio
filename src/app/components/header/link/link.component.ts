@@ -6,10 +6,14 @@ import { ScrollService } from '../../../shared';
 
 @Component({
   selector: 'sb-header-link',
-  templateUrl: './link.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [MatButtonModule]
+  imports: [MatButtonModule],
+  template: `
+    <a [href]="'#' + navItem().id" mat-button [class.in-viewport]="isInViewport()" [disabled]="isInViewport()">
+      {{ navItem().title }}
+    </a>
+  `
 })
 export class HeaderLinkComponent {
   private readonly scroll = inject(ScrollService);
