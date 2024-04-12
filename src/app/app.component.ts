@@ -21,10 +21,16 @@ import { ScrollService } from './shared';
     ScrollSectionDirective
   ],
   providers: [BypassUrlPipe, ScrollManagerDirective],
+  styles: `
+    header { @apply flex items-center justify-between h-16 sticky top-0 z-10 px-4 sm:p-5; }
+    main { @apply flex flex-col mx-0 md:mx-5 my-7 gap-7 xl:mx-auto; }
+    section:first-of-type { @apply flex-col gap-5 justify-center; }
+    footer { @apply flex w-full; }
+  `,
   template: `
-    <header class="flex items-center justify-between h-16 sticky top-0 z-10 px-4 sm:p-5"></header>
-    <main class="flex flex-col mx-0 md:mx-5 my-7 gap-7 xl:mx-auto">
-      <section id="about" class="flex-col gap-5 justify-center" sbScrollSection="about"></section>
+    <header></header>
+    <main>
+      <section id="about" sbScrollSection="about"></section>
       @defer (on viewport) {
       <section id="skills" sbScrollSection="skills"></section>
       <section id="hobby-projects" sbScrollSection="hobby-projects"></section>
@@ -34,7 +40,7 @@ import { ScrollService } from './shared';
       <p>loading ...</p>
       }
     </main>
-    <footer class="flex w-full"></footer>
+    <footer></footer>
   `
 })
 export class AppComponent {
