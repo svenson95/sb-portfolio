@@ -1,6 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-import { ImageUrl } from '../../models';
+import { ImageSource } from '../../models';
 
 @Pipe({
   name: 'thumbnail',
@@ -8,7 +8,7 @@ import { ImageUrl } from '../../models';
   pure: true
 })
 export class ThumbnailPipe implements PipeTransform {
-  public transform(value: ImageUrl | undefined): string {
+  public transform(value: ImageSource | undefined): string {
     if (value === undefined) throw new Error('ThumbnailPipe value is undefined');
     const idx = value.lastIndexOf('.');
     return value.slice(0, idx) + '-thumbnail' + value.slice(idx);

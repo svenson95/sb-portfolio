@@ -1,1 +1,1 @@
-export type ImageUrl = string;
+export type ImageSource = string;

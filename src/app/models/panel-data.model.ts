@@ -1,8 +1,8 @@
-import { ImageUrl } from './image.model';
+import { ImageSource } from './image.model';
 
 export interface PanelDataLink {
   href?: string | null;
-  src?: ImageUrl | null;
+  src?: ImageSource | null;
   label: string;
 }
 
