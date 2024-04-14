@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { faTableList } from '@fortawesome/free-solid-svg-icons';
 
 import { CardHeaderComponent } from '../../components';
-import { WORK_DATA } from '../../constants';
+import { CV_DATA } from '../../constants';
 
 @Component({
   selector: 'section#cv',
@@ -12,7 +12,7 @@ import { WORK_DATA } from '../../constants';
 
       <div class="px-3 md:px-5">
         <table class="w-full mb-5">
-          @for (item of work; track item.value) {
+          @for (item of data; track item.value) {
           <tr>
             <td>
               @if (item.to !== null) {
@@ -33,6 +33,6 @@ import { WORK_DATA } from '../../constants';
   imports: [CardHeaderComponent]
 })
 export class CvComponent {
-  public readonly work = WORK_DATA;
+  public readonly data = CV_DATA;
   public readonly faTable = faTableList;
 }

@@ -4,7 +4,7 @@ interface TableItem {
   value: string;
 }
 
-export const WORK_DATA: TableItem[] = [
+export const CV_DATA: TableItem[] = [
   {
     from: 'August 2022',
     to: 'Oktober 2023',
