@@ -13,7 +13,7 @@ import { CV_DATA } from './cv.data';
 
       <div class="px-3 md:px-5">
         <table class="w-full mb-5">
-          @for (item of data; track item.value) {
+          @for (item of data; track item.from) {
           <tr>
             <td>
               @if (item.to !== null) {
@@ -22,7 +22,10 @@ import { CV_DATA } from './cv.data';
               }
               <small>{{ item.from }}</small>
             </td>
-            <td [innerHTML]="item.value"></td>
+            <td>
+              <div [innerHTML]="item.profession"></div>
+              <small>{{ item.company }}</small>
+            </td>
           </tr>
           }
         </table>

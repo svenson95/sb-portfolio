@@ -1,81 +1,93 @@
 interface TableItem {
   from: string;
   to: string | null;
-  value: string;
+  profession: string;
+  company: string;
 }
 
 export const CV_DATA: TableItem[] = [
   {
     from: 'August 2022',
     to: 'Oktober 2023',
-    value: 'Webentwickler - Frontend <br /> <small>Yolawo GmbH</small>'
+    profession: 'Webentwickler - Frontend',
+    company: 'Yolawo GmbH'
   },
   {
     from: 'September 2021',
     to: 'Februar 2022',
-    value: 'Nebenjob als Webentwickler - Frontend <br /> <small>Kominal UG</small>'
+    profession: 'Nebenjob als Webentwickler - Frontend',
+    company: 'Kominal UG'
   },
   {
     from: 'September 2019',
     to: 'März 2022',
-    value: 'Ausbildung zum Fachinformatiker für Anwendungsentwicklung <br /> <small>Piobyte GmbH</small>'
+    profession: 'Ausbildung zum Fachinformatiker für Anwendungsentwicklung',
+    company: 'Piobyte GmbH'
   },
   {
     from: 'März 2019',
     to: 'September 2019',
-    value:
-      'EQJ als Webentwickler & App-Entwickler (Einstiegs<wbr/>qualifizierungs<wbr/>jahr) <br /> <small>Piobyte GmbH</small>'
+    profession: 'EQJ als Webentwickler & App-Entwickler (Einstiegs<wbr/>qualifizierungs<wbr/>jahr)',
+    company: 'Piobyte GmbH'
   },
   {
     from: 'Juni 2018',
     to: 'Oktober 2018',
-    value: 'Produktionshelfer bei einem StartUp (Handschriftautomation) <br /> <small>Wunderpen GmbH</small>'
+    profession: 'Produktionshelfer bei einem StartUp (Handschriftautomation)',
+    company: 'Wunderpen GmbH'
   },
   {
     from: 'Oktober 2017',
     to: 'Dezember 2017',
-    value:
-      'Ausbildung zum Fliesen-, Platten- und Mosaikleger <br /> <small>Ulf Martischewski Fliesen, Naturstein, Spanndecken</small>'
+    profession: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger',
+    company: 'Ulf Martischewski Fliesen, Naturstein, Spanndecken'
   },
   {
     from: 'September 2016',
     to: 'Juli 2017',
-    value: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger <br /> <small>WH Werkhaus Berlin</small>'
+    profession: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger',
+    company: 'WH Werkhaus Berlin'
   },
   {
     from: 'Oktober 2015',
     to: 'Juli 2016',
-    value: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger  <br /> <small>BfW Lehrbauhof Berlin</small>'
+    profession: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger',
+    company: 'BfW Lehrbauhof Berlin'
   },
   {
     from: 'Dezember 2014',
     to: 'Januar 2015',
-    value: 'Ausbildung zum Informatikkaufmann <br /> <small>ACDM (MAIL BOX - Zentrale)</small>'
+    profession: 'Ausbildung zum Informatikkaufmann',
+    company: 'ACDM (MAIL BOX - Zentrale)'
   },
   {
     from: 'August 2013',
     to: 'Dezember 2014',
-    value: 'Ausbildung zur Fachkraft für Lagerlogistik <br /> <small>MAIL BOX - Direct-Marketing Service GmbH</small>'
+    profession: 'Ausbildung zur Fachkraft für Lagerlogistik',
+    company: 'MAIL BOX - Direct-Marketing Service GmbH'
   },
   {
     from: 'Mai 2013',
     to: 'August 2013',
-    value: 'Lagerhelfer in Teilzeit <br /> <small>MAIL BOX - Direct-Marketing Service GmbH</small>'
+    profession: 'Lagerhelfer in Teilzeit',
+    company: 'MAIL BOX - Direct-Marketing Service GmbH'
   },
   {
     from: 'April 2013',
     to: 'Mai 2013',
-    value: 'Praktikum als Fachkraft für Lagerlogistik <br /> <small>Party Rent Franchise GmbH</small>'
+    profession: 'Praktikum als Fachkraft für Lagerlogistik',
+    company: 'Party Rent Franchise GmbH'
   },
   {
     from: 'Januar 2013',
     to: 'April 2013',
-    value:
-      'EQJ als Sport- und Fitnesskaufmann (Einstiegs<wbr/>qualifizierungs<wbr/>jahr) <br /> <small>EasyFitness Prenzlauer Berg</small>'
+    profession: 'EQJ als Sport- und Fitnesskaufmann (Einstiegs<wbr/>qualifizierungs<wbr/>jahr)',
+    company: 'EasyFitness Prenzlauer Berg'
   },
   {
     from: 'Januar 2012',
     to: null,
-    value: 'Schulpraktikum bei einem Smartphone-Reparaturservice <br /> <small>Phonedoctor Berlin</small>'
+    profession: 'Schulpraktikum bei einem Smartphone-Reparaturservice',
+    company: 'Phonedoctor Berlin'
   }
 ];
