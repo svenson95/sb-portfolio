@@ -31,14 +31,14 @@
               "src/styles/main.scss",
               "node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               {
-                "inject": false,
-                "input": "src/styles/custom-themes/dark-theme.scss",
-                "bundleName": "dark-theme"
+                "inject": true,
+                "input": "src/styles/custom-themes/light-theme.scss",
+                "bundleName": "light-theme"
               },
               {
                 "inject": false,
-                "input": "src/styles/custom-themes/light-theme.scss",
-                "bundleName": "light-theme"
+                "input": "src/styles/custom-themes/dark-theme.scss",
+                "bundleName": "dark-theme"
               }
             ],
             "scripts": []
@@ -106,14 +106,14 @@
             "styles": [
               "src/styles/main.scss",
               {
-                "inject": false,
-                "input": "src/styles/custom-themes/dark-theme.scss",
-                "bundleName": "dark-theme"
+                "inject": true,
+                "input": "src/styles/custom-themes/light-theme.scss",
+                "bundleName": "light-theme"
               },
               {
                 "inject": false,
-                "input": "src/styles/custom-themes/light-theme.scss",
-                "bundleName": "light-theme"
+                "input": "src/styles/custom-themes/dark-theme.scss",
+                "bundleName": "dark-theme"
               }
             ],
             "scripts": []
