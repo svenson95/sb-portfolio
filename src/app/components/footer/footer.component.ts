@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
 import { ScrollAnchorDirective } from '../../directives';
@@ -7,7 +8,7 @@ import { ScrollAnchorDirective } from '../../directives';
 @Component({
   selector: 'footer',
   standalone: true,
-  imports: [CommonModule, ScrollAnchorDirective],
+  imports: [CommonModule, ScrollAnchorDirective, FontAwesomeModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 xl:mx-auto py-5">
@@ -31,7 +32,7 @@ import { ScrollAnchorDirective } from '../../directives';
             @for (item of socials; track item.href) {
             <li>
               <a [title]="'Profil auf ' + item.title" [href]="item.href" target="_blank" rel="noopener">
-                <i [ngClass]="item.iconSelector"></i>
+                <fa-icon [icon]="item.iconSelector"></fa-icon>
                 <small>{{ item.title }}</small>
               </a>
             </li>
