@@ -21,7 +21,7 @@
       <div class="gallery">
         @for (image of project.images; track image.src) {
         <a [href]="image.src" target="_blank" rel="noopener noreferrer">
-          <img [src]="image.src! | thumbnail" [alt]="image.label" />
+          <img [ngSrc]="image.src! | thumbnail" [alt]="image.label" priority width="64" height="64" />
         </a>
         }
       </div>

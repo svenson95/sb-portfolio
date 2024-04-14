@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 
@@ -10,7 +11,7 @@ import { ThumbnailPipe } from './thumbnail.pipe';
   templateUrl: './projects-accordion.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [MatExpansionModule, ThumbnailPipe]
+  imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage]
 })
 export class ProjectsAccordionComponent {
   public readonly projects = input.required<PanelData[]>();
