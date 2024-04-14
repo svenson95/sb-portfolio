@@ -9,7 +9,7 @@
   footer {
     background-color: if(
       $is-dark-theme,
-      rgba(constants.$black, 0.25),
+      constants.$deepgray,
       rgba(constants.$grey-2, 0.3)
     );
   }
