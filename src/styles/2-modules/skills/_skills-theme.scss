@@ -5,7 +5,8 @@
 @mixin theme($theme) {
   $is-dark-theme: map.get($theme, is-dark);
 
-  small, i {
-    color: if($is-dark-theme, constants.$lightgray, constants.$mediumgray);
+  small,
+  i {
+    color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
   }
 }

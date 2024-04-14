@@ -5,22 +5,22 @@
 @mixin theme($theme) {
   $is-dark-theme: map.get($theme, is-dark);
 
-  div#about {
-
+  section#about {
     #socials a.mat-mdc-button {
-      color: if(
-          $is-dark-theme,
-          constants.$mediumgray,
-          constants.$lightgray
-      );
+      color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
     }
 
     div.key {
       color: if($is-dark-theme, constants.$lightgray, constants.$mediumgray);
     }
-  
+
     .subtitle {
       color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
     }
+  }
+
+  .subtitle,
+  .key {
+    color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
   }
 }
