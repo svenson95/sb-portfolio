@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/c
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
-import { Theme, ThemeService } from '../../shared/theme.service';
+import { Theme, ThemeService } from '../../../shared/theme.service';
 
 import { SunUpAndDownAnimation } from './theme.toggle.animation';
 
