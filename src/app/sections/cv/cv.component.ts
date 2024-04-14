@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { faTableList } from '@fortawesome/free-solid-svg-icons';
 
 import { CardHeaderComponent } from '../../components';
 import { WORK_DATA } from '../../constants';
@@ -7,7 +8,7 @@ import { WORK_DATA } from '../../constants';
   selector: 'section#cv',
   template: `
     <div class="card">
-      <sb-card-header title="Lebenslauf" icon="fa-table"></sb-card-header>
+      <sb-card-header title="Lebenslauf" [icon]="faTable"></sb-card-header>
 
       <div class="px-3 md:px-5">
         <table class="w-full mb-5">
@@ -33,4 +34,5 @@ import { WORK_DATA } from '../../constants';
 })
 export class CvComponent {
   public readonly work = WORK_DATA;
+  public readonly faTable = faTableList;
 }

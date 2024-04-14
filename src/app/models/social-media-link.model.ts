@@ -1,3 +1,7 @@
+import { IconDefinition } from '@fortawesome/fontawesome-common-types';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+
 export class SocialMediaLink {
   public title: string;
   public href: string;
@@ -7,14 +11,14 @@ export class SocialMediaLink {
     this.href = props.href;
   }
 
-  public get iconSelector(): string {
+  public get iconSelector(): IconDefinition {
     switch (this.title) {
       case 'linkedin':
-        return 'fa-brands fa-linkedin';
+        return faLinkedin;
       case 'github':
-        return 'fa-brands fa-github';
+        return faGithub;
       case 'mail':
-        return 'fa-solid fa-paper-plane';
+        return faPaperPlane;
       default:
         throw new Error('unknown socials icon selector title');
     }

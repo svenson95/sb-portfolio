@@ -2,7 +2,7 @@
   @for (link of socials; track link.title) {
   <a mat-button target="_blank" rel="noopener noreferrer" [href]="link.href">
     <span class="flex flex-col items-center py-2">
-      <i class="text-2xl" [ngClass]="link.iconSelector"></i>
+      <fa-icon class="text-2xl" [icon]="link.iconSelector"></fa-icon>
       <span>{{ link.title }}</span>
     </span>
   </a>
@@ -10,7 +10,7 @@
 </section>
 <section class="card flex-col md:flex-row gap-5 md:gap-10">
   <div class="flex-1">
-    <sb-card-header title="Über mich" icon="fa-circle-user"></sb-card-header>
+    <sb-card-header title="Über mich" [icon]="faCircleUser"></sb-card-header>
 
     <div class="flex flex-col gap-3 px-5">
       @for (item of about; track item.key) {
@@ -23,7 +23,7 @@
   </div>
 
   <div class="flex-1">
-    <sb-card-header title="Daten" icon="fa-address-card"></sb-card-header>
+    <sb-card-header title="Daten" [icon]="faAddressCard"></sb-card-header>
 
     <div class="flex flex-col gap-3" @staggerAnimation>
       @for(item of profile; track item.key) {
