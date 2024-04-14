@@ -16,38 +16,25 @@ export enum Theme {
 export class ThemeService {
   public readonly isDark = signal<boolean | undefined>(undefined);
 
-  public themeString = computed(() => this.isDark() ? Theme.DARK : Theme.LIGHT);
+  public themeString = computed(() => (this.isDark() ? Theme.DARK : Theme.LIGHT));
 
   constructor(@Inject(DOCUMENT) private document: Document, @Inject(LocalStorage) private storage: Storage) {
-    this.initializeThemeFromPreferences();
+    this.initThemeFromPreferences();
   }
 
   public toggle(): void {
-    this.isDark.update(isDark => !isDark);
+    this.isDark.update((isDark) => !isDark);
     this.updateRenderedTheme();
   }
 
-  public initializeThemeFromPreferences(): void {
-    const storedPreference = this.storage.getItem(THEME_STORAGE_KEY);
-    const isDark = this.initIsDark(storedPreference);
-    this.isDark.set(isDark);
+  public initThemeFromPreferences(): void {
+    this.initDarkTheme();
 
-    const linkElement = this.createThemeLink();
-    this.document.head.appendChild(linkElement);
+    const themeElement = this.createHtmlLinkElement();
+    this.document.head.appendChild(themeElement);
   }
 
-  private initIsDark(theme: string | null): boolean {
-    const isDark = theme === Theme.DARK;
-    const systemColor = matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
-    return theme ? isDark : systemColor;
-  }
-
-  private createThemeLink(): HTMLLinkElement {
-    const initialTheme = this.document.querySelector('#sb-portfolio-initial-theme');
-    if (initialTheme) {
-      initialTheme.parentElement?.removeChild(initialTheme);
-    }
-
+  private createHtmlLinkElement(): HTMLLinkElement {
     const themeLink = this.document.createElement('link');
     themeLink.id = 'sb-portfolio-custom-theme';
     themeLink.rel = 'stylesheet';
@@ -62,5 +49,13 @@ export class ThemeService {
     }
 
     this.storage.setItem(THEME_STORAGE_KEY, this.themeString());
+  }
+
+  private initDarkTheme(): void {
+    const storedPreference = this.storage.getItem(THEME_STORAGE_KEY);
+    const isBrowserDark = matchMedia?.('(prefers-color-scheme: dark)').matches;
+    const stored = storedPreference === Theme.DARK ? true : false;
+
+    this.isDark.set(storedPreference === undefined ? isBrowserDark : stored);
   }
 }
