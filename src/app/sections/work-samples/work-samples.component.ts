@@ -2,7 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 import { CardHeaderComponent, ProjectsAccordionComponent } from '../../components';
-import { WORK_SAMPLES_DATA } from '../../constants';
+
+import { WORK_SAMPLES_DATA } from './work-samples.data';
 
 @Component({
   selector: 'section#work-samples',

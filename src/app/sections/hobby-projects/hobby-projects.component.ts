@@ -2,7 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 import { CardHeaderComponent, ProjectsAccordionComponent } from '../../components';
-import { HOBBY_PROJECTS_DATA } from '../../constants';
+
+import { HOBBY_PROJECTS_DATA } from './hobby-projects.data';
 
 @Component({
   selector: 'section#hobby-projects',

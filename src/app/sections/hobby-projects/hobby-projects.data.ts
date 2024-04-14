@@ -1,4 +1,4 @@
-import { PanelData } from '../models';
+import { PanelData } from '../../models';
 
 export const HOBBY_PROJECTS_DATA: PanelData[] = [
   {

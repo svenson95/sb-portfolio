@@ -1,4 +1,4 @@
-import { PanelData } from '../models';
+import { PanelData } from '../../models';
 
 export const WORK_SAMPLES_DATA: PanelData[] = [
   {

@@ -2,7 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { faTableList } from '@fortawesome/free-solid-svg-icons';
 
 import { CardHeaderComponent } from '../../components';
-import { CV_DATA } from '../../constants';
+
+import { CV_DATA } from './cv.data';
 
 @Component({
   selector: 'section#cv',
