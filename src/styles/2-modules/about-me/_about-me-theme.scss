@@ -15,9 +15,4 @@
       color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
     }
   }
-
-  .subtitle,
-  .key {
-    color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
-  }
 }
