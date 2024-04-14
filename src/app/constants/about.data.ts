@@ -1,35 +1,34 @@
 export const ABOUT_DATA = [
+  { key: '2022', value: 'Mein Start als Junior Frontend-Entwickler.' },
   {
-    key: '2008',
+    key: '2019',
     value:
-      'In der Oberschule hatten wir einen Computer-Kurs, wo wir mit <sb-link url="https://scratch.mit.edu/" inNewTab>Scratch</sb-link> gearbeitet haben, so bin ich das erste mal mit dem Thema Programmierung in Berührung gekommen.'
-  },
-  {
-    key: '2009',
-    value:
-      'Mit <sb-link url="https://developer.valvesoftware.com/wiki/SDK_Docs" inNewTab>Source SDK</sb-link> "Maps" für ein Computer Spiel entwickelt.'
-  },
-  {
-    key: '2010',
-    value:
-      'Das erste mal mit Webentwicklung und insbesondere mit WordPress beschäftigt, eine kleine Website gebaut und einige Funktionen ausprobiert, Plugins installiert, am Styling Kleinigkeiten geändert.'
-  },
-  {
-    key: '2016',
-    value:
-      'Die erste kleine WordPress Page über Strato gehostet, für einen kleinen Handwerks Betrieb, mit etwas Text, Kontaktdaten, Referenzen in Form von Fotos und Beschreibungen.'
+      'Vollzeit-Praktikum als Web- & App-Entwickler - vorbereitend zur Ausbildung zum Fachinformatiker für Anwendungsentwicklung.'
   },
   {
     key: '2018',
     value:
-      'Den Entschluss getroffen, Programmieren zu lernen, angefangen mit einem Kurs auf Udemy über das Thema iOS Entwicklung mit <sb-link url="https://www.apple.com/de/swift/" inNewTab>Swift</sb-link>.'
+      'Den Entschluss getroffen Programmieren zu lernen, angefangen mit einem Online-Kurs über iOS Entwicklung mit <a href="https://www.apple.com/de/swift/" target="_blank" rel="noopener noreferrer">Swift</a>.'
   },
   {
-    key: '2019',
-    value:
-      'Vollzeit-Praktikum in einer Agentur für Web- & App-Entwicklung begonnen - vorbereitend zur Ausbildung zum Fachinformatiker für Anwendungsentwicklung.'
+    key: '2016',
+    value: 'Erste kleine WordPress Page für einen kleinen Handwerksbetrieb über Strato betrieben.'
   },
-  { key: '2022', value: 'Mein Start als Junior Frontend-Entwickler.' }
+  {
+    key: '2010',
+    value:
+      'Mit Webentwicklung und WordPress beschäftigt, eine kleine Website gebaut und über einen "Free Webspace" Anbieter gehostet.'
+  },
+  {
+    key: '2009',
+    value:
+      'Mit <a href="https://developer.valvesoftware.com/wiki/SDK_Docs" target="_blank" rel="noopener noreferrer">Source SDK</a> Karten / "Maps" für ein Computer Spiel entwickelt.'
+  },
+  {
+    key: '2008',
+    value:
+      'In der 8. Klasse mit <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a> gearbeitet, so bin ich das erste mal mit dem Thema Programmierung in Berührung gekommen.'
+  }
 ];
 
 export const PROFILE_DATA = [
