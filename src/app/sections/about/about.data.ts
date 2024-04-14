@@ -1,23 +1,21 @@
 export const ABOUT_DATA = [
-  { key: '2022', value: 'Mein Start als Junior Frontend-Entwickler.' },
+  { key: '2022', value: 'Erster Job als Junior Frontend-Entwickler.' },
   {
     key: '2019',
-    value:
-      'Vollzeit-Praktikum als Web- & App-Entwickler - vorbereitend zur Ausbildung zum Fachinformatiker für Anwendungsentwicklung.'
+    value: 'Ausbildung zum Fachinformatiker für Anwendungsentwicklung.'
   },
   {
     key: '2018',
     value:
-      'Den Entschluss getroffen Programmieren zu lernen, angefangen mit einem Online-Kurs über iOS Entwicklung mit <a href="https://www.apple.com/de/swift/" target="_blank" rel="noopener noreferrer">Swift</a>.'
+      'Online-Kurs auf <a href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer">Udemy</a> gekauft über iOS Entwicklung mit <a href="https://www.apple.com/de/swift/" target="_blank" rel="noopener noreferrer">Swift</a>, und mich intensiver mit Software-Entwicklung beschäftigt.'
   },
   {
     key: '2016',
-    value: 'Erste kleine WordPress Page für einen kleinen Handwerksbetrieb über Strato betrieben.'
+    value: 'Erste WordPress Page für einen kleinen Handwerksbetrieb über Strato betrieben.'
   },
   {
     key: '2010',
-    value:
-      'Mit Webentwicklung und WordPress beschäftigt, eine kleine Website gebaut und über einen "Free Webspace" Anbieter gehostet.'
+    value: 'Mit Webentwicklung beschäftigt. WordPress über einen "Free Webspace" Anbieter gehostet.'
   },
   {
     key: '2009',
@@ -27,7 +25,7 @@ export const ABOUT_DATA = [
   {
     key: '2008',
     value:
-      'In der 8. Klasse mit <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a> gearbeitet, so bin ich das erste mal mit dem Thema Programmierung in Berührung gekommen.'
+      'Im Schulunterricht mit <a href="https://scratch.mit.edu/" target="_blank" rel="noopener noreferrer">Scratch</a> gearbeitet, einer blockbasierten visuellen Programmiersprache.'
   }
 ];
 
