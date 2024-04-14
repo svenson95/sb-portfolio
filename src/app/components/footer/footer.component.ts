@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
 import { ScrollAnchorDirective } from '../../directives';
@@ -42,12 +43,14 @@ import { ScrollAnchorDirective } from '../../directives';
       </div>
 
       <small class="flex whitespace-nowrap items-baseline mt-8 sm:mt-0">
-        Made with <i class="fa fa-heart text-red-600 mx-1"></i> in Magdeburg
+        Made with <fa-icon [icon]="faHeart" class="mx-1"></fa-icon> in Magdeburg
       </small>
     </div>
   `
 })
 export class FooterComponent {
-  public readonly navigation = NAVIGATION_DATA;
-  public readonly socials = SOCIALS_DATA;
+  readonly navigation = NAVIGATION_DATA;
+  readonly socials = SOCIALS_DATA;
+
+  readonly faHeart = faHeart;
 }
