@@ -10,10 +10,7 @@
       color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
     }
 
-    div.key {
-      color: if($is-dark-theme, constants.$lightgray, constants.$mediumgray);
-    }
-
+    div.key,
     .subtitle {
       color: if($is-dark-theme, constants.$mediumgray, constants.$lightgray);
     }
