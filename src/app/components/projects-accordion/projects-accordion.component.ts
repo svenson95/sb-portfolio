@@ -1,9 +1,11 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 
-import { PanelData } from '../../models';
+import { PanelData, PanelDataLink } from '../../models';
 
+import { ImageDialog } from './components/image.dialog';
 import { ThumbnailPipe } from './thumbnail.pipe';
 
 @Component({
@@ -14,5 +16,12 @@ import { ThumbnailPipe } from './thumbnail.pipe';
   imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage]
 })
 export class ProjectsAccordionComponent {
+  private readonly dialog = inject(MatDialog);
   public readonly projects = input.required<PanelData[]>();
+
+  openDialog(image: PanelDataLink): void {
+    this.dialog.open(ImageDialog, {
+      data: { image }
+    });
+  }
 }
