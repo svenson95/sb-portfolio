@@ -31,6 +31,14 @@
       "parserOptions": {
         "project": ["tsconfig.json"],
         "createDefaultProgram": true
+      },
+      "rules": {
+        "@angular-eslint/component-class-suffix": [
+          "error",
+          {
+            "suffixes": ["Component", "Page", "Dialog"]
+          }
+        ]
       }
     },
     {
