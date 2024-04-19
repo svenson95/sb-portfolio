@@ -13,7 +13,10 @@ import { ThumbnailPipe } from './thumbnail.pipe';
   templateUrl: './projects-accordion.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage]
+  imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage],
+  styles: `
+    img { @apply cursor-pointer shadow; }
+  `
 })
 export class ProjectsAccordionComponent {
   private readonly dialog = inject(MatDialog);
@@ -21,7 +24,8 @@ export class ProjectsAccordionComponent {
 
   openDialog(image: PanelDataLink): void {
     this.dialog.open(ImageDialog, {
-      data: { image }
+      data: { image },
+      panelClass: 'project-image-dialog'
     });
   }
 }

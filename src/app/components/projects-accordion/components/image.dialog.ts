@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogActions, MatDialogModule } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 
 import { PanelDataLink } from '../../../models';
 
@@ -10,8 +10,11 @@ export interface DialogData {
 @Component({
   selector: 'sb-image-dialog',
   standalone: true,
-  imports: [MatDialogModule, MatDialogActions],
-  template: ` <img [src]="image.src!" [alt]="image.label" mat-dialog-close /> `
+  imports: [MatDialogModule],
+  template: ` <img [src]="image.src!" [alt]="image.label" mat-dialog-close /> `,
+  styles: `
+    ::ng-deep .project-image-dialog mat-dialog-container { height: 90vh }
+  `
 })
 export class ImageDialog {
   private readonly data = inject(MAT_DIALOG_DATA);
