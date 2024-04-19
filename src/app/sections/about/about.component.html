@@ -1,37 +1,39 @@
-<section id="socials" class="flex gap-5">
-  @for (link of socials; track link.title) {
-  <a mat-button target="_blank" rel="noopener noreferrer" [href]="link.href">
-    <span class="flex flex-col items-center py-2">
-      <fa-icon class="text-2xl" [icon]="link.iconSelector"></fa-icon>
-      <span>{{ link.title }}</span>
-    </span>
-  </a>
-  }
-</section>
-<section class="flex flex-col md:flex-row gap-5 md:gap-10">
-  <div class="flex-1">
-    <sb-card-header title="Über mich" [icon]="faCircleUser"></sb-card-header>
+<div class="card">
+  <section id="socials" class="flex gap-5">
+    @for (link of socials; track link.title) {
+    <a mat-button target="_blank" rel="noopener noreferrer" [href]="link.href">
+      <span class="flex flex-col items-center py-2">
+        <fa-icon class="text-2xl" [icon]="link.iconSelector"></fa-icon>
+        <span>{{ link.title }}</span>
+      </span>
+    </a>
+    }
+  </section>
+  <section class="flex flex-col md:flex-row gap-5 md:gap-10">
+    <div class="flex-1">
+      <sb-card-header title="Über mich" [icon]="faCircleUser"></sb-card-header>
 
-    <div class="flex flex-col gap-3 px-5">
-      @for (item of about; track item.key) {
-      <div>
-        <h4 class="subtitle">{{ item.key }}</h4>
-        <div [innerHTML]="item.value | bypassUrl: 'html'"></div>
+      <div class="flex flex-col gap-3 px-5">
+        @for (item of about; track item.key) {
+        <div>
+          <h4 class="subtitle">{{ item.key }}</h4>
+          <div [innerHTML]="item.value | bypassUrl: 'html'"></div>
+        </div>
+        }
       </div>
-      }
     </div>
-  </div>
 
-  <div class="flex-1">
-    <sb-card-header title="Daten" [icon]="faAddressCard"></sb-card-header>
+    <div class="flex-1">
+      <sb-card-header title="Daten" [icon]="faAddressCard"></sb-card-header>
 
-    <div class="flex flex-col gap-3" @staggerAnimation>
-      @for(item of profile; track item.key) {
-      <div class="flex flex-col lg:flex-row border-b pb-2 px-5">
-        <div class="key flex-1">{{ item.key }}:</div>
-        <div class="value flex-1" [innerHTML]="item.value"></div>
+      <div class="flex flex-col gap-3" @staggerAnimation>
+        @for(item of profile; track item.key) {
+        <div class="flex flex-col lg:flex-row border-b pb-2 px-5">
+          <div class="key flex-1">{{ item.key }}:</div>
+          <div class="value flex-1" [innerHTML]="item.value"></div>
+        </div>
+        }
       </div>
-      }
     </div>
-  </div>
-</section>
+  </section>
+</div>
