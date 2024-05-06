@@ -13,11 +13,12 @@ export class ScrollManagerDirective {
   private readonly sections = new Map<string, ScrollSectionDirective>();
 
   public onClick(id: string): void {
-    if (!this.sections.has(id)) {
-      throw new Error(`${id} must be implemented with ScrollSectionDirective`);
+    const section = this.sections.get(id);
+    if (section === undefined) {
+      throw new Error(`${id} not found in onClick method of ScrollManagerDirective.`);
     }
 
-    this.sections.get(id)!.scrollIntoView();
+    section.scrollIntoView();
     this.scrollService.setVisibleSection(id);
   }
 
