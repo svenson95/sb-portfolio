@@ -43,10 +43,6 @@ mat-expansion-panel.mat-expansion-panel {
 
     span.mat-expansion-indicator {
       margin-right: 2px;
-
-      &::after {
-
-      }
     }
   }
 
@@ -60,7 +56,6 @@ mat-expansion-panel.mat-expansion-panel {
       align-items: center;
 
       a {
-        background-color: rgba(100, 100, 100, 0.25);
         padding: 4px 8px;
 
         &:hover {

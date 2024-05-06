@@ -6,7 +6,8 @@
   $is-dark-theme: map.get($theme, is-dark);
 
   a {
-    box-shadow: inset 0 0 0 0 if($is-dark-theme, constants.$sb-blue-700, constants.$sb-blue-100);
-    color: if($is-dark-theme, constants.$sb-blue-100, constants.$sb-blue-600);
+    box-shadow: inset 0 0 0 0
+      if($is-dark-theme, constants.$sb-blue-700, constants.$sb-blue-100);
+    color: if($is-dark-theme, constants.$sb-blue-100, constants.$sb-blue-300);
   }
 }
