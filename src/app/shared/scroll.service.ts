@@ -1,45 +1,36 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, NgZone, inject, signal } from '@angular/core';
-import { debounceTime, fromEvent } from 'rxjs';
+import { Injectable, inject, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
-  private readonly scrollEvent$ = fromEvent(window, 'scroll').pipe(debounceTime(20));
-  private readonly ngZone = inject(NgZone);
+  readonly visibleSection = signal<string | undefined>(undefined);
+  readonly document = inject(DOCUMENT);
 
-  public readonly visibleSection = signal<string | undefined>(undefined);
-
-  constructor(@Inject(DOCUMENT) private document: Document) {}
-
-  public initialize(): void {
-    // Inside runOutsideAngular, events which are usually triggering CD will not do it anymore
-    this.ngZone.runOutsideAngular(() => {
-      this.scrollEvent$.subscribe((_: Event) => {
-        // reenter the Angular zone after event subscribed
-        this.ngZone.run(() => {
-          const visibleSection = this.getVisibleSection();
-          if (visibleSection && this.visibleSection() !== visibleSection) {
-            this.setVisibleSection(visibleSection);
-          }
-        });
-      });
-    });
-  }
-
-  public setVisibleSection(sectionId: string): void {
+  setVisibleSection(sectionId: string): void {
     this.visibleSection.set(sectionId);
   }
 
-  private getVisibleSection(): string | undefined {
-    const sections = Array.from(this.document.querySelectorAll('section'));
+  getVisibleSection(): string | undefined {
+    const SECTION_SELECTOR = 'section';
+    const sections = Array.from(this.document.querySelectorAll(SECTION_SELECTOR));
     const visibleSection = sections.find(this.isInViewport);
     return visibleSection?.id ?? undefined;
   }
 
-  private isInViewport(el: HTMLElement): boolean {
+  isInViewport(el: HTMLElement): boolean {
     const { top, bottom } = el.getBoundingClientRect();
-    return top <= 800 && bottom >= 300;
+    const topOffset = 800;
+    const bottomOffset = 300;
+    return top <= topOffset && bottom >= bottomOffset;
+  }
+
+  updateVisibleSection(): void {
+    const visibleSection = this.getVisibleSection();
+    const isNotSelected = this.visibleSection() !== visibleSection;
+    if (visibleSection && isNotSelected) {
+      this.setVisibleSection(visibleSection);
+    }
   }
 }
