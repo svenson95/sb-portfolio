@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, computed, signal } from '@angular/core';
+import { Injectable, computed, inject, signal } from '@angular/core';
 
 import { LocalStorage } from './storage.service';
 
@@ -14,20 +14,23 @@ export enum Theme {
   providedIn: 'root'
 })
 export class ThemeService {
-  public readonly isDark = signal<boolean | undefined>(undefined);
+  readonly document = inject(DOCUMENT);
+  readonly storage = inject(LocalStorage);
 
-  public themeString = computed(() => (this.isDark() ? Theme.DARK : Theme.LIGHT));
+  readonly isDark = signal<boolean | undefined>(undefined);
 
-  constructor(@Inject(DOCUMENT) private document: Document, @Inject(LocalStorage) private storage: Storage) {
+  readonly themeString = computed(() => (this.isDark() ? Theme.DARK : Theme.LIGHT));
+
+  constructor() {
     this.initThemeFromPreferences();
   }
 
-  public toggle(): void {
+  toggle(): void {
     this.isDark.update((isDark) => !isDark);
     this.updateRenderedTheme();
   }
 
-  public initThemeFromPreferences(): void {
+  initThemeFromPreferences(): void {
     this.initDarkTheme();
 
     const themeElement = this.createHtmlLinkElement();
@@ -43,7 +46,8 @@ export class ThemeService {
   }
 
   private updateRenderedTheme(): void {
-    const customLinkElement = this.document.getElementById('sb-portfolio-custom-theme') as HTMLLinkElement | null;
+    const THEME_ELEMENT_ID = 'sb-portfolio-custom-theme';
+    const customLinkElement = this.document.getElementById(THEME_ELEMENT_ID) as HTMLLinkElement | null;
     if (customLinkElement) {
       customLinkElement.href = `${this.themeString()}-theme.css`;
     }
@@ -53,7 +57,8 @@ export class ThemeService {
 
   private initDarkTheme(): void {
     const storedPreference = this.storage.getItem(THEME_STORAGE_KEY);
-    const isBrowserDark = matchMedia?.('(prefers-color-scheme: dark)').matches;
+    const USERS_OS_THEME_IS_DARK = '(prefers-color-scheme: dark)';
+    const isBrowserDark = matchMedia?.(USERS_OS_THEME_IS_DARK).matches;
     const stored = storedPreference === Theme.DARK ? true : false;
 
     this.isDark.set(storedPreference === undefined ? isBrowserDark : stored);
