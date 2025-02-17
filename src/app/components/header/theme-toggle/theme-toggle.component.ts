@@ -7,16 +7,15 @@ import { Theme, ThemeService } from '../../../shared/theme.service';
 import { SunUpAndDownAnimation } from './theme.toggle.animation';
 
 @Component({
-  selector: 'sb-theme-toggle',
-  template: `
+    selector: 'sb-theme-toggle',
+    template: `
     <button mat-icon-button type="button" (click)="theme.toggle()" [matTooltip]="themeToggleLabel()">
       <mat-icon [@sunUpAndDown]="isDark()">{{ iconString() }}</mat-icon>
     </button>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [MatIconModule, MatTooltipModule],
-  animations: [SunUpAndDownAnimation]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [MatIconModule, MatTooltipModule],
+    animations: [SunUpAndDownAnimation]
 })
 export class ThemeToggleComponent {
   readonly theme = inject(ThemeService);

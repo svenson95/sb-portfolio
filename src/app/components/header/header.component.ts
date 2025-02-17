@@ -6,12 +6,12 @@ import { HeaderLinkComponent } from './link/link.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
 @Component({
-  selector: 'header',
-  styles: `
+    selector: 'header',
+    styles: `
     h1 { @apply text-xl font-bold mr-5 leading-5; }
     ul { @apply mr-5 hidden lg:flex gap-3; }
   `,
-  template: `
+    template: `
     <h1>
       <span>Portfolio</span>
       <span class="px-2">|</span>
@@ -26,9 +26,8 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
     </ul>
     <sb-theme-toggle></sb-theme-toggle>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [HeaderLinkComponent, ThemeToggleComponent]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [HeaderLinkComponent, ThemeToggleComponent]
 })
 export class HeaderComponent {
   readonly navigation = NAVIGATION_DATA;

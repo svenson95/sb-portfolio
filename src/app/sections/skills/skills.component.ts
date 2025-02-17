@@ -9,11 +9,10 @@ import { ThemeService } from '../../shared';
 import { ImageComponent } from './image.component';
 
 @Component({
-  selector: 'section#skills',
-  templateUrl: './skills.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [CommonModule, CardHeaderComponent, ImageComponent]
+    selector: 'section#skills',
+    templateUrl: './skills.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CommonModule, CardHeaderComponent, ImageComponent]
 })
 export class SkillsComponent {
   private readonly theme = inject(ThemeService);

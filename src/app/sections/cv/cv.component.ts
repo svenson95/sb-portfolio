@@ -6,8 +6,8 @@ import { CardHeaderComponent } from '../../components';
 import { CV_DATA } from './cv.data';
 
 @Component({
-  selector: 'section#cv',
-  template: `
+    selector: 'section#cv',
+    template: `
     <div class="card">
       <sb-card-header title="Lebenslauf" [icon]="faTable"></sb-card-header>
 
@@ -32,9 +32,8 @@ import { CV_DATA } from './cv.data';
       </div>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [CardHeaderComponent]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CardHeaderComponent]
 })
 export class CvComponent {
   public readonly data = CV_DATA;

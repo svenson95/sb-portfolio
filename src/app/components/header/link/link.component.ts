@@ -6,11 +6,10 @@ import { NavigationItem } from '../../../models';
 import { ScrollService } from '../../../shared';
 
 @Component({
-  selector: 'sb-header-link',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [MatButtonModule, ScrollAnchorDirective],
-  template: `
+    selector: 'sb-header-link',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [MatButtonModule, ScrollAnchorDirective],
+    template: `
     <a mat-button [sbScrollAnchor]="navItem().id" [class.in-viewport]="isInViewport()" [disabled]="isInViewport()">
       {{ navItem().title }}
     </a>

@@ -8,11 +8,10 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'sb-image-dialog',
-  standalone: true,
-  imports: [MatDialogModule],
-  template: ` <img [src]="image.src!" [alt]="image.label" mat-dialog-close /> `,
-  styles: `
+    selector: 'sb-image-dialog',
+    imports: [MatDialogModule],
+    template: ` <img [src]="image.src!" [alt]="image.label" mat-dialog-close /> `,
+    styles: `
     ::ng-deep .project-image-dialog mat-dialog-container { height: 90vh }
   `
 })

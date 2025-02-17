@@ -7,11 +7,10 @@ import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
 import { ScrollAnchorDirective } from '../../directives';
 
 @Component({
-  selector: 'footer',
-  standalone: true,
-  imports: [CommonModule, ScrollAnchorDirective, FontAwesomeModule],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  template: `
+    selector: 'footer',
+    imports: [CommonModule, ScrollAnchorDirective, FontAwesomeModule],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    template: `
     <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 xl:mx-auto py-5">
       <div class="flex gap-12">
         <div class="flex flex-col gap-3">

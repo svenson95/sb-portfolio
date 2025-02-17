@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, ApplicationConfig, StaticProvider, importProvidersFrom } from '@angular/core';
+import { ApplicationConfig, StaticProvider, importProvidersFrom, inject, provideAppInitializer } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { LocalStorage, ScrollEventService, SessionStorage, WindowToken, getStorage, windowProvider } from './shared';
@@ -18,7 +18,10 @@ export const STORAGE_PROVIDERS: StaticProvider[] = [
 ];
 
 export const SCROLL_EVENT_PROVIDERS: StaticProvider[] = [
-  { provide: APP_INITIALIZER, useFactory: () => () => null, deps: [ScrollEventService], multi: true }
+  provideAppInitializer(() => {
+        const initializerFn = (() => () => null)(inject(ScrollEventService));
+        return initializerFn();
+      })
 ];
 
 export const appConfig: ApplicationConfig = {

@@ -6,17 +6,16 @@ import { CardHeaderComponent, ProjectsAccordionComponent } from '../../component
 import { WORK_SAMPLES_DATA } from './work-samples.data';
 
 @Component({
-  selector: 'section#work-samples',
-  template: `
+    selector: 'section#work-samples',
+    template: `
     <div class="card">
       <sb-card-header title="Bisherige Projekte" [icon]="faCode"></sb-card-header>
 
       <sb-projects-accordion [projects]="workSamples" />
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [CardHeaderComponent, ProjectsAccordionComponent]
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [CardHeaderComponent, ProjectsAccordionComponent]
 })
 export class WorkSamplesComponent {
   public readonly workSamples = WORK_SAMPLES_DATA;

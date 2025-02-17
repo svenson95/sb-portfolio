@@ -9,12 +9,11 @@ import { ImageDialog } from './components/image.dialog';
 import { ThumbnailPipe } from './thumbnail.pipe';
 
 @Component({
-  selector: 'sb-projects-accordion',
-  templateUrl: './projects-accordion.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage],
-  styles: `
+    selector: 'sb-projects-accordion',
+    templateUrl: './projects-accordion.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage],
+    styles: `
     img { @apply cursor-pointer shadow; }
   `
 })

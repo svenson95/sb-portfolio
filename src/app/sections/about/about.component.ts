@@ -11,12 +11,11 @@ import { staggerAnimation } from './about.animation';
 import { ABOUT_DATA, PROFILE_DATA } from './about.data';
 
 @Component({
-  selector: 'section#about',
-  templateUrl: './about.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule],
-  animations: [staggerAnimation]
+    selector: 'section#about',
+    templateUrl: './about.component.html',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule],
+    animations: [staggerAnimation]
 })
 export class AboutComponent {
   public readonly socials = SOCIALS_DATA;
