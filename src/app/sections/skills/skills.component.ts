@@ -9,10 +9,28 @@ import { ThemeService } from '../../shared';
 import { ImageComponent } from './image.component';
 
 @Component({
-    selector: 'section#skills',
-    templateUrl: './skills.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CommonModule, CardHeaderComponent, ImageComponent]
+  selector: 'section#skills',
+  templateUrl: './skills.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule, CardHeaderComponent, ImageComponent],
+  styles: `
+    @use "src/styles/constants";
+
+    div.grid {
+      grid-template-rows: min-content 1fr 1fr 1fr 1fr;
+
+      * {
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+      }
+    }
+
+    small,
+    i {
+      color: light-dark(constants.$lightgray, constants.$mediumgray);
+    }
+  `
 })
 export class SkillsComponent {
   private readonly theme = inject(ThemeService);

@@ -11,11 +11,30 @@ import { staggerAnimation } from './about.animation';
 import { ABOUT_DATA, PROFILE_DATA } from './about.data';
 
 @Component({
-    selector: 'section#about',
-    templateUrl: './about.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule],
-    animations: [staggerAnimation]
+  selector: 'section#about',
+  templateUrl: './about.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule],
+  animations: [staggerAnimation],
+  styles: `
+    @use "src/styles/constants";
+    
+    :host {
+      #socials a.mat-mdc-button {
+        height: auto;
+        color: var(--mat-sys-primary);
+      }
+
+      div > ::ng-deep a:hover {
+        text-decoration: underline;
+      }
+
+      div.key,
+      .subtitle {
+        color: light-dark(constants.$lightgray, constants.$mediumgray);
+      }
+    }
+  `
 })
 export class AboutComponent {
   public readonly socials = SOCIALS_DATA;

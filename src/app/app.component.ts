@@ -19,10 +19,40 @@ import { AboutComponent, CvComponent, HobbyProjectsComponent, SkillsComponent, W
   ],
   providers: [ScrollManagerDirective],
   styles: `
-    header { @apply flex items-center justify-between h-16 sticky top-0 z-10 px-4 sm:p-5; }
-    main { @apply flex flex-col mx-0 md:mx-5 my-7 gap-7 xl:mx-auto; }
-    section:first-of-type { @apply flex-col gap-5 justify-center; }
-    footer { @apply flex w-full; }
+    @use "src/styles/constants";
+    @use 'sass:map';
+
+    :host {
+      @apply flex flex-col;
+
+      main,
+      footer .wrapper {
+        max-width: 1200px;
+      }
+
+      header { @apply flex items-center justify-between h-16 sticky top-0 z-10 px-4 sm:p-5; }
+      main { @apply flex flex-col mx-0 md:mx-5 my-7 gap-7 xl:mx-auto; }
+      section:first-of-type { @apply flex-col gap-5 justify-center; }
+      main > section {
+        @apply flex items-center;
+        min-height: calc(100vh - 64px);
+
+        ::ng-deep .card {
+          @apply w-full p-4;
+
+          @screen sm {
+            @apply p-6;
+          }
+        }
+      }
+      footer { @apply flex w-full; }
+
+      @screen md {
+        main > section ::ng-deep .card {
+          border-left: 1px solid constants.$border-color;
+        }
+      }
+    }
   `,
   template: `
     <header></header>

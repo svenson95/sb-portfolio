@@ -6,8 +6,8 @@ import { CardHeaderComponent } from '../../components';
 import { CV_DATA } from './cv.data';
 
 @Component({
-    selector: 'section#cv',
-    template: `
+  selector: 'section#cv',
+  template: `
     <div class="card">
       <sb-card-header title="Lebenslauf" [icon]="faTable"></sb-card-header>
 
@@ -32,8 +32,46 @@ import { CV_DATA } from './cv.data';
       </div>
     </div>
   `,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [CardHeaderComponent]
+  styles: `
+    @use "src/styles/constants";
+    
+    table {
+      tr:not(:last-of-type) td {
+        border-bottom: 1px solid constants.$border-color;
+      }
+
+      tr:nth-child(even) {
+        background-color: light-dark(rgba(constants.$lightboxgray, 0.2), rgba(constants.$mediumgray, 0.1));
+      }
+
+      th {
+        padding-bottom: 0.5em;
+      }
+
+      td {
+        padding: 8px;
+      }
+
+      td:nth-of-type(1) {
+        width: 80px;
+        font-family: constants.$monospace-font;
+      }
+
+      td:nth-of-type(2) div {
+        font-size: 0.8rem;
+      }
+
+      td span {
+        font-weight: 600;
+      }
+
+      small {
+        color: light-dark(constants.$lightgray, constants.$mediumgray);
+      }
+    }
+  `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CardHeaderComponent]
 })
 export class CvComponent {
   public readonly data = CV_DATA;

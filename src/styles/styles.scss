@@ -1,8 +1,5 @@
-/// import directories
-@use './0-base' as base;
-@use './1-layouts' as layouts;
-@use './2-modules' as modules;
-@use './3-components' as components;
+@use 'constants';
+@use 'mixins';
 
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
@@ -13,16 +10,19 @@
 @tailwind utilities;
 
 html {
+  scroll-behavior: smooth;
+
+  color-scheme: normal;
   @include mat.theme(
     (
       color: (
         theme-type: light,
-        primary: mat.$azure-palette,
-        tertiary: mat.$blue-palette
+        primary: mat.$azure-palette
       ),
       typography: Montserrat,
       density: 0
-    )
+    ),
+    $overrides: (body-large-size: '14px')
   );
 }
 
@@ -32,5 +32,83 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  border-color: constants.$border-color;
+}
+
+// typography
+body {
+  font-family: constants.$primary-font;
+  font-weight: 500;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  margin-inline: -2px;
+  padding-inline: 2px;
+  transition: box-shadow 200ms ease-in-out;
+  white-space: nowrap; // needed to show animation correctly
+  color: var(--mat-sys-primary);
+}
+
+// Material components styling
+.mat-mdc-button[mat-button] {
+  border-radius: 0;
+
+  &:hover,
+  &:focus,
+  &.in-viewport {
+    &:after {
+      width: 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    @include mixins.transition(all 0.25s ease-in-out);
+  }
+
+  &.mat-mdc-button-disabled:after {
+    background-color: light-dark(
+      color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent),
+      color-mix(in srgb, constants.$white 60%, transparent)
+    );
+  }
+
+  &:not(.mat-mdc-button-disabled):hover:after {
+    background-color: light-dark(
+      color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent),
+      color-mix(in srgb, constants.$white 60%, transparent)
+    );
+  }
+}
+
+.mat-mdc-button[mat-button][disabled],
+.mat-mdc-button[mat-button].mat-mdc-button-disabled {
+  cursor: default;
+  pointer-events: none;
+  color: light-dark(
+    color-mix(in srgb, var(--mat-sys-on-surface) 38%, transparent),
+    color-mix(in srgb, constants.$white 60%, transparent)
+  );
+}
+
+.mat-mdc-button.mdc-button .mat-mdc-button-persistent-ripple::before {
+  background-color: transparent;
+}
+
+span.mat-mdc-button-focus-overlay {
+  background: transparent;
 }
