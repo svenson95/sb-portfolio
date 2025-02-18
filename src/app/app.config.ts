@@ -1,7 +1,8 @@
-import { ApplicationConfig, StaticProvider, importProvidersFrom, inject, provideAppInitializer } from '@angular/core';
+import { ApplicationConfig, StaticProvider, importProvidersFrom } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
-import { LocalStorage, ScrollEventService, SessionStorage, WindowToken, getStorage, windowProvider } from './shared';
+import { LocalStorage, SessionStorage, WindowToken, getStorage, windowProvider } from './shared';
 
 export const STORAGE_PROVIDERS: StaticProvider[] = [
   { provide: WindowToken, useFactory: windowProvider },
@@ -17,13 +18,22 @@ export const STORAGE_PROVIDERS: StaticProvider[] = [
   }
 ];
 
-export const SCROLL_EVENT_PROVIDERS: StaticProvider[] = [
-  provideAppInitializer(() => {
-        const initializerFn = (() => () => null)(inject(ScrollEventService));
-        return initializerFn();
-      })
-];
+// TODO: check how to implement scroll event again
+// export const SCROLL_EVENT_PROVIDERS: StaticProvider[] = [
+//   provideAppInitializer(() => {
+//     const initializerFn = (
+//       () => () =>
+//         null
+//     )(inject(ScrollEventService));
+//     return initializerFn();
+//   })
+// ];
 
 export const appConfig: ApplicationConfig = {
-  providers: [importProvidersFrom([BrowserAnimationsModule]), STORAGE_PROVIDERS, SCROLL_EVENT_PROVIDERS]
+  providers: [
+    importProvidersFrom([BrowserAnimationsModule]),
+    STORAGE_PROVIDERS,
+    // SCROLL_EVENT_PROVIDERS,
+    provideAnimationsAsync()
+  ]
 };
