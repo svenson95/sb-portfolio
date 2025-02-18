@@ -1,10 +1,10 @@
-import { trigger, transition, query, style, stagger, animate, keyframes } from "@angular/animations";
+import { animate, keyframes, query, stagger, style, transition, trigger } from '@angular/animations';
 
 export const staggerAnimation = trigger('staggerAnimation', [
   transition('* => *', [
-    query(':enter', style({ opacity: 0 }), { optional: true }),
+    query('.about-profile-item', style({ opacity: 0 })),
     query(
-      ':enter',
+      '.about-profile-item',
       stagger('100ms', [
         animate(
           '300ms ease-in',
