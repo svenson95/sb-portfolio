@@ -1,8 +1,8 @@
 import { ApplicationConfig, StaticProvider, importProvidersFrom, inject, provideAppInitializer } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-
 import { of } from 'rxjs';
+
 import { LocalStorage, ScrollEventService, SessionStorage, WindowToken, getStorage, windowProvider } from './shared';
 
 export const STORAGE_PROVIDERS: StaticProvider[] = [
