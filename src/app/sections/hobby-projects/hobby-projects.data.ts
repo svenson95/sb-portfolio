@@ -2,9 +2,9 @@ import { PanelData } from '../../models';
 
 export const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
-    title: 'reelscore',
-    description: 'reelscore.description',
-    content: 'reelscore.content',
+    title: 'hobby-projects.reelscore',
+    description: 'hobby-projects.reelscore.description',
+    content: 'hobby-projects.reelscore.content',
     links: [
       { href: 'https://github.com/svenson95/reelscore', label: 'GitHub' },
       { href: 'https://reelscore.vercel.app/', label: 'Live' }
@@ -18,8 +18,8 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
   },
   {
     title: 'Angular Challenges',
-    description: 'angular-challenges.description',
-    content: 'angular-challenges.content',
+    description: 'hobby-projects.angular-challenges.description',
+    content: 'hobby-projects.angular-challenges.content',
     links: [
       { href: 'https://github.com/tomalaforge/angular-challenges', label: 'GitHub' },
       { href: 'https://angular-challenges.vercel.app/', label: 'Live' },
@@ -32,8 +32,8 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
   },
   {
     title: 'ng-xmp<wbr />-animations',
-    description: 'ng-xmp-animations.description',
-    content: 'ng-xmp-animations.content',
+    description: 'hobby-projects.ng-xmp-animations.description',
+    content: 'hobby-projects.ng-xmp-animations.content',
     links: [
       { href: 'https://github.com/svenson95/ng-xmp-animations', label: 'GitHub' },
       { href: 'https://svenson95.github.io/ng-xmp-animations', label: 'Live-Preview' }
@@ -41,8 +41,8 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
   },
   {
     title: 'Fachentwickler',
-    description: 'fachentwickler.description',
-    content: 'fachentwickler.content',
+    description: 'hobby-projects.fachentwickler.description',
+    content: 'hobby-projects.fachentwickler.content',
     links: [
       { href: null, label: 'GitHub' },
       { href: 'https://github.com/svenson95/fachentwickler-app', label: 'Frontend' },

@@ -3,7 +3,7 @@
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title [innerHTML]="project.title"></mat-panel-title>
-      <mat-panel-description> {{ 'content.hobby-projects.' + project.description | translate }} </mat-panel-description>
+      <mat-panel-description> {{ 'content.' + project.description | translate }} </mat-panel-description>
     </mat-expansion-panel-header>
 
     <ng-template matExpansionPanelContent>
@@ -16,7 +16,7 @@
         } }
       </div>
       }
-      <p [innerHTML]="'content.hobby-projects.' + project.content | translate"></p>
+      <p [innerHTML]="'content.' + project.content | translate"></p>
       @if (project.images) {
       <div class="gallery">
         @for (image of project.images; track image.src) {

@@ -3,16 +3,14 @@ import { PanelData } from '../../models';
 export const WORK_SAMPLES_DATA: PanelData[] = [
   {
     title: 'Cost-of-Production',
-    description: 'April 2021 - November 2021',
-    content:
-      'Online-Plattform gebaut mit <a target="blank" rel="noopener noreferrer" href="https://themeforest.net/item/vien-angular-admin-template/25817698">Vien-Angular-Admin-Template</a>. zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports.',
+    description: 'work-samples.cost-of-production.description',
+    content: 'work-samples.cost-of-production.content',
     images: [{ src: 'assets/work-examples/cop/cop-1.png', label: 'Image 1' }]
   },
   {
     title: 'VapeWatchers',
-    description: 'Januar 2020 - Juni 2021',
-    content:
-      'Neuentwicklung einer Ionic & React Control-Panel-App, für Nutzer von E-Zigaretten mit Informationen zu Inhaltsstoffen und Rauchverhalten - Nikotin Konsum pro Tag/Woche, verwendete Cartridges & Nutzungshistorie. Benutzer-Authentifizierung über AWS-Amplify.',
+    description: 'work-samples.vape-watchers.description',
+    content: 'work-samples.vape-watchers.content',
     images: [
       { src: 'assets/work-examples/smart-vaping/smart-vaping-1.png', label: 'Image 1' },
       { src: 'assets/work-examples/smart-vaping/smart-vaping-2.png', label: 'Image 2' },
@@ -21,23 +19,20 @@ export const WORK_SAMPLES_DATA: PanelData[] = [
   },
   {
     title: 'Lernetics',
-    description: 'Oktober 2020 - Dezember 2020',
-    content:
-      'Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“',
+    description: 'work-samples.lernetics.description',
+    content: 'work-samples.lernetics.content',
     images: [{ src: 'assets/work-examples/lernetics/lernetics-1.png', label: 'Image 1' }]
   },
   {
     title: 'Pio Office Suite',
-    description: 'August 2020 - September 2021',
-    content:
-      'Neuentwicklung einer Progressive-Web-App mit Ionic & Angular, ein Kontaktbuch mit der Möglichkeit, Anrufe über Durchwahlnummern zu initialisieren mithilfe einer zusätzlichen VoIP-App „easybell“.',
+    description: 'work-samples.pio-office-suite.description',
+    content: 'work-samples.pio-office-suite.content',
     images: [{ src: 'assets/work-examples/pos/pos-1.png', label: 'Image 1' }]
   },
   {
     title: 'Survey-App',
-    description: 'März 2019 - Dezember 2019',
-    content:
-      'Single-Page-Application entwickelt mit Angular und Angular Material, Anwendung zum durchführen von Umfragen.',
+    description: 'work-samples.survey-app.description',
+    content: 'work-samples.survey-app.content',
     images: [
       { src: 'assets/work-examples/vilua-survey/vilua-survey-1.png', label: 'Image 1' },
       { src: 'assets/work-examples/vilua-survey/vilua-survey-2.png', label: 'Image 2' },
