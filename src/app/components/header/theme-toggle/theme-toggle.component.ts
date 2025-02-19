@@ -14,6 +14,7 @@ import { SunUpAndDownAnimation } from './theme.toggle.animation';
     </button>
   `,
   styles: `
+    button { @apply flex; }
     mat-icon { color: var(--mat-sys-primary); }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
