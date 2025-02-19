@@ -1,5 +1,15 @@
 {
   "header": {
+    "navigation": {
+      "about": "About me",
+      "skills": "Skills",
+      "hobby-projects": "Hobby projects",
+      "work-samples": "Work samples",
+      "cv": "CV"
+    },
+    "theme": {
+      "tooltip": "Switch to {{value}} mode"
+    },
     "language": {
       "german": "German",
       "english": "English",

@@ -33,7 +33,7 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
       <span>Portfolio</span>
     </h1>
     <ul class="links">
-      @for (item of navigation; track item.id) {
+      @for (item of navigation; track item) {
       <li>
         <sb-header-link [navItem]="item"></sb-header-link>
       </li>
