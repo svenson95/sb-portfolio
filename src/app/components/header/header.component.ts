@@ -31,8 +31,6 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
   template: `
     <h1>
       <span>Portfolio</span>
-      <span class="px-2">|</span>
-      <span>Sven B.</span>
     </h1>
     <ul class="links">
       @for (item of navigation; track item.id) {
