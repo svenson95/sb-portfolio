@@ -16,7 +16,7 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
       background-color: light-dark(rgba(constants.$white, 0.5), rgba(constants.$black, 0.5));
 
       @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-        background-color: light-dark(rgba(constants.$white, 0.5), rgba(constants.$grey-2, 0.2));
+        background-color: light-dark(rgba(constants.$white, 0.5), rgba(constants.$grey-2, 0.1));
         @include mixins.backdrop-filter(3px);
       }
 
