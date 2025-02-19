@@ -1,0 +1,56 @@
+{
+  "header": {
+    "navigation": {
+      "about": "Über mich",
+      "skills": "Skills",
+      "hobby-projects": "Hobbyprojekte",
+      "work-samples": "Arbeitsproben",
+      "cv": "Lebenslauf"
+    },
+    "theme": {
+      "tooltip": "{{value}} mode aktivieren"
+    },
+    "language": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "switch-tooltip": "Sprache ändern"
+    }
+  },
+  "content": {
+    "about": {
+      "journey": {
+        "title": "Über mich",
+        "first-job": "Erster Job als Junior Frontend-Entwickler.",
+        "apprenticeship": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung.",
+        "swift": "Online-Kurs auf <a href=\"https://www.udemy.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Udemy</a> gekauft über iOS Entwicklung mit <a href=\"https://www.apple.com/de/swift/\" target=\"_blank\" rel=\"noopener noreferrer\">Swift</a>, angefangen mich mit Software-Entwicklung zu beschäftigen.",
+        "wordpress-page": "Erste WordPress Page für einen kleinen Handwerksbetrieb über <a href=\"https://www.strato.de/\" target=\"_blank\" rel=\"noopener noreferrer\">Strato</a> betrieben.",
+        "web-development": "Mit Webentwicklung beschäftigt. WordPress über einen \"Free Webspace\" Anbieter gehostet.",
+        "source-sdk": "Mit <a href=\"https://developer.valvesoftware.com/wiki/SDK_Docs\" target=\"_blank\" rel=\"noopener noreferrer\">Source SDK</a> \"Counter-Strike\" Maps entwickelt.",
+        "scratch": "Im Schulunterricht mit <a href=\"https://scratch.mit.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Scratch</a> gearbeitet, einer blockbasierten visuellen Programmiersprache."
+      },
+      "data": {
+        "title": "Persönliche Daten",
+        "name": {
+          "key": "Name",
+          "value": "Sven Brodny"
+        },
+        "birthdate": {
+          "key": "Geburtsdatum",
+          "value": "02.11.1995"
+        },
+        "languages": {
+          "key": "Sprachen",
+          "value": "Deutsch (C2) / Englisch (B2)"
+        },
+        "birthplace": {
+          "key": "Geburtsort",
+          "value": "Hamburg"
+        },
+        "city": {
+          "key": "Wohnort",
+          "value": "Berlin"
+        }
+      }
+    }
+  }
+}

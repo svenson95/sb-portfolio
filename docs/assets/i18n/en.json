@@ -1,0 +1,56 @@
+{
+  "header": {
+    "navigation": {
+      "about": "About me",
+      "skills": "Skills",
+      "hobby-projects": "Hobby projects",
+      "work-samples": "Work samples",
+      "cv": "CV"
+    },
+    "theme": {
+      "tooltip": "Switch to {{value}} mode"
+    },
+    "language": {
+      "german": "German",
+      "english": "English",
+      "switch-tooltip": "Switch language"
+    }
+  },
+  "content": {
+    "about": {
+      "journey": {
+        "title": "About me",
+        "first-job": "First job as a Junior Frontend-Developer.",
+        "apprenticeship": "Apprenticeship as an \"IT specialist for application development\".",
+        "swift": "Bought an online course on <a href=\"https://www.udemy.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Udemy</a> about iOS Development with <a href=\"https://www.apple.com/de/swift/\" target=\"_blank\" rel=\"noopener noreferrer\">Swift</a>, started to get involved in software development.",
+        "wordpress-page": "Developed first WordPress page for a small construction company hosted on <a href=\"https://www.strato.de/\" target=\"_blank\" rel=\"noopener noreferrer\">Strato</a>.",
+        "web-development": "Tried to learn Web Development. Hosted a example WordPress page on a \"free webspace\" service.",
+        "source-sdk": "Created \"Counter-Strike\" maps with <a href=\"https://developer.valvesoftware.com/wiki/SDK_Docs\" target=\"_blank\" rel=\"noopener noreferrer\">Source SDK</a>.",
+        "scratch": "Worked with <a href=\"https://scratch.mit.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Scratch</a> in high school, a block-based visual programming language."
+      },
+      "data": {
+        "title": "Personal data",
+        "name": {
+          "key": "Name",
+          "value": "Sven Brodny"
+        },
+        "birthdate": {
+          "key": "Birthdate",
+          "value": "1995/11/02"
+        },
+        "languages": {
+          "key": "Languages",
+          "value": "German (C2) / English (B2)"
+        },
+        "birthplace": {
+          "key": "Birthplace",
+          "value": "Hamburg"
+        },
+        "city": {
+          "key": "City",
+          "value": "Berlin"
+        }
+      }
+    }
+  }
+}
