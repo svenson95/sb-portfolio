@@ -77,6 +77,45 @@
         "description": "April 2020 - Juli 2022",
         "content": "Home-Schooling Plattform für die Berufsschule, Unterrichtszusammenfassungen, Quizze, Karteikarten & \"Matching\"-Puzzle-Minigame. Dashboard mit Fortschrittsanzeige, Anzeige der letzten Ankündigung aus dem Schul-Newsarchiv, anstehende Klausuren, Stundenplan und Lektionen der aktuellen Schulwoche."
       }
+    },
+    "work-samples": {
+      "cost-of-production": {
+        "description": "April 2021 - November 2021",
+        "content": "Online-Plattform gebaut mit <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://themeforest.net/item/vien-angular-admin-template/25817698\">Vien-Angular-Admin-Template</a>. Zur Erfassung von Produktionskosten in der Landwirtschaft - Farm-Statistiken, Fragebögen & Reports."
+      },
+      "vape-watchers": {
+        "description": "Januar 2020 - Juni 2021",
+        "content": "Neuentwicklung einer Ionic & React Control-Panel-App, für Nutzer von E-Zigaretten mit Informationen zu Inhaltsstoffen und Rauchverhalten - Nikotin Konsum pro Tag/Woche, verwendete Cartridges & Nutzungshistorie. Benutzer-Authentifizierung über AWS-Amplify."
+      },
+      "lernetics": {
+        "description": "Oktober 2020 - Dezember 2020",
+        "content": "Neuentwicklung einer Cross-Plattform-App mit Tab-basiertem Layout für eine Berufsschule. „Mit Lernletics kannst du dich im Rahmen deiner Ausbildung in verschiedenen Themenbereichen selbst trainieren.“"
+      },
+      "pio-office-suite": {
+        "description": "August 2020 - September 2021",
+        "content": "Neuentwicklung einer Progressive-Web-App mit Ionic & Angular, ein Kontaktbuch mit der Möglichkeit, Anrufe über Durchwahlnummern zu initialisieren mithilfe einer zusätzlichen VoIP-App „easybell“."
+      },
+      "survey-app": {
+        "description": "März 2019 - Dezember 2019",
+        "content": "Single-Page-Application entwickelt mit Angular und Angular Material, Anwendung zum durchführen von Umfragen."
+      }
+    },
+    "cv": {
+      "web-developer": "Webentwickler - Frontend",
+      "part-time-job-web-dev": "Nebenjob als Webentwickler - Frontend",
+      "apprenticeship-it-app-dev": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung",
+      "internship-web-app-dev": "EQJ als Webentwickler & App-Entwickler (Einstiegsqualifizierungsjahr)",
+      "production-assistant": "Produktionshelfer bei einem StartUp (Handschriftautomation)",
+      "apprenticeship-tiler": "Ausbildung zum Fliesen-, Platten- und Mosaikleger",
+      "apprenticeship-it-management-assistant": "Ausbildung zum Informatikkaufmann",
+      "apprenticeship-warehouse-logistics-assistant": "Ausbildung zur Fachkraft für Lagerlogistik",
+      "part-time-warehouse-logistics-assistant": "Lagerhelfer in Teilzeit",
+      "internship-warehouse-logistics-assistant": "Praktikum als Fachkraft für Lagerlogistik",
+      "internship-sport-and-fitness-management-assistant": "EQJ als Sport- und Fitnesskaufmann (Einstiegsqualifizierungsjahr)",
+      "school-internship-repair-service": "Schulpraktikum bei einem Smartphone-Reparaturservice"
     }
+  },
+  "footer": {
+    "more": "Mehr"
   }
 }
