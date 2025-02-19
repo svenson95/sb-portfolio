@@ -5,7 +5,7 @@ import { faAddressCard, faCircleUser } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { CardHeaderComponent } from '../../components';
-import { SOCIALS_DATA } from '../../constants';
+import { MORE_DATA } from '../../constants';
 import { BypassUrlPipe } from '../../pipes';
 
 import { staggerAnimation } from './about.animation';
@@ -21,7 +21,7 @@ import { ABOUT_DATA, PROFILE_DATA } from './about.data';
     @use "src/styles/constants";
     
     :host {
-      #socials a.mat-mdc-button {
+      #more a.mat-mdc-button {
         height: auto;
         color: var(--mat-sys-primary);
       }
@@ -38,7 +38,7 @@ import { ABOUT_DATA, PROFILE_DATA } from './about.data';
   `
 })
 export class AboutComponent {
-  public readonly socials = SOCIALS_DATA;
+  public readonly more = MORE_DATA;
   public readonly about = ABOUT_DATA;
   public readonly profile = PROFILE_DATA;
 

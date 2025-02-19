@@ -4,7 +4,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
+import { MORE_DATA, NAVIGATION_DATA } from '../../constants';
 import { ScrollAnchorDirective } from '../../directives';
 
 @Component({
@@ -12,7 +12,7 @@ import { ScrollAnchorDirective } from '../../directives';
   imports: [CommonModule, ScrollAnchorDirective, FontAwesomeModule, TranslateModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 py-5">
+    <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between my-5 mx-10 py-5">
       <div class="flex gap-12">
         <div class="flex flex-col gap-3">
           <h3 class="font-bold">Navigation</h3>
@@ -28,9 +28,9 @@ import { ScrollAnchorDirective } from '../../directives';
         </div>
 
         <div class="flex flex-col gap-3">
-          <h3 class="font-bold">Social Media</h3>
+          <h3 class="font-bold">Mehr</h3>
           <ul>
-            @for (item of socials; track item.href) {
+            @for (item of more; track item.href) {
             <li>
               <a [title]="'Profil auf ' + item.title" [href]="item.href" target="_blank" rel="noopener">
                 <fa-icon [icon]="item.iconSelector"></fa-icon>
@@ -43,7 +43,7 @@ import { ScrollAnchorDirective } from '../../directives';
       </div>
 
       <small class="made-with-label flex whitespace-nowrap items-baseline mt-8 sm:mt-0">
-        Made with <fa-icon [icon]="faHeart" class="mx-1"></fa-icon> in Magdeburg
+        Made with <fa-icon [icon]="faHeart" class="mx-1"></fa-icon> in Berlin
       </small>
     </div>
   `,
@@ -69,7 +69,7 @@ import { ScrollAnchorDirective } from '../../directives';
 })
 export class FooterComponent {
   readonly navigation = NAVIGATION_DATA;
-  readonly socials = SOCIALS_DATA;
+  readonly more = MORE_DATA;
 
   readonly faHeart = faHeart;
 }

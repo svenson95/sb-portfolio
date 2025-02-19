@@ -2,7 +2,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-export class SocialMediaLink {
+export class MoreLink {
   public title: string;
   public href: string;
 
@@ -20,7 +20,7 @@ export class SocialMediaLink {
       case 'mail':
         return faPaperPlane;
       default:
-        throw new Error('unknown socials icon selector title');
+        throw new Error('unknown more icon selector title');
     }
   }
 }
