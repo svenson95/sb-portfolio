@@ -3,9 +3,8 @@ import { PanelData } from '../../models';
 export const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
     title: 'reelscore',
-    description: 'March 2024 - now',
-    content:
-      'Fußball Livescore Anwendung, mit meiner selbst entwickelten Erweiterung einer "Performance"-Form, abgeleitet von den Schüssen, Torschüssen und erzielte Tore eines Teams. Wenn bspw. nur 3 mal im ganzen Spiel aufs gegnerische Tor geschossen wurde und das Spiel nur 1:0 gewonnen wurde, war die Performance mittelmäßig. In anderen Livescore Anwendungen wird nur die "Ergebnis"-Form angezeigt, abgeleitet vom Spielausgang für das jeweilige Spiel. Die Daten dafür werden von der RapidAPI <a target="blank" rel="noopener noreferrer" href="https://rapidapi.com/api-sports/api/api-football">API-FOOTBALL</a> geladen, dafür habe ich mir eine zusätzliche Anwendung erstellt, womit ich die Daten laden und in meiner MongoDB-Datenbank speichern kann. Aktuell werden keine neue Daten mehr geladen, um die Anwendung zu testen, zum Datum 18.05.2024 springen, dort sind Spiele vorhanden.',
+    description: 'reelscore.description',
+    content: 'reelscore.content',
     links: [
       { href: 'https://github.com/svenson95/reelscore', label: 'GitHub' },
       { href: 'https://reelscore.vercel.app/', label: 'Live' }
@@ -19,23 +18,22 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
   },
   {
     title: 'Angular Challenges',
-    description: 'Februar 2024',
-    content:
-      'Durch einen <a target="blank" rel="noopener noreferrer" href="https://blog.angular.io/introducing-angular-v17-4d7033312e4b">Blogeintrag</a>, in welchem die Version 17 von Angular vorgestellt wurde, bin ich auf dieses Projekt gestoßen. Hier habe ich selbst Challenges gelöst, einige von diesen Challenges auch erweitert und angepasst, kleinere Styling Anpassungen in der Anwendung vogenommen und eigene Challenges erstellt - <a target="blank" rel="noopener noreferrer" href="https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/">Simple Animations</a> & <a target="blank" rel="noopener noreferrer" href="https://angular-challenges.vercel.app/challenges/typescript/47-enums-vs-union-types/">Enums vs Union Types</a>.',
+    description: 'angular-challenges.description',
+    content: 'angular-challenges.content',
     links: [
       { href: 'https://github.com/tomalaforge/angular-challenges', label: 'GitHub' },
       { href: 'https://angular-challenges.vercel.app/', label: 'Live' },
       {
         href: 'https://github.com/tomalaforge/angular-challenges/pulls?q=is%3Apr+author%3Asvenson95+',
-        label: 'Meine Pull Requests'
+        label: 'content.hobby-projects.angular-challenges.links.my-pull-requests'
       }
     ],
     images: [{ src: 'assets/hobby-projects/challenge-simple-animations.png', label: 'Image 1' }]
   },
   {
     title: 'ng-xmp<wbr />-animations',
-    description: 'September 2021',
-    content: "Tutorial App mit Beispiel-Implementierungen von Angular's integrierter Animations-Library.",
+    description: 'ng-xmp-animations.description',
+    content: 'ng-xmp-animations.content',
     links: [
       { href: 'https://github.com/svenson95/ng-xmp-animations', label: 'GitHub' },
       { href: 'https://svenson95.github.io/ng-xmp-animations', label: 'Live-Preview' }
@@ -43,9 +41,8 @@ export const HOBBY_PROJECTS_DATA: PanelData[] = [
   },
   {
     title: 'Fachentwickler',
-    description: 'April 2020 - Juli 2022',
-    content:
-      'Home-Schooling Plattform für die Berufsschule, Unterrichtszusammenfassungen, Quizze, Karteikarten & "Matching"-Puzzle-Minigame. Dashboard mit Fortschrittsanzeige, Anzeige der letzten Ankündigung aus dem Schul-Newsarchiv, anstehende Klausuren, Stundenplan und Lektionen der aktuellen Schulwoche.',
+    description: 'fachentwickler.description',
+    content: 'fachentwickler.content',
     links: [
       { href: null, label: 'GitHub' },
       { href: 'https://github.com/svenson95/fachentwickler-app', label: 'Frontend' },

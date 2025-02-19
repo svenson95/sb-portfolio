@@ -56,6 +56,27 @@
       "very-good-knowledge": "Very good knowledge",
       "advanced-knowledge": "Advanced knowledge",
       "basic-knowledge": "Basic knowledge"
+    },
+    "hobby-projects": {
+      "reelscore": {
+        "description": "March 2024 - now",
+        "content": "European football livescore application, with an own developed extension \"Performance-Form\", derived from the shots, shots on goal and goals scored by a team. If, for example, only 3 shots were taken on the opponent's goal in the whole game and the game was only won 1-0, the performance was mediocre. In other live score applications, only the \"result form\" is displayed, derived from the outcome of the respective game. The data for this is loaded from the RapidAPI <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://rapidapi.com/api-sports/api/api-football\">API-FOOTBALL</a>, for this I have created an additional application to load new data and save it in my MongoDB database. Currently no new data is being loaded, to test the application, jump to the date 2024/05/18, there is content available."
+      },
+      "angular-challenges": {
+        "description": "February 2024",
+        "content": "I came across this project through a <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://blog.angular.io/introducing-angular-v17-4d7033312e4b\">blog post</a>, introducing version 17 of Angular. Here I solved challenges myself, extended and adapted some of these challenges, made minor styling adjustments in the application and created my own challenges - <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/\">Simple Animations</a> & <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://angular-challenges.vercel.app/challenges/typescript/47-enums-vs-union-types/\">Enums vs Union Types</a>.",
+        "links": {
+          "my-pull-requests": "My pull requests"
+        }
+      },
+      "ng-xmp-animations": {
+        "description": "September 2021",
+        "content": "Application with example implementations for Angular's integrated animations library"
+      },
+      "fachentwickler": {
+        "description": "April 2020 - July 2022",
+        "content": "Home-schooling platform for the vocational school, lesson summaries, quizzes, index cards & \"matching\" puzzle mini-game. Dashboard with progress indicator, display of the latest announcement from the school news archive, upcoming exams, timetable and lessons for the current school week."
+      }
     }
   }
 }

@@ -2,6 +2,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { PanelData, PanelDataLink } from '../../models';
 
@@ -12,7 +13,7 @@ import { ThumbnailPipe } from './thumbnail.pipe';
   selector: 'sb-projects-accordion',
   templateUrl: './projects-accordion.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage],
+  imports: [MatExpansionModule, ThumbnailPipe, NgOptimizedImage, TranslateModule],
   styles: `
     @use 'src/styles/constants';
 
