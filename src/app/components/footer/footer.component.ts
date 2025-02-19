@@ -28,7 +28,7 @@ import { ScrollAnchorDirective } from '../../directives';
         </div>
 
         <div class="flex flex-col gap-3">
-          <h3 class="font-bold">Mehr</h3>
+          <h3 class="font-bold">{{ 'footer.more' | translate }}</h3>
           <ul>
             @for (item of more; track item.href) {
             <li>
