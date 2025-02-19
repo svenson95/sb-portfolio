@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faAddressCard, faCircleUser } from '@fortawesome/free-solid-svg-icons';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { CardHeaderComponent } from '../../components';
 import { SOCIALS_DATA } from '../../constants';
@@ -14,7 +15,7 @@ import { ABOUT_DATA, PROFILE_DATA } from './about.data';
   selector: 'section#about',
   templateUrl: './about.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule],
+  imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule, TranslateModule],
   animations: [staggerAnimation],
   styles: `
     @use "src/styles/constants";

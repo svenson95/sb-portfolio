@@ -11,26 +11,26 @@
   </section>
   <section class="flex flex-col md:flex-row gap-5 md:gap-10">
     <div class="flex-1">
-      <sb-card-header title="Über mich" [icon]="faCircleUser"></sb-card-header>
+      <sb-card-header [title]="'content.about.journey.title' | translate" [icon]="faCircleUser"></sb-card-header>
 
       <div class="flex flex-col gap-3 px-5">
         @for (item of about; track item.key) {
         <div>
           <h4 class="subtitle">{{ item.key }}</h4>
-          <div [innerHTML]="item.value | bypassUrl : 'html'"></div>
+          <div [innerHTML]="item.value | translate | bypassUrl : 'html'"></div>
         </div>
         }
       </div>
     </div>
 
     <div class="flex-1">
-      <sb-card-header title="Daten" [icon]="faAddressCard"></sb-card-header>
+      <sb-card-header [title]="'content.about.data.title' | translate" [icon]="faAddressCard"></sb-card-header>
 
       <div class="flex flex-col gap-3" @staggerAnimation>
         @for(item of profile; track item.key) {
         <div class="about-profile-item flex flex-col lg:flex-row border-b pb-2 px-5">
-          <div class="key flex-1">{{ item.key }}:</div>
-          <div class="value flex-1" [innerHTML]="item.value"></div>
+          <div class="key flex-1">{{ 'content.about.data.' + item.key + '.key' | translate }}:</div>
+          <div class="value flex-1" [innerHTML]="'content.about.data.' + item.key + '.value' | translate"></div>
         </div>
         }
       </div>
