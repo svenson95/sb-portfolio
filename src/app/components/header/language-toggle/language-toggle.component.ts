@@ -25,7 +25,7 @@ interface SelectLanguage {
     </select>
   `,
   styles: `
-    select { @apply bg-transparent; }
+    select { @apply bg-transparent text-primary-color; }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [MatIconModule, MatTooltipModule, TranslateModule]
