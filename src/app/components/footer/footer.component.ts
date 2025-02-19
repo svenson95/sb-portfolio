@@ -2,24 +2,25 @@ import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { NAVIGATION_DATA, SOCIALS_DATA } from '../../constants';
 import { ScrollAnchorDirective } from '../../directives';
 
 @Component({
   selector: 'footer',
-  imports: [CommonModule, ScrollAnchorDirective, FontAwesomeModule],
+  imports: [CommonModule, ScrollAnchorDirective, FontAwesomeModule, TranslateModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
-    <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 xl:mx-auto py-5">
+    <div class="wrapper flex flex-col sm:flex-row w-full items-center sm:justify-between m-5 py-5">
       <div class="flex gap-12">
         <div class="flex flex-col gap-3">
           <h3 class="font-bold">Navigation</h3>
           <ul>
-            @for (item of navigation; track item.id) {
+            @for (item of navigation; track item) {
             <li>
-              <a class="cursor-pointer" [sbScrollAnchor]="item.id">
-                <small>{{ item.title }}</small>
+              <a class="cursor-pointer" [sbScrollAnchor]="item">
+                <small>{{ 'header.navigation.' + item | translate }}</small>
               </a>
             </li>
             }
