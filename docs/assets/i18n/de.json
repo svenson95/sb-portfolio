@@ -51,6 +51,32 @@
           "value": "Berlin"
         }
       }
+    },
+    "skills": {
+      "very-good-knowledge": "Sehr gute Kenntnisse",
+      "advanced-knowledge": "Erweiterte Kenntnisse",
+      "basic-knowledge": "Grund&shy;kenntnisse"
+    },
+    "hobby-projects": {
+      "reelscore": {
+        "description": "März 2024 - jetzt",
+        "content": "Fußball Livescore Anwendung, mit meiner selbst entwickelten Erweiterung einer \"Performance-Form\", abgeleitet von den Schüssen, Torschüssen und erzielten Tore eines Teams. Wenn bspw. nur 3 mal im ganzen Spiel aufs gegnerische Tor geschossen wurde und das Spiel nur 1:0 gewonnen wurde, war die Performance mittelmäßig. In anderen Livescore Anwendungen wird nur die \"Ergebnis-Form\" angezeigt, abgeleitet vom Spielausgang für das jeweilige Spiel. Die Daten dafür werden von der RapidAPI <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://rapidapi.com/api-sports/api/api-football\">API-FOOTBALL</a> geladen, dafür habe ich mir eine zusätzliche Anwendung erstellt, womit ich neue Daten laden und in meiner MongoDB-Datenbank speichern kann. Aktuell werden keine neue Daten mehr geladen, um die Anwendung zu testen, zum Datum 18.05.2024 springen, dort sind Spiele vorhanden."
+      },
+      "angular-challenges": {
+        "description": "Februar 2024",
+        "content": "Durch einen <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://blog.angular.io/introducing-angular-v17-4d7033312e4b\">Blogeintrag</a>, in welchem die Version 17 von Angular vorgestellt wurde, bin ich auf dieses Projekt gestoßen. Hier habe ich selbst Challenges gelöst, einige von diesen Challenges auch erweitert und angepasst, kleinere Styling Anpassungen in der Anwendung vogenommen und eigene Challenges erstellt - <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/\">Simple Animations</a> & <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://angular-challenges.vercel.app/challenges/typescript/47-enums-vs-union-types/\">Enums vs Union Types</a>.",
+        "links": {
+          "my-pull-requests": "Meine Pull Requests"
+        }
+      },
+      "ng-xmp-animations": {
+        "description": "September 2021",
+        "content": "Anwendung mit Beispiel-Implementierungen von Angular's integrierter Animations-Library."
+      },
+      "fachentwickler": {
+        "description": "April 2020 - Juli 2022",
+        "content": "Home-Schooling Plattform für die Berufsschule, Unterrichtszusammenfassungen, Quizze, Karteikarten & \"Matching\"-Puzzle-Minigame. Dashboard mit Fortschrittsanzeige, Anzeige der letzten Ankündigung aus dem Schul-Newsarchiv, anstehende Klausuren, Stundenplan und Lektionen der aktuellen Schulwoche."
+      }
     }
   }
 }
