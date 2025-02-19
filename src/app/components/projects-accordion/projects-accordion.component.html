@@ -22,11 +22,13 @@
         @for (image of project.images; track image.src) {
         <img
           (click)="openDialog(image)"
+          (keypress)="openDialog(image)"
           [ngSrc]="image.src! | thumbnail"
           [alt]="image.label"
           priority
           width="64"
           height="64"
+          tabindex="0"
         />
         }
       </div>
