@@ -51,6 +51,11 @@
           "value": "Berlin"
         }
       }
+    },
+    "skills": {
+      "very-good-knowledge": "Sehr gute Kenntnisse",
+      "advanced-knowledge": "Erweiterte Kenntnisse",
+      "basic-knowledge": "Grund&shy;kenntnisse"
     }
   }
 }

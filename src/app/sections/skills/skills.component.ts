@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { CardHeaderComponent } from '../../components';
 import { ImageSource } from '../../models';
@@ -12,7 +13,7 @@ import { ImageComponent } from './image.component';
   selector: 'section#skills',
   templateUrl: './skills.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, CardHeaderComponent, ImageComponent],
+  imports: [CommonModule, CardHeaderComponent, ImageComponent, TranslateModule],
   styles: `
     @use "src/styles/constants";
 

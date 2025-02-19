@@ -51,6 +51,11 @@
           "value": "Berlin"
         }
       }
+    },
+    "skills": {
+      "very-good-knowledge": "Very good knowledge",
+      "advanced-knowledge": "Advanced knowledge",
+      "basic-knowledge": "Basic knowledge"
     }
   }
 }
