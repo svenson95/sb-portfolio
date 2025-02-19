@@ -1,11 +1,20 @@
 import { ApplicationConfig, StaticProvider, importProvidersFrom, inject, provideAppInitializer } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 
-import { LocalStorage, ScrollEventService, SessionStorage, WindowToken, getStorage, windowProvider } from './shared';
+import {
+  LocalStorage,
+  ScrollEventService,
+  SessionStorage,
+  StaticTranslationLoader,
+  WindowToken,
+  getStorage,
+  windowProvider
+} from './shared';
 
-export const STORAGE_PROVIDERS: StaticProvider[] = [
+const STORAGE_PROVIDERS: StaticProvider[] = [
   { provide: WindowToken, useFactory: windowProvider },
   {
     provide: LocalStorage,
@@ -19,14 +28,19 @@ export const STORAGE_PROVIDERS: StaticProvider[] = [
   }
 ];
 
-// TODO: check how to implement scroll event again
-export const SCROLL_EVENT_PROVIDER = provideAppInitializer(() => of(inject(ScrollEventService)));
+const SCROLL_EVENT_PROVIDER = provideAppInitializer(() => of(inject(ScrollEventService)));
+const TRANSLATION_PROVIDER = TranslateModule.forRoot({
+  loader: {
+    provide: TranslateLoader,
+    useClass: StaticTranslationLoader
+  }
+});
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    importProvidersFrom([BrowserAnimationsModule]),
+    provideAnimationsAsync(),
+    importProvidersFrom([BrowserAnimationsModule, TRANSLATION_PROVIDER]),
     ...STORAGE_PROVIDERS,
-    SCROLL_EVENT_PROVIDER,
-    provideAnimationsAsync()
+    SCROLL_EVENT_PROVIDER
   ]
 };

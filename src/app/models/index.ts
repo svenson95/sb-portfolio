@@ -1,3 +1,4 @@
+export * from './available-language.model';
 export * from './image.model';
 export * from './navigation-item.model';
 export * from './panel-data.model';

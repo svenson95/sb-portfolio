@@ -1,7 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { FooterComponent, HeaderComponent } from './components';
 import { ScrollManagerDirective, ScrollSectionDirective } from './directives';
+import { AvailableLanguage } from './models';
 import { AboutComponent, CvComponent, HobbyProjectsComponent, SkillsComponent, WorkSamplesComponent } from './sections';
 
 @Component({
@@ -15,7 +17,8 @@ import { AboutComponent, CvComponent, HobbyProjectsComponent, SkillsComponent, W
     HobbyProjectsComponent,
     CvComponent,
     FooterComponent,
-    ScrollSectionDirective
+    ScrollSectionDirective,
+    TranslateModule
   ],
   providers: [ScrollManagerDirective],
   styles: `
@@ -66,4 +69,14 @@ import { AboutComponent, CvComponent, HobbyProjectsComponent, SkillsComponent, W
     <footer></footer>
   `
 })
-export class AppComponent {}
+export class AppComponent {
+  #translate = inject(TranslateService);
+
+  constructor() {
+    const defaultLang: AvailableLanguage = 'de';
+    const availableLangs: AvailableLanguage[] = ['de', 'en'];
+    this.#translate.addLangs(availableLangs);
+    this.#translate.setDefaultLang(defaultLang);
+    this.#translate.use(this.#translate.getBrowserLang() || defaultLang);
+  }
+}

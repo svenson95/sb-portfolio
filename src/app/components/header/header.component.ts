@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { NAVIGATION_DATA } from '../../constants';
 
+import { LanguageToggleComponent } from './language-toggle/language-toggle.component';
 import { HeaderLinkComponent } from './link/link.component';
 import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
 
@@ -24,6 +25,7 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
         color: light-dark(constants.$lightgray, constants.$mediumgray);
       }
       ul { @apply mr-5 hidden lg:flex gap-3; }
+      .header-buttons { @apply flex items-center gap-5; }
     }
   `,
   template: `
@@ -39,10 +41,13 @@ import { ThemeToggleComponent } from './theme-toggle/theme-toggle.component';
       </li>
       }
     </ul>
-    <sb-theme-toggle></sb-theme-toggle>
+    <div class="header-buttons">
+      <sb-theme-toggle></sb-theme-toggle>
+      <sb-language-toggle></sb-language-toggle>
+    </div>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [HeaderLinkComponent, ThemeToggleComponent]
+  imports: [HeaderLinkComponent, ThemeToggleComponent, LanguageToggleComponent]
 })
 export class HeaderComponent {
   readonly navigation = NAVIGATION_DATA;

@@ -1,0 +1,9 @@
+{
+  "header": {
+    "language": {
+      "german": "Deutsch",
+      "english": "Englisch",
+      "switch-tooltip": "Sprache ändern"
+    }
+  }
+}
