@@ -21,11 +21,8 @@ export class HeaderLinkComponent {
   public readonly navItem = input.required<string>();
   public readonly isInViewport = signal<boolean>(false);
 
-  public visibleSectionEffect = effect(
-    () => {
-      const visibleSectionId = this.scroll.visibleSection();
-      this.isInViewport.set(visibleSectionId === this.navItem());
-    },
-    { allowSignalWrites: true }
-  );
+  public visibleSectionEffect = effect(() => {
+    const visibleSectionId = this.scroll.visibleSection();
+    this.isInViewport.set(visibleSectionId === this.navItem());
+  });
 }
