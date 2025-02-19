@@ -2,6 +2,22 @@ import { PanelData } from '../../models';
 
 export const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
+    title: 'reelscore',
+    description: 'March 2024 - now',
+    content:
+      'Fußball Livescore Anwendung, mit meiner selbst entwickelten Erweiterung einer "Performance"-Form, abgeleitet von den Schüssen, Torschüssen und erzielte Tore eines Teams. Wenn bspw. nur 3 mal im ganzen Spiel aufs gegnerische Tor geschossen wurde und das Spiel nur 1:0 gewonnen wurde, war die Performance mittelmäßig. In anderen Livescore Anwendungen wird nur die "Ergebnis"-Form angezeigt, abgeleitet vom Spielausgang für das jeweilige Spiel. Die Daten dafür werden von der RapidAPI <a target="blank" rel="noopener noreferrer" href="https://rapidapi.com/api-sports/api/api-football">API-FOOTBALL</a> geladen, dafür habe ich mir eine zusätzliche Anwendung erstellt, womit ich die Daten laden und in meiner MongoDB-Datenbank speichern kann. Aktuell werden keine neue Daten mehr geladen, um die Anwendung zu testen, zum Datum 18.05.2024 springen, dort sind Spiele vorhanden.',
+    links: [
+      { href: 'https://github.com/svenson95/reelscore', label: 'GitHub' },
+      { href: 'https://reelscore.vercel.app/', label: 'Live' }
+    ],
+    images: [
+      { src: 'assets/hobby-projects/reelscore-1.png', label: 'Image 1' },
+      { src: 'assets/hobby-projects/reelscore-2.png', label: 'Image 2' },
+      { src: 'assets/hobby-projects/reelscore-3.png', label: 'Image 3' },
+      { src: 'assets/hobby-projects/reelscore-4.png', label: 'Image 4' }
+    ]
+  },
+  {
     title: 'Angular Challenges',
     description: 'Februar 2024',
     content:
