@@ -1,93 +1,93 @@
 interface TableItem {
-  from: string;
-  to: string | null;
+  from: Date;
+  to: Date | null;
   profession: string;
   company: string;
 }
 
 export const CV_DATA: TableItem[] = [
   {
-    from: 'Aug 2022',
-    to: 'Okt 2023',
-    profession: 'Webentwickler - Frontend',
+    from: new Date('2022/08'),
+    to: new Date('2023/10'),
+    profession: 'web-developer',
     company: 'Yolawo GmbH'
   },
   {
-    from: 'Sep 2021',
-    to: 'Feb 2022',
-    profession: 'Nebenjob als Webentwickler - Frontend',
+    from: new Date('2021/09'),
+    to: new Date('2022/02'),
+    profession: 'part-time-job-web-dev',
     company: 'Kominal UG'
   },
   {
-    from: 'Sep 2019',
-    to: 'Mär 2022',
-    profession: 'Ausbildung zum Fachinformatiker für Anwendungsentwicklung',
+    from: new Date('2019/09'),
+    to: new Date('2022/03'),
+    profession: 'apprenticeship-it-app-dev',
     company: 'Piobyte GmbH'
   },
   {
-    from: 'Mär 2019',
-    to: 'Sep 2019',
-    profession: 'EQJ als Webentwickler & App-Entwickler (Einstiegs<wbr/>qualifizierungs<wbr/>jahr)',
+    from: new Date('2019/03'),
+    to: new Date('2019/09'),
+    profession: 'internship-web-app-dev',
     company: 'Piobyte GmbH'
   },
   {
-    from: 'Jun 2018',
-    to: 'Okt 2018',
-    profession: 'Produktionshelfer bei einem StartUp (Handschriftautomation)',
+    from: new Date('2018/06'),
+    to: new Date('2018/10'),
+    profession: 'production-assistant',
     company: 'Wunderpen GmbH'
   },
   {
-    from: 'Okt 2017',
-    to: 'Dez 2017',
-    profession: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger',
+    from: new Date('2017/10'),
+    to: new Date('2017/12'),
+    profession: 'apprenticeship-tiler',
     company: 'Ulf Martischewski Fliesen, Naturstein, Spanndecken'
   },
   {
-    from: 'Sep 2016',
-    to: 'Jul 2017',
-    profession: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger',
+    from: new Date('2016/09'),
+    to: new Date('2017/07'),
+    profession: 'apprenticeship-tiler',
     company: 'WH Werkhaus Berlin'
   },
   {
-    from: 'Okt 2015',
-    to: 'Jul 2016',
-    profession: 'Ausbildung zum Fliesen-, Platten- und Mosaikleger',
+    from: new Date('2015/10'),
+    to: new Date('2016/07'),
+    profession: 'apprenticeship-tiler',
     company: 'BfW Lehrbauhof Berlin'
   },
   {
-    from: 'Dez 2014',
-    to: 'Jan 2015',
-    profession: 'Ausbildung zum Informatikkaufmann',
+    from: new Date('2014/12'),
+    to: new Date('2015/01'),
+    profession: 'apprenticeship-it-management-assistant',
     company: 'ACDM (MAIL BOX - Zentrale)'
   },
   {
-    from: 'Aug 2013',
-    to: 'Dez 2014',
-    profession: 'Ausbildung zur Fachkraft für Lagerlogistik',
+    from: new Date('2013/08'),
+    to: new Date('2014/12'),
+    profession: 'apprenticeship-warehouse-logistics-assistant',
     company: 'MAIL BOX - Direct-Marketing Service GmbH'
   },
   {
-    from: 'Mai 2013',
-    to: 'Aug 2013',
-    profession: 'Lagerhelfer in Teilzeit',
+    from: new Date('2013/05'),
+    to: new Date('2013/08'),
+    profession: 'part-time-warehouse-logistics-assistant',
     company: 'MAIL BOX - Direct-Marketing Service GmbH'
   },
   {
-    from: 'Apr 2013',
-    to: 'Mai 2013',
-    profession: 'Praktikum als Fachkraft für Lagerlogistik',
+    from: new Date('2013/04'),
+    to: new Date('2013/05'),
+    profession: 'internship-warehouse-logistics-assistant',
     company: 'Party Rent Franchise GmbH'
   },
   {
-    from: 'Jan 2013',
-    to: 'Apr 2013',
-    profession: 'EQJ als Sport- und Fitnesskaufmann (Einstiegs<wbr/>qualifizierungs<wbr/>jahr)',
+    from: new Date('2013/01'),
+    to: new Date('2013/04'),
+    profession: 'internship-sport-and-fitness-management-assistant',
     company: 'EasyFitness Prenzlauer Berg'
   },
   {
-    from: 'Jan 2012',
+    from: new Date('2012/01'),
     to: null,
-    profession: 'Schulpraktikum bei einem Smartphone-Reparaturservice',
+    profession: 'school-internship-repair-service',
     company: 'Phonedoctor Berlin'
   }
 ];

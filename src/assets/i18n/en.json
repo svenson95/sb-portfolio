@@ -99,6 +99,20 @@
         "description": "March 2019 - December 2019",
         "content": "Single-page application developed with Angular and Angular Material, application for conducting surveys."
       }
+    },
+    "cv": {
+      "web-developer": "Web-Developer - Frontend",
+      "part-time-job-web-dev": "Part time job Web-Developer - Frontend",
+      "apprenticeship-it-app-dev": "Apprenticeship IT specialist for app development",
+      "internship-web-app-dev": "Internship Web-Developer & App-Developer",
+      "production-assistant": "Production assistant in a StartUp (handwriting automation)",
+      "apprenticeship-tiler": "Apprenticeship Tiler",
+      "apprenticeship-it-management-assistant": "Apprenticeship IT management assistant",
+      "apprenticeship-warehouse-logistics-assistant": "Apprenticeship Warehouse logistics assistant",
+      "part-time-warehouse-logistics-assistant": "Part time job Warehouse logistics assistant",
+      "internship-warehouse-logistics-assistant": "Internship Warehouse logistics assistant",
+      "internship-sport-and-fitness-management-assistant": "Internship Sport and fitness management assistant",
+      "school-internship-repair-service": "School internship in a smartphone repair service"
     }
   }
 }

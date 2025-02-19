@@ -99,6 +99,20 @@
         "description": "März 2019 - Dezember 2019",
         "content": "Single-Page-Application entwickelt mit Angular und Angular Material, Anwendung zum durchführen von Umfragen."
       }
+    },
+    "cv": {
+      "web-developer": "Webentwickler - Frontend",
+      "part-time-job-web-dev": "Nebenjob als Webentwickler - Frontend",
+      "apprenticeship-it-app-dev": "Ausbildung zum Fachinformatiker für Anwendungsentwicklung",
+      "internship-web-app-dev": "EQJ als Webentwickler & App-Entwickler (Einstiegsqualifizierungsjahr)",
+      "production-assistant": "Produktionshelfer bei einem StartUp (Handschriftautomation)",
+      "apprenticeship-tiler": "Ausbildung zum Fliesen-, Platten- und Mosaikleger",
+      "apprenticeship-it-management-assistant": "Ausbildung zum Informatikkaufmann",
+      "apprenticeship-warehouse-logistics-assistant": "Ausbildung zur Fachkraft für Lagerlogistik",
+      "part-time-warehouse-logistics-assistant": "Lagerhelfer in Teilzeit",
+      "internship-warehouse-logistics-assistant": "Praktikum als Fachkraft für Lagerlogistik",
+      "internship-sport-and-fitness-management-assistant": "EQJ als Sport- und Fitnesskaufmann (Einstiegsqualifizierungsjahr)",
+      "school-internship-repair-service": "Schulpraktikum bei einem Smartphone-Reparaturservice"
     }
   }
 }

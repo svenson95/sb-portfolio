@@ -1,5 +1,8 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { faTableList } from '@fortawesome/free-solid-svg-icons';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { CardHeaderComponent } from '../../components';
 
@@ -9,7 +12,7 @@ import { CV_DATA } from './cv.data';
   selector: 'section#cv',
   template: `
     <div class="card">
-      <sb-card-header title="Lebenslauf" [icon]="faTable"></sb-card-header>
+      <sb-card-header [title]="'header.navigation.cv' | translate" [icon]="faTable"></sb-card-header>
 
       <div class="px-3 md:px-5">
         <table class="w-full mb-5">
@@ -17,13 +20,13 @@ import { CV_DATA } from './cv.data';
           <tr>
             <td>
               @if (item.to !== null) {
-              <small>{{ item.to }}</small>
+              <small>{{ item.to | date : 'LLL YYYY' : '' : currentLang() }}</small>
               <br />
               }
-              <small>{{ item.from }}</small>
+              <small>{{ item.from | date : 'LLL YYYY' : '' : currentLang() }}</small>
             </td>
             <td>
-              <div [innerHTML]="item.profession"></div>
+              <div [innerHTML]="'content.cv.' + item.profession | translate"></div>
               <small>{{ item.company }}</small>
             </td>
           </tr>
@@ -53,7 +56,7 @@ import { CV_DATA } from './cv.data';
       }
 
       td:nth-of-type(1) {
-        width: 80px;
+        width: 90px;
         font-family: constants.$monospace-font;
       }
 
@@ -71,9 +74,34 @@ import { CV_DATA } from './cv.data';
     }
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CardHeaderComponent]
+  imports: [CardHeaderComponent, TranslateModule, DatePipe]
 })
 export class CvComponent {
-  public readonly data = CV_DATA;
-  public readonly faTable = faTableList;
+  readonly #translate = inject(TranslateService);
+  readonly currentLang = signal<string>('de-DE');
+
+  readonly data = CV_DATA;
+  readonly faTable = faTableList;
+
+  constructor() {
+    this.listenToLangChanges();
+  }
+
+  listenToLangChanges(): void {
+    this.#translate.onLangChange.pipe(takeUntilDestroyed()).subscribe((params) => {
+      let langId = '';
+      switch (params.lang) {
+        case 'de':
+          langId = 'de-DE';
+          break;
+        case 'en':
+          langId = 'en-US';
+          break;
+        default:
+          langId = 'de-DE';
+          break;
+      }
+      this.currentLang.set(langId);
+    });
+  }
 }
