@@ -2,7 +2,7 @@ import { PanelData } from '../../models';
 
 export const HOBBY_PROJECTS_DATA: PanelData[] = [
   {
-    title: 'hobby-projects.reelscore',
+    title: 'reelscore',
     description: 'hobby-projects.reelscore.description',
     content: 'hobby-projects.reelscore.content',
     links: [
