@@ -3,7 +3,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { Theme, ThemeService } from '../../../shared/theme.service';
+import { AppTheme } from '../../../models';
+import { ThemeService } from '../../../shared';
 
 import { SunUpAndDownAnimation } from './theme.toggle.animation';
 
@@ -30,7 +31,7 @@ import { SunUpAndDownAnimation } from './theme.toggle.animation';
 export class ThemeToggleComponent {
   readonly theme = inject(ThemeService);
 
-  readonly iconString = computed(() => this.theme.themeString() + '_mode');
   readonly isDark = this.theme.isDark;
-  readonly nextTheme = computed(() => (this.isDark() ? Theme.LIGHT : Theme.DARK));
+  readonly nextTheme = computed<AppTheme>(() => (this.isDark() ? 'light' : 'dark'));
+  readonly iconString = computed(() => this.nextTheme() + '_mode');
 }

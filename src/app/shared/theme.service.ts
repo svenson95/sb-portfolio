@@ -1,14 +1,11 @@
 import { DOCUMENT } from '@angular/common';
 import { Injectable, computed, inject, signal } from '@angular/core';
 
+import { AppTheme } from '../models';
+
 import { LocalStorage } from './storage.service';
 
 const THEME_STORAGE_KEY = 'sb-portfolio-theme';
-
-export enum Theme {
-  DARK = 'dark',
-  LIGHT = 'light'
-}
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +15,7 @@ export class ThemeService {
   readonly storage = inject(LocalStorage);
 
   readonly isDark = signal<boolean | undefined>(undefined);
-  readonly themeString = computed(() => (this.isDark() ? Theme.DARK : Theme.LIGHT));
+  readonly themeString = computed<AppTheme>(() => (this.isDark() ? 'dark' : 'light'));
 
   constructor() {
     this.initStoredTheme();
@@ -32,17 +29,24 @@ export class ThemeService {
   private updateRenderedTheme(): void {
     const theme = this.themeString();
     this.storage.setItem(THEME_STORAGE_KEY, theme);
-    document.documentElement.style.setProperty('color-scheme', theme);
+    this.setColorScheme(theme);
   }
 
   private initStoredTheme(): void {
-    const storedPreference = this.storage.getItem(THEME_STORAGE_KEY);
+    const storedPreference = this.storage.getItem(THEME_STORAGE_KEY) as AppTheme;
     const USERS_OS_THEME_IS_DARK = '(prefers-color-scheme: dark)';
-    const isBrowserDark = matchMedia?.(USERS_OS_THEME_IS_DARK).matches;
-    const storedDarkTheme = storedPreference === Theme.DARK ? true : false;
-    const theme = storedDarkTheme ? 'dark' : 'light';
+    const isUsersOsDark = matchMedia?.(USERS_OS_THEME_IS_DARK).matches;
+    const storedDarkTheme = storedPreference === 'dark' ? true : false;
+    const isDarkThemePreferred = !!storedPreference ? storedDarkTheme : isUsersOsDark;
+    this.isDark.set(isDarkThemePreferred);
 
-    this.isDark.set(storedPreference === undefined ? isBrowserDark : storedDarkTheme);
+    const isUsersThemeAndStoredSame = !!storedPreference ? isUsersOsDark && storedPreference === 'dark' : true;
+    if (!isUsersThemeAndStoredSame) {
+      this.setColorScheme(storedPreference);
+    }
+  }
+
+  private setColorScheme(theme: AppTheme): void {
     document.documentElement.style.setProperty('color-scheme', theme);
   }
 }
