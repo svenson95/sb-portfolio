@@ -3,10 +3,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-import { AvailableLanguage } from '../../../models';
+import { AppLanguage } from '../../../models';
 
 interface SelectLanguage {
-  code: AvailableLanguage;
+  code: AppLanguage;
   label: string;
 }
 
@@ -14,8 +14,9 @@ interface SelectLanguage {
   selector: 'sb-language-toggle',
   template: `
     <select
-      (change)="changeLocale($any($event.target).value)"
+      (change)="changeLanguage(languageSelect.value)"
       [matTooltip]="'header.language.switch-tooltip' | translate"
+      #languageSelect
     >
       @for (lang of languages; track lang.code) {
       <option [value]="lang.code" [selected]="lang.code === currentLocale">
@@ -31,15 +32,15 @@ interface SelectLanguage {
   imports: [MatIconModule, MatTooltipModule, TranslateModule]
 })
 export class LanguageToggleComponent {
-  readonly #translate = inject(TranslateService);
-  readonly currentLocale = this.#translate.currentLang;
+  #translate = inject(TranslateService);
+  currentLocale = this.#translate.currentLang;
 
   readonly languages: SelectLanguage[] = [
     { code: 'de', label: 'header.language.german' },
     { code: 'en', label: 'header.language.english' }
   ];
 
-  changeLocale(lang: AvailableLanguage): void {
+  changeLanguage(lang: string): void {
     this.#translate.use(lang);
   }
 }

@@ -3,7 +3,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 import { FooterComponent, HeaderComponent } from './components';
 import { ScrollManagerDirective, ScrollSectionDirective } from './directives';
-import { AvailableLanguage } from './models';
+import { AppLanguage } from './models';
 import { AboutComponent, CvComponent, HobbyProjectsComponent, SkillsComponent, WorkSamplesComponent } from './sections';
 
 @Component({
@@ -73,8 +73,8 @@ export class AppComponent {
   #translate = inject(TranslateService);
 
   constructor() {
-    const defaultLang: AvailableLanguage = 'de';
-    const availableLangs: AvailableLanguage[] = ['de', 'en'];
+    const availableLangs: AppLanguage[] = ['de', 'en'];
+    const defaultLang: AppLanguage = 'de';
     this.#translate.addLangs(availableLangs);
     this.#translate.setDefaultLang(defaultLang);
     this.#translate.use(this.#translate.getBrowserLang() || defaultLang);
