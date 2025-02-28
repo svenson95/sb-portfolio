@@ -27,9 +27,9 @@ export const ABOUT_DATA = [
 ];
 
 export const PROFILE_DATA = [
-  { key: 'name', value: 'Sven Brodny' },
-  { key: 'birthdate', value: '02.11.1995' },
-  { key: 'languages', value: 'Deutsch (C2) / Englisch (B2)' },
-  { key: 'birthplace', value: 'Hamburg' },
-  { key: 'city', value: 'Berlin' }
+  { key: 'name' },
+  { key: 'birthdate' },
+  { key: 'languages' },
+  { key: 'birthplace' },
+  { key: 'city' }
 ];
