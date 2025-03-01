@@ -7,7 +7,8 @@ import {
   StaticProvider,
   importProvidersFrom,
   inject,
-  provideAppInitializer
+  provideAppInitializer,
+  provideExperimentalZonelessChangeDetection
 } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -51,6 +52,7 @@ const LOCALE_ID_PROVIDER = { provide: LOCALE_ID, useValue: 'de-DE' };
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    provideExperimentalZonelessChangeDetection(),
     provideAnimationsAsync(),
     importProvidersFrom([BrowserAnimationsModule, TRANSLATION_PROVIDER]),
     ...STORAGE_PROVIDERS,
