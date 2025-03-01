@@ -1,9 +1,5 @@
-import { registerLocaleData } from '@angular/common';
-import localeDe from '@angular/common/locales/de';
-import localeDeExtra from '@angular/common/locales/extra/de';
 import {
   ApplicationConfig,
-  LOCALE_ID,
   StaticProvider,
   importProvidersFrom,
   inject,
@@ -48,17 +44,12 @@ const TRANSLATION_PROVIDER = TranslateModule.forRoot({
   }
 });
 
-const LOCALE_ID_PROVIDER = { provide: LOCALE_ID, useValue: 'de-DE' };
-
 export const appConfig: ApplicationConfig = {
   providers: [
     provideExperimentalZonelessChangeDetection(),
     provideAnimationsAsync(),
     importProvidersFrom([BrowserAnimationsModule, TRANSLATION_PROVIDER]),
     ...STORAGE_PROVIDERS,
-    SCROLL_EVENT_PROVIDER,
-    LOCALE_ID_PROVIDER
+    SCROLL_EVENT_PROVIDER
   ]
 };
-
-registerLocaleData(localeDe, 'de-DE', localeDeExtra);

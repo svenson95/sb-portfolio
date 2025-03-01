@@ -1,3 +1,6 @@
+import { registerLocaleData } from '@angular/common';
+import localeDe from '@angular/common/locales/de';
+import localeDeExtra from '@angular/common/locales/extra/de';
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -73,10 +76,17 @@ export class AppComponent {
   #translate = inject(TranslateService);
 
   constructor() {
+    this.initLocale();
+  }
+
+  initLocale(): void {
+    registerLocaleData(localeDe, 'de-DE', localeDeExtra);
+
     const availableLangs: AppLanguage[] = ['de', 'en'];
-    const defaultLang: AppLanguage = 'de';
     this.#translate.addLangs(availableLangs);
-    this.#translate.setDefaultLang(defaultLang);
-    this.#translate.use(this.#translate.getBrowserLang() || defaultLang);
+
+    const initLang = this.#translate.getBrowserLang() === 'de' ? 'de' : 'en';
+    this.#translate.setDefaultLang(initLang);
+    this.#translate.use(initLang);
   }
 }
