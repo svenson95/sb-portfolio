@@ -94,7 +94,7 @@ type Skill = { source: string; title: string };
     }
 
     .image-container {
-      @apply flex flex-col gap-5 items-center;
+      @apply flex flex-col gap-10 items-center;
     }
 
     .image-placeholder {
