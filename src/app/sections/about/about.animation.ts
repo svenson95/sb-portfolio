@@ -7,7 +7,7 @@ export const staggerAnimation = trigger('staggerAnimation', [
       '.about-profile-item',
       stagger('100ms', [
         animate(
-          '300ms ease-in',
+          '300ms 200ms',
           keyframes([
             style({ opacity: 0, transform: 'translateX(-20px)', offset: 0 }),
             style({ opacity: 0.5, transform: 'translateX(10px)', offset: 0.3 }),

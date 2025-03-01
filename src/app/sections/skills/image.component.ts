@@ -8,20 +8,8 @@ import { ImageSource, ImageTitle } from '../../models';
   selector: 'sb-image',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgOptimizedImage, MatIconModule],
-  styles: `
-    mat-icon {
-      width: 50px;
-      height: 50px;
-      font-size: 50px;
-    }
-  `,
-  template: `
-    @defer(on viewport) {
-    <img [ngSrc]="source()" [alt]="title()" [title]="title()" priority width="50" height="50" />
-    } @placeholder {
-    <mat-icon>image</mat-icon>
-    }
-  `
+  styles: ``,
+  template: ` <img [ngSrc]="source()" [alt]="title()" [title]="title()" priority width="50" height="50" /> `
 })
 export class ImageComponent {
   source = input.required<ImageSource>();
