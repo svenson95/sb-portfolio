@@ -42,6 +42,7 @@ import { ABOUT_DATA, PROFILE_DATA } from './about.data';
         <div class="flex-1">
           <sb-card-header [title]="'content.about.data.title' | translate" [icon]="faAddressCard"></sb-card-header>
 
+          @defer (on viewport) {
           <div class="flex flex-col gap-3" @staggerAnimation>
             @for(item of profile; track item.key) {
             <div class="about-profile-item flex flex-col lg:flex-row border-b pb-2 px-5">
@@ -50,6 +51,9 @@ import { ABOUT_DATA, PROFILE_DATA } from './about.data';
             </div>
             }
           </div>
+          } @placeholder() {
+          <div>not on viewport...</div>
+          }
         </div>
       </section>
     </div>
