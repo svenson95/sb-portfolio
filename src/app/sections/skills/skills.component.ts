@@ -49,9 +49,11 @@ type Skill = { source: string; title: string };
 
           @defer(on viewport) {
           <div class="image-container" @skillsStaggerTwo>
-            @for (knowledge of goodKnowledge; track knowledge.source) {
+            @for (knowledge of goodKnowledge; track knowledge.source) { @if (knowledge.source.includes("nodejs")) {
+            <sb-image class="skill-image" [source]="nodeJsLogo()" [title]="knowledge.title"></sb-image>
+            }@else {
             <sb-image class="skill-image" [source]="knowledge.source" [title]="knowledge.title"></sb-image>
-            }
+            } }
           </div>
           } @placeholder {
           <div class="image-container">
@@ -119,7 +121,7 @@ export class SkillsComponent {
   ];
 
   goodKnowledge: Skill[] = [
-    { source: this.nodeJsLogo(), title: 'Node.js' },
+    { source: 'assets/skillset/nodejs-light.png', title: 'Node.js' },
     { source: 'assets/skillset/javascript.png', title: 'JavaScript' },
     { source: 'assets/skillset/ionic.png', title: 'Ionic' },
     { source: 'assets/skillset/mongodb.png', title: 'MongoDB' }
