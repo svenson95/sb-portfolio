@@ -1,0 +1,121 @@
+{
+  "header": {
+    "navigation": {
+      "about": "About me",
+      "skills": "Skills",
+      "hobby-projects": "Hobby projects",
+      "work-samples": "Work samples",
+      "cv": "CV"
+    },
+    "theme": {
+      "tooltip": "Switch to {{value}} mode"
+    },
+    "language": {
+      "german": "German",
+      "english": "English",
+      "switch-tooltip": "Switch language"
+    }
+  },
+  "content": {
+    "about": {
+      "journey": {
+        "title": "About me",
+        "first-job": "First job as a Junior Frontend-Developer.",
+        "apprenticeship": "Apprenticeship as an \"IT specialist for application development\".",
+        "swift": "Bought an online course on <a href=\"https://www.udemy.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Udemy</a> about iOS Development with <a href=\"https://www.apple.com/de/swift/\" target=\"_blank\" rel=\"noopener noreferrer\">Swift</a>, started to get involved in software development.",
+        "wordpress-page": "Developed first WordPress page for a small construction company hosted on <a href=\"https://www.strato.de/\" target=\"_blank\" rel=\"noopener noreferrer\">Strato</a>.",
+        "web-development": "Tried to learn Web Development. Hosted a example WordPress page on a \"free webspace\" service.",
+        "source-sdk": "Created \"Counter-Strike\" maps with <a href=\"https://developer.valvesoftware.com/wiki/SDK_Docs\" target=\"_blank\" rel=\"noopener noreferrer\">Source SDK</a>.",
+        "scratch": "Worked with <a href=\"https://scratch.mit.edu/\" target=\"_blank\" rel=\"noopener noreferrer\">Scratch</a> in high school, a block-based visual programming language."
+      },
+      "data": {
+        "title": "Personal data",
+        "name": {
+          "key": "Name",
+          "value": "Sven Brodny"
+        },
+        "birthdate": {
+          "key": "Birthdate",
+          "value": "11/02/1995"
+        },
+        "languages": {
+          "key": "Languages",
+          "value": "German (C2) / English (B2)"
+        },
+        "birthplace": {
+          "key": "Birthplace",
+          "value": "Hamburg"
+        },
+        "city": {
+          "key": "City",
+          "value": "Berlin"
+        }
+      }
+    },
+    "skills": {
+      "very-good-knowledge": "Very good knowledge",
+      "advanced-knowledge": "Advanced knowledge",
+      "basic-knowledge": "Basic knowledge"
+    },
+    "hobby-projects": {
+      "reelscore": {
+        "description": "March 2024 - now",
+        "content": "European football livescore application, with an own developed extension \"Performance-Form\", derived from the shots, shots on goal and goals scored by a team. If, for example, only 3 shots were taken on the opponent's goal in the whole game and the game was only won 1-0, the performance was mediocre. In other live score applications, only the \"result form\" is displayed, derived from the outcome of the respective game. The data for this is loaded from the RapidAPI <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://rapidapi.com/api-sports/api/api-football\">API-FOOTBALL</a>, for this I have created an additional application to load new data and save it in my MongoDB database. Currently no new data is being loaded. To test the application, jump to the date 2024/05/18, there is content available."
+      },
+      "angular-challenges": {
+        "description": "February 2024",
+        "content": "I came across this project through a <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://blog.angular.io/introducing-angular-v17-4d7033312e4b\">blog post</a>, introducing version 17 of Angular. Here I solved challenges myself, extended and adapted some of these challenges, made minor styling adjustments in the application and created my own challenges - <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://angular-challenges.vercel.app/challenges/angular/46-simple-animations/\">Simple Animations</a> & <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://angular-challenges.vercel.app/challenges/typescript/47-enums-vs-union-types/\">Enums vs Union Types</a>.",
+        "links": {
+          "my-pull-requests": "My pull requests"
+        }
+      },
+      "ng-xmp-animations": {
+        "description": "September 2021",
+        "content": "Application with example implementations for Angular's integrated animations library"
+      },
+      "fachentwickler": {
+        "description": "April 2020 - July 2022",
+        "content": "Home-schooling platform for the vocational school, lesson summaries, quizzes, index cards & \"matching\" puzzle mini-game. Dashboard with progress indicator, display of the latest announcement from the school news archive, upcoming exams, timetable and lessons for the current school week."
+      }
+    },
+    "work-samples": {
+      "cost-of-production": {
+        "description": "April 2021 - November 2021",
+        "content": "Build online platform with <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://themeforest.net/item/vien-angular-admin-template/25817698\">Vien-Angular-Admin-Template</a>. For recording production costs in agriculture - farm statistics, questionnaires & reports."
+      },
+      "vape-watchers": {
+        "description": "January 2020 - June 2021",
+        "content": "Greenfield project of an Ionic & React control panel app for e-cigarette users with information on ingredients and smoking behavior - nicotine consumption per day/week, used cartridges & usage history. User authentication via AWS-Amplify."
+      },
+      "lernetics": {
+        "description": "October 2020 - December 2020",
+        "content": "Greenfield project of a cross-platform app with tab-based layout for a vocational school. „With Lernletics you can train yourself in various subject areas as part of your training.“"
+      },
+      "pio-office-suite": {
+        "description": "August 2020 - September 2021",
+        "content": "Greenfield project of a progressive web app with Ionic & Angular, a contact book with the possibility to initiate calls via direct dial numbers using an additional VoIP app “easybell”."
+      },
+      "survey-app": {
+        "description": "March 2019 - December 2019",
+        "content": "Single-page application developed with Angular and Angular Material, application for conducting surveys."
+      }
+    },
+    "cv": {
+      "web-developer": "Web-Developer - Frontend",
+      "part-time-job-web-dev": "Part time job Web-Developer - Frontend",
+      "apprenticeship-it-app-dev": "Apprenticeship IT specialist for app development",
+      "internship-web-app-dev": "Internship Web-Developer & App-Developer",
+      "production-assistant": "Production assistant in a StartUp (handwriting automation)",
+      "apprenticeship-tiler": "Apprenticeship Tiler",
+      "apprenticeship-it-management-assistant": "Apprenticeship IT management assistant",
+      "apprenticeship-warehouse-logistics-assistant": "Apprenticeship Warehouse logistics assistant",
+      "part-time-warehouse-logistics-assistant": "Part time job Warehouse logistics assistant",
+      "internship-warehouse-logistics-assistant": "Internship Warehouse logistics assistant",
+      "internship-sport-and-fitness-management-assistant": "Internship Sport and fitness management assistant",
+      "school-internship-repair-service": "School internship in a smartphone repair service"
+    }
+  },
+  "footer": {
+    "more": "More"
+  }
+}
