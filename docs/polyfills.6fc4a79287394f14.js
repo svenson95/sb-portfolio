@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksb_portfolio=self.webpackChunksb_portfolio||[]).push([[461],{4050:()=>{}},s=>{s(s.s=4050)}]);
