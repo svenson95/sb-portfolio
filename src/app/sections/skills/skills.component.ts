@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -115,21 +115,21 @@ export class SkillsComponent {
   faBook = faBook;
   nodeJsLogo = computed<ImageSource>(() => this.imagesDirectory + `nodejs-${this.theme.themeString()}.png`);
 
-  veryGoodKnowledge = signal<Skill[]>([
+  veryGoodKnowledge = computed<Skill[]>(() => [
     { source: this.imagesDirectory + 'angular.png', title: 'Angular' },
     { source: this.imagesDirectory + 'typescript.png', title: 'TypeScript' },
     { source: this.imagesDirectory + 'html.png', title: 'HTML5' },
     { source: this.imagesDirectory + 'css.png', title: 'CSS3' }
   ]);
 
-  goodKnowledge = signal<Skill[]>([
+  goodKnowledge = computed<Skill[]>(() => [
     { source: this.nodeJsLogo(), title: 'Node.js' },
     { source: this.imagesDirectory + 'javascript.png', title: 'JavaScript' },
     { source: this.imagesDirectory + 'ionic.png', title: 'Ionic' },
     { source: this.imagesDirectory + 'mongodb.png', title: 'MongoDB' }
   ]);
 
-  basicKnowledge = signal<Skill[]>([
+  basicKnowledge = computed<Skill[]>(() => [
     { source: this.imagesDirectory + 'swift.png', title: 'Swift' },
     { source: this.imagesDirectory + 'react.png', title: 'React' },
     { source: this.imagesDirectory + 'mysql.png', title: 'MySQL' },
