@@ -24,7 +24,6 @@ import { ThumbnailPipe } from './thumbnail.pipe';
         box-shadow: none;
       }
 
-      &,
       &:not(.mat-expanded) {
         .mat-expansion-panel-header {
           &.cdk-keyboard-focused:not([aria-disabled='true']),
