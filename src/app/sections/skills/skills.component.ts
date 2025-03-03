@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -8,34 +8,30 @@ import { ImageSource } from '../../models';
 import { ThemeService } from '../../shared';
 
 import { ImageComponent } from './image.component';
-import { staggerAnimation, staggerAnimationThree, staggerAnimationTwo } from './skills.animation';
+import { staggerAnimationOne, staggerAnimationThree, staggerAnimationTwo } from './skills.animation';
 
 type Skill = { source: string; title: string };
 
 @Component({
-  selector: 'section#skills',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, CardHeaderComponent, ImageComponent, TranslateModule],
-  animations: [staggerAnimation, staggerAnimationTwo, staggerAnimationThree],
   template: `
     <div class="card">
       <sb-card-header title="Skills" [icon]="faBook"></sb-card-header>
 
-      <div class="flex sm:gap-10 gap-4">
+      <section id="skills-content">
         <div class="knowledge-container">
-          <div class="text-xs sm:text-sm">
+          <div class="knowledge-label">
             <p>{{ 'content.skills.very-good-knowledge' | translate }}</p>
           </div>
 
           @defer(on viewport) {
           <div class="image-container" @skillsStaggerOne>
-            @for (knowledge of veryGoodKnowledge; track knowledge.source) {
+            @for (knowledge of veryGoodKnowledge(); track knowledge.source) {
             <sb-image class="skill-image" [source]="knowledge.source" [title]="knowledge.title"></sb-image>
             }
           </div>
           } @placeholder {
           <div class="image-container">
-            @for (_ of veryGoodKnowledge; track _.source) {
+            @for (_ of veryGoodKnowledge(); track _.source) {
             <div class="image-placeholder"></div>
             }
           </div>
@@ -43,21 +39,19 @@ type Skill = { source: string; title: string };
         </div>
 
         <div class="knowledge-container">
-          <div class="text-xs sm:text-sm">
+          <div class="knowledge-label">
             <p>{{ 'content.skills.advanced-knowledge' | translate }}</p>
           </div>
 
           @defer(on viewport) {
           <div class="image-container" @skillsStaggerTwo>
-            @for (knowledge of goodKnowledge; track knowledge.source) { @if (knowledge.source.includes("nodejs")) {
-            <sb-image class="skill-image" [source]="nodeJsLogo()" [title]="knowledge.title"></sb-image>
-            }@else {
+            @for (knowledge of goodKnowledge(); track knowledge.source) {
             <sb-image class="skill-image" [source]="knowledge.source" [title]="knowledge.title"></sb-image>
-            } }
+            }
           </div>
           } @placeholder {
           <div class="image-container">
-            @for (_ of goodKnowledge; track _.source) {
+            @for (_ of goodKnowledge(); track _.source) {
             <div class="image-placeholder"></div>
             }
           </div>
@@ -65,72 +59,80 @@ type Skill = { source: string; title: string };
         </div>
 
         <div class="knowledge-container">
-          <div class="text-xs sm:text-sm">
+          <div class="knowledge-label">
             <p [innerHTML]="'content.skills.basic-knowledge' | translate"></p>
           </div>
 
           @defer(on viewport) {
           <div class="image-container" @skillsStaggerThree>
-            @for (knowledge of basicKnowledge; track knowledge.source) {
+            @for (knowledge of basicKnowledge(); track knowledge.source) {
             <sb-image class="skill-image" [source]="knowledge.source" [title]="knowledge.title"></sb-image>
             }
           </div>
           } @placeholder {
           <div class="image-container">
-            @for (_ of basicKnowledge; track _.source) {
+            @for (_ of basicKnowledge(); track _.source) {
             <div class="image-placeholder"></div>
             }
           </div>
           }
         </div>
-      </div>
+      </section>
     </div>
   `,
   styles: `
     @use "src/styles/constants";
 
-    .knowledge-container {
-      @apply flex flex-col flex-1 gap-5 text-center;
-    }
+    :host { 
+      @apply flex; 
+    
+      section#skills-content { 
+        @apply flex sm:gap-10 gap-4; 
+      }
 
-    .image-container {
-      @apply flex flex-col gap-10 items-center;
-    }
+      .knowledge-container {
+        @apply flex flex-col flex-1 gap-5 text-center;
 
-    .image-placeholder {
-      width: 50px;
-      height: 54px;
-    }
+        .knowledge-label { @apply text-xs sm:text-sm; }
+      }
 
-    small,
-    i {
-      color: light-dark(constants.$lightgray, constants.$mediumgray);
+      .image-container {
+        @apply flex flex-col gap-10 items-center;
+
+        .image-placeholder { @apply w-[50px] h-[54px]; }
+      }
     }
-  `
+  `,
+  selector: 'section#skills',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [CommonModule, CardHeaderComponent, ImageComponent, TranslateModule],
+  animations: [staggerAnimationOne, staggerAnimationTwo, staggerAnimationThree]
 })
 export class SkillsComponent {
-  private readonly theme = inject(ThemeService);
-  public readonly nodeJsLogo = computed<ImageSource>(() => `assets/skillset/nodejs-${this.theme.themeString()}.png`);
-  public readonly faBook = faBook;
+  private theme = inject(ThemeService);
+  private readonly imagesDirectory = 'assets/skillset/';
 
-  veryGoodKnowledge: Skill[] = [
-    { source: 'assets/skillset/angular.png', title: 'Angular' },
-    { source: 'assets/skillset/typescript.png', title: 'TypeScript' },
-    { source: 'assets/skillset/html.png', title: 'HTML5' },
-    { source: 'assets/skillset/css.png', title: 'CSS3' }
-  ];
+  faBook = faBook;
+  nodeJsLogo = computed<ImageSource>(() => this.imagesDirectory + `nodejs-${this.theme.themeString()}.png`);
 
-  goodKnowledge: Skill[] = [
-    { source: 'assets/skillset/nodejs-light.png', title: 'Node.js' },
-    { source: 'assets/skillset/javascript.png', title: 'JavaScript' },
-    { source: 'assets/skillset/ionic.png', title: 'Ionic' },
-    { source: 'assets/skillset/mongodb.png', title: 'MongoDB' }
-  ];
+  veryGoodKnowledge = signal<Skill[]>([
+    { source: this.imagesDirectory + 'angular.png', title: 'Angular' },
+    { source: this.imagesDirectory + 'typescript.png', title: 'TypeScript' },
+    { source: this.imagesDirectory + 'html.png', title: 'HTML5' },
+    { source: this.imagesDirectory + 'css.png', title: 'CSS3' }
+  ]);
 
-  basicKnowledge: Skill[] = [
-    { source: 'assets/skillset/swift.png', title: 'Swift' },
-    { source: 'assets/skillset/react.png', title: 'React' },
-    { source: 'assets/skillset/mysql.png', title: 'MySQL' },
-    { source: 'assets/skillset/java.png', title: 'Java' }
-  ];
+  goodKnowledge = signal<Skill[]>([
+    { source: this.nodeJsLogo(), title: 'Node.js' },
+    { source: this.imagesDirectory + 'javascript.png', title: 'JavaScript' },
+    { source: this.imagesDirectory + 'ionic.png', title: 'Ionic' },
+    { source: this.imagesDirectory + 'mongodb.png', title: 'MongoDB' }
+  ]);
+
+  basicKnowledge = signal<Skill[]>([
+    { source: this.imagesDirectory + 'swift.png', title: 'Swift' },
+    { source: this.imagesDirectory + 'react.png', title: 'React' },
+    { source: this.imagesDirectory + 'mysql.png', title: 'MySQL' },
+    { source: this.imagesDirectory + 'java.png', title: 'Java' }
+  ]);
 }

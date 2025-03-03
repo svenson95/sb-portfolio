@@ -1,6 +1,6 @@
 import { animate, keyframes, query, stagger, style, transition, trigger } from '@angular/animations';
 
-export const staggerAnimation = trigger('skillsStaggerOne', [
+export const staggerAnimationOne = trigger('skillsStaggerOne', [
   transition(':enter', [
     query('.skill-image', style({ opacity: 0 })),
     query(
