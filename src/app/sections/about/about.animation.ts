@@ -2,9 +2,9 @@ import { animate, keyframes, query, stagger, style, transition, trigger } from '
 
 export const staggerAnimation = trigger('staggerAnimation', [
   transition('* => *', [
-    query('.about-profile-item', style({ opacity: 0 })),
+    query('#personal-data-item', style({ opacity: 0 })),
     query(
-      '.about-profile-item',
+      '#personal-data-item',
       stagger('100ms', [
         animate(
           '300ms 200ms',

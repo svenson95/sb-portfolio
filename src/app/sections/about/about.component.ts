@@ -12,74 +12,106 @@ import { staggerAnimation } from './about.animation';
 import { ABOUT_DATA, PROFILE_DATA } from './about.data';
 
 @Component({
-  selector: 'section#about',
   template: `
     <div class="card">
-      <section id="more" class="flex justify-center gap-5 mb-5">
+      <section id="about-more">
         @for (link of more; track link.title) {
         <a mat-button target="_blank" rel="noopener noreferrer" [href]="link.href">
-          <span class="flex flex-col items-center py-2">
-            <fa-icon class="text-2xl" [icon]="link.iconSelector"></fa-icon>
+          <span class="wrapper">
+            <fa-icon [icon]="link.iconSelector"></fa-icon>
             <span>{{ link.title }}</span>
           </span>
         </a>
         }
       </section>
-      <section class="flex flex-col md:flex-row gap-5 md:gap-10">
-        <div class="flex-1">
+      <section id="about-content">
+        <div id="journey">
           <sb-card-header [title]="'content.about.journey.title' | translate" [icon]="faCircleUser"></sb-card-header>
 
-          <div class="flex flex-col gap-3 px-5">
+          <div id="journey-list">
             @for (item of about; track item.key) {
             <div>
-              <h4 class="subtitle">{{ item.key }}</h4>
+              <h4 id="journey-year">{{ item.key }}</h4>
               <div [innerHTML]="item.value | translate | bypassUrl : 'html'"></div>
             </div>
             }
           </div>
         </div>
 
-        <div class="flex-1">
+        <div id="personal-data">
           <sb-card-header [title]="'content.about.data.title' | translate" [icon]="faAddressCard"></sb-card-header>
 
           @defer (on viewport) {
-          <div class="flex flex-col gap-3" @staggerAnimation>
+          <div id="personal-data-list" @staggerAnimation>
             @for(item of profile; track item.key) {
-            <div class="about-profile-item flex flex-col lg:flex-row border-b pb-2 px-5">
-              <div class="key flex-1">{{ 'content.about.data.' + item.key + '.key' | translate }}:</div>
-              <div class="value flex-1" [innerHTML]="'content.about.data.' + item.key + '.value' | translate"></div>
+            <div id="personal-data-item">
+              <div id="personal-data-item-key">{{ 'content.about.data.' + item.key + '.key' | translate }}:</div>
+              <div
+                id="personal-data-item-value"
+                [innerHTML]="'content.about.data.' + item.key + '.value' | translate"
+              ></div>
             </div>
             }
           </div>
           } @placeholder() {
-          <div>not on viewport...</div>
+          <div id="personal-data-placeholder" class="profile-placeholder">
+            @for (_ of profile; track _.key) {
+            <div id="placeholder-item"></div>
+            }
+          </div>
           }
         </div>
       </section>
     </div>
   `,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule, TranslateModule],
-  animations: [staggerAnimation],
   styles: `
     @use "src/styles/constants";
     
     :host {
-      #more a.mat-mdc-button {
-        height: auto;
-        color: var(--mat-sys-primary);
+      section#about-more {
+        @apply flex justify-center gap-5 mb-5;
+
+        a[mat-button] {
+          @apply h-auto;
+
+          .wrapper { @apply flex flex-col items-center py-2; }
+          fa-icon { @apply text-2xl; }
+        }
       }
 
-      div > ::ng-deep a:hover {
-        text-decoration: underline;
-      }
+      section#about-content {
+        @apply flex flex-col md:flex-row gap-5 md:gap-10;
 
-      div.key,
-      .subtitle {
-        color: light-dark(constants.$lightgray, constants.$mediumgray);
+        & > div {
+          @apply flex-1;
+        }
+
+        #journey-list { @apply flex flex-col gap-3 px-5; }
+
+        #personal-data-list, #personal-data-placeholder {
+          @apply flex flex-col gap-3;
+
+          #personal-data-item { @apply flex flex-col lg:flex-row border-b pb-2 px-5; }
+          #placeholder-item { @apply h-[51px] lg:h-[30px]; }
+        }
+
+        ::ng-deep a:hover {
+          text-decoration: underline;
+        }
+
+        #personal-data-item-key,
+        #journey-year {
+          color: light-dark(constants.$lightgray, constants.$mediumgray);
+        }
+
+        #personal-data-item-key, #personal-data-item-value { @apply flex-1; }
       }
     }
-  `
+  `,
+  selector: 'section#about',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [FontAwesomeModule, CardHeaderComponent, BypassUrlPipe, MatButtonModule, TranslateModule],
+  animations: [staggerAnimation]
 })
 export class AboutComponent {
   public readonly more = MORE_DATA;
