@@ -60,7 +60,7 @@
     "hobby-projects": {
       "reelscore": {
         "description": "March 2024 - now",
-        "content": "European football livescore application, with an own developed extension \"Performance-Form\", derived from the shots, shots on goal and goals scored by a team. If, for example, only 3 shots were taken on the opponent's goal in the whole game and the game was only won 1-0, the performance was mediocre. In other live score applications, only the \"result form\" is displayed, derived from the outcome of the respective game. The data for this is loaded from the RapidAPI <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://rapidapi.com/api-sports/api/api-football\">API-FOOTBALL</a>, for this I have created an additional application to load new data and save it in my MongoDB database. Currently no new data is being loaded. To test the application, jump to the date 2024/05/18, there is content available."
+        "content": "European football livescore application, with an own developed extension \"Performance-Form\", derived from the shots, shots on goal and goals scored by a team. If, for example, only 3 shots were taken on the opponent's goal in the whole game and the game was only won 1-0, the performance was mediocre. In other live score applications, only the \"result form\" is displayed, derived from the outcome of the respective game. The data for this is loaded from the RapidAPI <a target=\"blank\" rel=\"noopener noreferrer\" href=\"https://rapidapi.com/api-sports/api/api-football\">API-FOOTBALL</a>, for this I have created an additional application to load new data and save it in my MongoDB database."
       },
       "angular-challenges": {
         "description": "February 2024",
